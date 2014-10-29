@@ -1,0 +1,1384 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="HLine" file="../../Textures/Pinco/hline.dds"/>
+		<Texture name="VLine" file="../../Textures/Pinco/vline.dds"/>
+		<Texture name="HDotLine" file="../../Textures/Pinco/hdotline.dds"/>
+		<Texture name="VDotLine" file="../../Textures/Pinco/vdotline.dds"/>
+	</Assets>
+	<Scripts>
+		<Script file="CraftingTool.lua" />
+		<Script file="Craftables.lua" />
+		<Script file="EnuCliloc.lua" />
+	</Scripts>
+	<Windows>
+
+		<DynamicImage name="SubVLine" texture="VDotLine"  handleinput="false">
+			<Size>
+				<AbsPoint x="2" y="40" />
+			</Size>
+			<TexCoords x="0" y="0"/>
+			<TintColor r="50" g="50"  b="50" a="255"/>
+		</DynamicImage>
+
+		<DynamicImage name="SubVLine_Long" texture="VDotLine"  handleinput="false">
+			<Size>
+				<AbsPoint x="2" y="80" />
+			</Size>
+			<TexCoords x="0" y="0"/>
+			<TintColor r="50" g="50"  b="50" a="255"/>
+		</DynamicImage>
+
+		<DynamicImage name="SubHLine" texture="HDotLine"  handleinput="false">
+			<Size>
+				<AbsPoint x="20" y="2" />
+			</Size>
+			<TexCoords x="0" y="0"/>
+			<TintColor r="50" g="50"  b="50" a="255"/>
+		</DynamicImage>
+
+
+		<Button name="CategoryButton" backgroundtexture="UO_Core" highlighttexture="UO_Core">
+			<Size>
+				<AbsPoint x="30" y="24" />
+			</Size>
+			<TexCoords>
+				<Normal x="222" y="367" />
+				<NormalHighlit x="222" y="391" />
+				<Pressed x="222" y="391" />
+				<PressedHighlit x="222" y="391" />
+				<Disabled x="222" y="414" />
+			</TexCoords>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="CraftingTool.SearchCategory" />
+			</EventHandlers>
+		</Button>
+
+		<Window name="CraftTooltipTemplate" handleinput="false">
+			<Size>
+				<AbsPoint x="270" y="25" />
+			</Size>
+			<Windows>
+
+				<!-- Inner Frame Boilerplate -->
+				<FullResizeImage name="$parentBG" inherits="UO_Simple_Black_Background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<!-- End of Inner Frame Boilerplate -->
+
+				<Label name="$parentTitle" font="font_verdana_bold_shadow_med2_20" maxchars="512" textalign="center" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="270" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<Color  r="64" g="164" b="254" a="255" />
+				</Label>
+			</Windows>
+		</Window>
+		
+		<Window name="CraftTooltipItemTemplate" skipinput="true">
+			<Size>
+				<AbsPoint x="270" y="56" />
+			</Size>
+
+			<Windows>
+				<DynamicImage name="$parentTopLine" texture="HLine" >
+					<Size>
+						<AbsPoint x="266" y="2" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="2" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				<DynamicImage name="$parentIcon" >
+					<Size>
+						<AbsPoint x="56" y="56" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="$parentLeftLine" texture="VLine">
+					<Size>
+						<AbsPoint x="2" y="56" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="56" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<Label name="$parentName" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="center" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="200" y="56" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="61" y="-3" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+			</Windows>
+			<DynamicImage name="$parentBottomLine" texture="HLine">
+				<Size>
+					<AbsPoint x="266" y="2" />
+				</Size>
+				<TexCoords x="0" y="0"/>
+				<TintColor r="50" g="50"  b="50" a="255"/>
+				<Anchors>
+					<Anchor point="bottomleft" relativePoint="bottomleft" >
+						<AbsPoint x="2" y="0" />
+					</Anchor>
+				</Anchors>
+			</DynamicImage>
+		</Window>
+
+		<Window name="CraftRecipeTemplate" >
+			<Size>
+				<AbsPoint x="450" y="30" />
+			</Size>
+
+			<Windows>
+				<Window name="$parentLines" handleinput="false" layer="background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+					<Windows>
+
+						<DynamicImage name="$parentTopLine" texture="HLine" >
+							<Size>
+								<AbsPoint x="450" y="2" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+
+
+						<DynamicImage name="$parentLeftLine" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="30" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+						<DynamicImage name="$parentRightLine" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="30" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+						<DynamicImage name="$parentBottomLine" texture="HLine">
+							<Size>
+								<AbsPoint x="450" y="2" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="bottomleft" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+					</Windows>
+				</Window>
+
+
+				<Label name="$parentName" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="left" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="405" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="5" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="0" b="0" a="255" />
+				</Label>
+
+
+
+			</Windows>
+		</Window>
+
+		<Window name="CraftCategoryTemplate" >
+			<Size>
+				<AbsPoint x="450" y="30" />
+			</Size>
+
+			<Windows>
+				<Window name="$parentLines" handleinput="false" layer="background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+					<Windows>
+
+						<DynamicImage name="$parentTopLine" texture="HLine" >
+							<Size>
+								<AbsPoint x="450" y="2" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+
+
+						<DynamicImage name="$parentLeftLine" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="30" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+						<DynamicImage name="$parentRightLine" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="30" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+						<DynamicImage name="$parentRightLineIcon" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="30" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" >
+									<AbsPoint x="40" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+						<DynamicImage name="$parentBottomLine" texture="HLine">
+							<Size>
+								<AbsPoint x="450" y="2" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="bottomleft" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+					</Windows>
+				</Window>
+
+
+				<Label name="$parentName" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="left" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="405" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="45" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="64" g="164" b="254" a="255" />
+				</Label>
+
+
+				<Button name="$parentGoButton" inherits="CategoryButton"  >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="5" y="2" />
+						</Anchor>
+					</Anchors>
+				</Button>
+
+			</Windows>
+		</Window>
+
+		<Window name="CraftItemTemplate" skipinput="true">
+			<Size>
+				<AbsPoint x="960" y="80" />
+			</Size>
+
+			<Windows>
+
+
+				<DynamicImage name="$parentTopLine" texture="HLine">
+					<Size>
+						<AbsPoint x="960" y="2" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+
+
+				<DynamicImage name="$parentLeftLine" texture="VLine">
+					<Size>
+						<AbsPoint x="2" y="80" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="$parentRightLine" texture="VLine">
+					<Size>
+						<AbsPoint x="2" y="80" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+
+
+				<DynamicImage name="$parentIcon" >
+					<Size>
+						<AbsPoint x="80" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center"  relativeTo="$parentIconFrame">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.MaterialsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.DeleteTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+
+				<DynamicImage name="$parentRightLineIcon" texture="VLine">
+					<Size>
+						<AbsPoint x="2" y="80" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" >
+							<AbsPoint x="80" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+
+				<Label name="$parentName" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="top" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="250" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="85" y="10" />
+						</Anchor>
+					</Anchors>
+					<Color r="64" g="164" b="254" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.MaterialsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.DeleteTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<Label name="$parentAmount" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="top" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="250" y="13" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentName">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<Color r="0" g="164" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.MaterialsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.DeleteTooltip" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentMax" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="top" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="250" y="13" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentAmount">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="0" g="164" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.MaterialsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.DeleteTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<DynamicImage name="$parentRightLineName" texture="VLine">
+					<Size>
+						<AbsPoint x="2" y="80" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parentName" >
+							<AbsPoint x="5" y="-10" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<Window name="$parentCraftData" handleinput="true">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentName">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.MaterialsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.DeleteTooltip" />
+					</EventHandlers>
+					<Windows>
+						<Label name="$parentSkills" font="font_verdana_bold_shadow_med2_12" maxchars="512" textalign="topleft" draganddrop="false" wordwrap="true" >
+							<Size>
+								<AbsPoint x="160" y="70" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<DynamicImage name="$parentRightLineSkills" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="80" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parentSkills" >
+									<AbsPoint x="5" y="-10" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+						<Label name="$parentSuccess" font="font_verdana_bold_shadow_med2_12" maxchars="512" textalign="topleft" draganddrop="false" wordwrap="true" >
+							<Size>
+								<AbsPoint x="220" y="70" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parentSkills">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="255" b="255" a="255" />
+						</Label>
+						<DynamicImage name="$parentRightLineSuccess" texture="VLine">
+							<Size>
+								<AbsPoint x="2" y="80" />
+							</Size>
+							<TexCoords x="0" y="0"/>
+							<TintColor r="50" g="50"  b="50" a="255"/>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parentSuccess" >
+									<AbsPoint x="5" y="-10" />
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+
+					</Windows>
+				</Window>
+
+				<Label name="$parentInfo" font="font_verdana_bold_shadow_med2_14" maxchars="512" textalign="topleft" draganddrop="false" wordwrap="true" >
+					<Size>
+						<AbsPoint x="600" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentCraftData">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.MaterialsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.DeleteTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<Button name="$parentMake" inherits="CraftToolBigButtonMakeTemplate" >
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft"  relativeTo="$parentCraftDataSuccess">
+							<AbsPoint x="15" y="0" />
+						</Anchor>
+					</Anchors>
+				</Button>
+
+				<Button name="$parentMakeNumber" inherits="CraftToolBigButtonMakeTemplate" >
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft"  relativeTo="$parentMake">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Button>
+
+				<Button name="$parentMakeMax" inherits="CraftToolBigButtonMakeTemplate" >
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft"  relativeTo="$parentMakeNumber">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Button>
+
+				<DynamicImage name="$parentBottomLine" texture="HLine">
+					<Size>
+						<AbsPoint x="960" y="2" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<TintColor r="50" g="50"  b="50" a="255"/>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="bottomleft" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+			</Windows>
+		</Window>
+
+		<Button name="CraftToolMaterialButtonTemplate"  draganddrop="false" texturescale="3.7">
+			<Size>
+				<AbsPoint x="180" y="40" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+				<EventHandler event="OnMouseOverEnd" function="CraftingTool.MouseOverEnd" />
+			</EventHandlers>
+			<TexCoords>
+				<Normal texture="hud_image" x="0" y="754" />
+				<NormalHighlit texture="hud_image" x="50" y="754" />
+				<Disabled texture="hud_image" x="0" y="754" />
+				<Pressed texture="hud_image" x="0" y="754" />
+				<PressedHighlit texture="hud_image" x="50" y="754" />
+			</TexCoords>
+			<Windows>
+				<FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<DynamicImage name="$parentIcon" >
+					<Size>
+						<AbsPoint x="60" y="60" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" >
+							<AbsPoint x="5" y="5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+
+				<Label name="$parentLabel" font="font_verdana_bold_shadow_med2_16" maxchars="64" textalign="left" draganddrop="false" wordwrap="false" >
+					<Size>
+						<AbsPoint x="130" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIcon">
+							<AbsPoint x="5" y="-6" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+						<EventHandler event="OnMouseOverEnd" function="CraftingTool.MouseOverEnd" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Button>
+
+		<Button name="CraftToolSmallButtonTemplate"  draganddrop="false" texturescale="0.8">
+			<Size>
+				<AbsPoint x="40" y="40" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+			</EventHandlers>
+			<TexCoords>
+				<Normal texture="hud_image" x="0" y="754" />
+				<NormalHighlit texture="hud_image" x="50" y="754" />
+				<Disabled texture="hud_image" x="0" y="754" />
+				<Pressed texture="hud_image" x="0" y="754" />
+				<PressedHighlit texture="hud_image" x="50" y="754" />
+			</TexCoords>
+			<Windows>
+
+				<DynamicImage name="$parentIcon" >
+					<Size>
+						<AbsPoint x="40" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" >
+							<AbsPoint x="3" y="8" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+
+				<Label name="$parentLabel" font="font_verdana_bold_shadow_med2_15" maxchars="64" textalign="center" draganddrop="false" wordwrap="true" layer="overlay">
+					<Size>
+						<AbsPoint x="1" y="1" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="$parent">
+							<AbsPoint x="0" y="-8" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Button>
+
+		<Button name="CraftToolBigButtonTemplate"  draganddrop="false" texturescale="1.2">
+			<Size>
+				<AbsPoint x="60" y="60" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+			</EventHandlers>
+			<TexCoords>
+				<Normal texture="hud_image" x="0" y="754" />
+				<NormalHighlit texture="hud_image" x="50" y="754" />
+				<Disabled texture="hud_image" x="0" y="754" />
+				<Pressed texture="hud_image" x="0" y="754" />
+				<PressedHighlit texture="hud_image" x="50" y="754" />
+			</TexCoords>
+			<Windows>
+
+				<DynamicImage name="$parentIcon" >
+					<Size>
+						<AbsPoint x="60" y="60" />
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+
+				<Label name="$parentLabel" font="font_verdana_bold_shadow_med2_15" maxchars="64" textalign="center" draganddrop="false" wordwrap="true" layer="overlay">
+					<Size>
+						<AbsPoint x="60" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="$parent">
+							<AbsPoint x="0" y="-8" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Button>
+
+		<Button name="CraftToolBigButtonMakeTemplate"  draganddrop="false" texturescale="1.2">
+			<Size>
+				<AbsPoint x="60" y="60" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnLButtonUp" function="CraftingTool.Make" />
+				<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+			</EventHandlers>
+			<TexCoords>
+				<Normal texture="hud_image" x="0" y="754" />
+				<NormalHighlit texture="hud_image" x="50" y="754" />
+				<Disabled texture="hud_image" x="0" y="754" />
+				<Pressed texture="hud_image" x="0" y="754" />
+				<PressedHighlit texture="hud_image" x="50" y="754" />
+			</TexCoords>
+
+			<Windows>
+
+				<Label name="$parentLabel" font="font_verdana_bold_shadow_med2_17" maxchars="64" textalign="center" draganddrop="false" wordwrap="true" layer="overlay">
+					<Size>
+						<AbsPoint x="60" y="60" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="-3" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Button>
+
+		<Button name="CraftToolBigButtonLabelTemplate"  draganddrop="false" texturescale="1.2">
+			<Size>
+				<AbsPoint x="60" y="60" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+			</EventHandlers>
+			<TexCoords>
+				<Normal texture="hud_image" x="0" y="754" />
+				<NormalHighlit texture="hud_image" x="50" y="754" />
+				<Disabled texture="hud_image" x="0" y="754" />
+				<Pressed texture="hud_image" x="0" y="754" />
+				<PressedHighlit texture="hud_image" x="50" y="754" />
+			</TexCoords>
+
+			<Windows>
+
+				<Label name="$parentLabel" font="font_verdana_bold_shadow_med2_17" maxchars="64" textalign="center" draganddrop="false" wordwrap="true" layer="overlay">
+					<Size>
+						<AbsPoint x="60" y="60" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="-3" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Button>
+
+		<Window name="CraftingToolWindow" movable="true">
+			<Size>
+				<AbsPoint x="1200" y="700" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="ResizeWindow">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnShutdown" function="CraftingTool.Shutdown" />
+				<!--<EventHandler event="OnShown" function="CraftingTool.Show" />-->
+				<EventHandler event="OnHidden" function="CraftingTool.ClearAll" />
+				<EventHandler event="OnUpdate" function="CraftingTool.Update" />
+				<EventHandler event="OnRButtonUp" function="CraftingTool.Close" />
+				<EventHandler event="OnMouseWheel" function="EnhancePack.Scale" />
+				<EventHandler event="OnKeyEscape" function="CraftingTool.OnkeyEsc"/>
+			</EventHandlers>
+			<Windows>
+
+				<FullResizeImage name="$parentBackground" inherits="UO_Simple_Black_Background" layer="background" alpha="0.2">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<FullResizeImage name="$parentFrame" inherits="UO_Simple_Frame" layer="background" frameonly="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				
+				<ScrollWindow name="CraftingToolSW" childscrollwindow="CraftingToolSWScrollChild" scrollbar="CraftingToolSWScrollbar" lineheight="20" autoHideScrollBar="true" >
+					<Size>
+						<AbsPoint x="1170" y="400" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+							<AbsPoint x="15" y="20" />
+						</Anchor>
+
+					</Anchors>
+					<EventHandlers>
+						<!--
+						<EventHandler event="OnLButtonDown" function="NewChatWindow.OnLButtonDownJW" />
+						<EventHandler event="OnLButtonUp" function="NewChatWindow.OnLButtonUpJW" />
+						<EventHandler event="OnMouseOver" function="NewChatWindow.ShowAgain" />-->
+					</EventHandlers>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" layer="secondary"/>
+						<FullResizeImage name="$parentBackground" inherits="UO_Simple_Black_Background" layer="background" alpha="0.2">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+									<AbsPoint x="-5" y="-5" />
+								</Anchor>
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" >
+									<AbsPoint x="5" y="5" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<FullResizeImage name="$parentFrame" inherits="UO_Simple_Frame" layer="background" frameonly="false">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+									<AbsPoint x="-5" y="-5" />
+								</Anchor>
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" >
+									<AbsPoint x="5" y="5" />
+								</Anchor>
+							</Anchors>
+						</FullResizeImage>
+						<Window name="$parentScrollChild" popable="false" skipinput="true">
+							<Size>
+								<AbsPoint x="1150" y="285"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft">
+									<AbsPoint x="5" y="5" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+								<Window name="$parentCont" >
+									<Size>
+										<AbsPoint x="1150" y="0" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+									<Windows>
+
+
+									</Windows>
+								</Window>
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+
+				<EditBox name="$parentSearchBox" font="UO_DefaultText" taborder="1" maxchars="50" scrolling="horz" layer="overlay">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="CraftingToolSW">
+							<AbsPoint x="60" y="40" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnKeyEnter" function="CraftingTool.OnLButtonUpSearch" />
+						<EventHandler event="OnKeyEscape" function="CraftingTool.OnkeyEsc"/>
+					</EventHandlers>
+				</EditBox>
+				<Window name="$parentSearchBoxBG" handleinput="false">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentSearchBox" >
+							<AbsPoint x="-5" y="-5" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<!-- Inner Frame Boilerplate -->
+						<FullResizeImage name="$parentBG" inherits="UO_Simple_Black_Background">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" />
+								<Anchor point="bottomright" relativePoint="bottomright" />
+							</Anchors>
+						</FullResizeImage>
+						<FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" />
+								<Anchor point="bottomright" relativePoint="bottomright" />
+							</Anchors>
+						</FullResizeImage>
+						<!-- End of Inner Frame Boilerplate -->
+					</Windows>
+				</Window>
+				<Label name="$parentTotal" font="font_verdana_bold_shadow_small" maxchars="100" textalign="center" draganddrop="false">
+					<Size>
+						<AbsPoint x="250" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentSearchBoxBG">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Button name="$parentNextButton" inherits="UO_Default_SmallNextButton">
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomleft" relativeTo="$parentSearchBoxBG">
+							<AbsPoint x="5" y="-3" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.SearchTooltip" />
+						<EventHandler event="OnLButtonUp" function="CraftingTool.OnLButtonUpSearch" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentLatest" inherits="CraftToolBigButtonLabelTemplate" >
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft"  relativeTo="$parentNextButton">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.ShowLatest" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentCancelButton" backgroundtexture="UO_Core" highlighttexture="UO_Core" texturescale="1.1" layer="popup">
+					<Size>
+						<AbsPoint x="22" y="22" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentSearchBoxBG">
+							<AbsPoint x="-5" y="5" />
+						</Anchor>
+					</Anchors>
+					<TexCoords>
+						<Normal x="184" y="0" />
+						<NormalHighlit x="226" y="0" />
+						<Pressed x="205" y="0"  />
+						<PressedHighlit x="205" y="0" />
+						<Disabled x="163" y="0" />
+					</TexCoords>
+
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.RemoveFiltersTooltip" />
+						<EventHandler event="OnLButtonUp" function="CraftingTool.ClearAll" />
+					</EventHandlers>
+				</Button>
+
+
+
+				<Label name="$parentSearchText" font="font_verdana_bold_shadow_med2_18" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="top" relativePoint="bottom" relativeTo="$parentSearchBoxBG" >
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<!--
+				<Label name="$parentTitleText" font="font_verdana_bold_shadow_med2_36" textalign="center" handleinput="false" wordwrap="true" autoresizewidth="true" autoresize="true">
+					<Size>
+						<AbsPoint x="500" y="36" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent" >
+							<AbsPoint x="-200" y="20" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<Button name="$parentOptionsButton" inherits="UO_Default_Spring_Button" >
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentSearchText">
+							<AbsPoint x="-70" y="2" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.ShowSearchOptions" />
+						<EventHandler event="OnMouseOver" function="CraftingTool.OptionsButtonMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="ItemProperties.ClearMouseOverItem" />
+					</EventHandlers>
+				</Button>-->
+				
+
+				<FullResizeImage name="$parentDisableSW" inherits="UO_Simple_Black_Background" layer="overlay" alpha="0.5" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft"  relativeTo="CraftingToolSW"/>
+						<Anchor point="bottomright" relativePoint="bottomright"  relativeTo="CraftingToolSW"/>
+					</Anchors>
+				</FullResizeImage>
+
+				<Label name="$parentItemMade" font="font_verdana_bold_shadow_med2_13" maxchars="512" textalign="right" draganddrop="false" wordwrap="false" >
+					<Size>
+						<AbsPoint x="400" y="15" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="CraftingToolSW">
+							<AbsPoint x="0" y="3" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+
+				<Window name="$parentActiveSkill">
+					<Size>
+						<AbsPoint x="320" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSearchBox">
+							<AbsPoint x="-20" y="80" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<Button name="$parentRecipeSearch" inherits="CraftToolSmallButtonTemplate" >
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent" >
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="CraftingTool.CountRecipes" />
+							</EventHandlers>
+						</Button>
+
+						<ComboBox name="$parentCombo" inherits="UO_Default_LongComboBox" >
+							<Anchors>
+								<Anchor point="topright" relativePoint="topleft" relativeTo="$parentRecipeSearch">
+									<AbsPoint x="5" y="5" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="CraftingTool.ChangeActiveSkill" />
+							</EventHandlers>
+						</ComboBox>
+						<Label name="$parentLabel" font="font_verdana_bold_shadow_med2_18" textalign="center" handleinput="false" wordwrap="true">
+							<Size>
+								<AbsPoint x="140" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="top" relativePoint="bottom" relativeTo="$parentCombo">
+									<AbsPoint x="0" y="-10" />
+								</Anchor>
+							</Anchors>
+							<Color r="255" g="204" b="0" a="255" />
+						</Label>
+
+
+					</Windows>
+				</Window>
+
+				<Label name="$parentSkillLabel" font="font_verdana_bold_shadow_med2_15" textalign="right" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActiveSkill">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<Label name="$parentSkillValue" font="font_verdana_bold_shadow_med2_15" textalign="left" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentSkillLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentToolLabel" font="font_verdana_bold_shadow_med2_15" textalign="right" handleinput="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSkillLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<Label name="$parentToolValue" font="font_verdana_bold_shadow_med2_15" textalign="left" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentToolLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentAllToolLabel" font="font_verdana_bold_shadow_med2_15" textalign="right" handleinput="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentToolLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<Label name="$parentAllToolValue" font="font_verdana_bold_shadow_med2_15" textalign="left" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentAllToolLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentToolType" font="font_verdana_italic_shadow_med2_12" textalign="center" handleinput="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="180" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentAllToolLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Label name="$parentMaterialsLabel" font="font_verdana_bold_shadow_med2_15" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="140" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentActiveSkill">
+							<AbsPoint x="80" y="-20" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<Button name="$parentMaterials1" inherits="CraftToolMaterialButtonTemplate">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top"  relativeTo="$parentMaterialsLabel" >
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.MaterialsMenu" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentMaterials2" inherits="CraftToolMaterialButtonTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft"  relativeTo="$parentMaterials1" >
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.MaterialsMenu" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentSettings" inherits="CraftToolBigButtonTemplate" >
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright"  relativeTo="CraftingToolSW" >
+							<AbsPoint x="-80" y="40" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.SettingsMenu" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentMakeLast" inherits="CraftToolBigButtonLabelTemplate" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright"  relativeTo="$parentSettings">
+							<AbsPoint x="-40" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.MakeLast" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentSmelt" inherits="CraftToolBigButtonTemplate" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright"  relativeTo="$parentMakeLast">
+							<AbsPoint x="-40" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.SmeltItem" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentEnhance" inherits="CraftToolBigButtonTemplate" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright"  relativeTo="$parentSmelt">
+							<AbsPoint x="-40" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.EnhanceItem" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentRepair" inherits="CraftToolBigButtonTemplate" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright"  relativeTo="$parentEnhance">
+							<AbsPoint x="-40" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.RepairItem" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentAlter" inherits="CraftToolBigButtonTemplate" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright"  relativeTo="$parentRepair">
+							<AbsPoint x="-40" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="CraftingTool.AlterItem" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentCancelMakeButton" backgroundtexture="UO_Core" highlighttexture="UO_Core" texturescale="1.1" layer="popup">
+					<Size>
+						<AbsPoint x="23" y="23" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topleft" relativeTo="$parentEnhance">
+							<AbsPoint x="-25" y="15" />
+						</Anchor>
+					</Anchors>
+					<TexCoords>
+						<Normal x="184" y="0" />
+						<NormalHighlit x="226" y="0" />
+						<Pressed x="205" y="0"  />
+						<PressedHighlit x="205" y="0" />
+						<Disabled x="163" y="0" />
+					</TexCoords>
+
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="CraftingTool.ButtonsTooltip" />
+						<EventHandler event="OnLButtonUp" function="CraftingTool.CancelMake" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentCancelMakeLabel" font="font_verdana_bold_shadow_med2_15" textalign="left" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="150" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentCancelMakeButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="0" a="255" />
+				</Label>
+
+				<!--
+				<DynamicImage name="$parentSeparator1" texture="HLine"  texturescale="1.0" >
+					<Size>
+						<AbsPoint x="500" y="2" />
+					</Size>
+					<TexCoords x="0" y="0"/>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlter" >
+							<AbsPoint x="30" y="60" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				-->
+				<Label name="$parentWarningLabel" font="font_verdana_bold_shadow_med2_15" textalign="left" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="140" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentMaterials1">
+							<AbsPoint x="50" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="0" b="0" a="255" />
+				</Label>
+				<Label name="$parentWarningValue" font="font_verdana_italic_shadow_med2_15" textalign="left" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="500" y="90" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentWarningLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

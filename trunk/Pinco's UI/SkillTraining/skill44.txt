@@ -1,0 +1,12 @@
+
+0 - 30: Train at Tinker or Thief. 
+
+Arrange to have a tinker create 100 dart trapped boxes. You will need 3 different skill tinkerer levels: 50, 80, and 100. Arrange 20 boxes and put all the keys on a keyring for each backpack. Unlock and relock the boxes to activate the traps again. Make sure to wear a 70 physical resistance suit because you will be damaged on some failures. A method of healing will be needed also. 
+
+30 - 50: Use on 50 skill trapped boxes.
+ 
+50 - 80: Use on 80 skill trapped boxes. 
+
+80 - 100: Use on 100 skill trapped boxes. 
+
+It is best to train Remove Trap on a character with Tinkering so you can easily re-trap boxes you disarm

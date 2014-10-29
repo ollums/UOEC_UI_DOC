@@ -1,0 +1,1 @@
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/Crafting Tool", "CraftingTool.xml", "CraftingTool.xml" )

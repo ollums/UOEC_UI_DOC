@@ -1,0 +1,62 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="MobHBHighlight" file="Textures/Pinco/curr_tgt.dds"/>
+  </Assets>
+	<Windows>
+		<AnimatedImage name="MobHBHighlightEffect" fps="24" texture="MobHBHighlight" movable="false" handleinput="false" layer="popup" poppable="false" sticky="false">
+			<Size>
+				<AbsPoint x="190" y="50"/>
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			<AnimFrames>
+<AnimFrame id="1" x="0" y="0" />
+<AnimFrame id="2" x="200" y="0" />
+<AnimFrame id="3" x="400" y="0" />
+<AnimFrame id="4" x="600" y="0" />
+<AnimFrame id="5" x="800" y="0" />
+<AnimFrame id="6" x="1000" y="0" />
+<AnimFrame id="7" x="1200" y="0" />
+<AnimFrame id="8" x="1400" y="0" />
+<AnimFrame id="9" x="1600" y="0" />
+<AnimFrame id="10" x="1800" y="0" />
+<AnimFrame id="11" x="2000" y="0" />
+<AnimFrame id="12" x="2200" y="0" />
+<AnimFrame id="13" x="2400" y="0" />
+<AnimFrame id="14" x="2600" y="0" />
+<AnimFrame id="15" x="2800" y="0" />
+<AnimFrame id="16" x="3000" y="0" />
+<AnimFrame id="17" x="3200" y="0" />
+<AnimFrame id="18" x="3400" y="0" />
+<AnimFrame id="19" x="3600" y="0" />
+<AnimFrame id="20" x="3800" y="0" />
+<AnimFrame id="21" x="4000" y="0" />
+<AnimFrame id="22" x="4200" y="0" />
+<AnimFrame id="23" x="4400" y="0" />
+<AnimFrame id="24" x="4600" y="0" />
+<AnimFrame id="25" x="4800" y="0" />
+<AnimFrame id="26" x="5000" y="0" />
+<AnimFrame id="27" x="5200" y="0" />
+<AnimFrame id="28" x="5400" y="0" />
+<AnimFrame id="29" x="5600" y="0" />
+<AnimFrame id="30" x="5800" y="0" />
+<AnimFrame id="31" x="0" y="60" />
+<AnimFrame id="32" x="200" y="60" />
+<AnimFrame id="33" x="400" y="60" />
+<AnimFrame id="34" x="600" y="60" />
+<AnimFrame id="35" x="800" y="60" />
+<AnimFrame id="36" x="1000" y="60" />
+<AnimFrame id="37" x="1200" y="60" />
+<AnimFrame id="38" x="1400" y="60" />
+<AnimFrame id="39" x="1600" y="60" />
+<AnimFrame id="40" x="1800" y="60" />
+
+
+			</AnimFrames>
+		</AnimatedImage>
+
+	</Windows>
+</Interface>

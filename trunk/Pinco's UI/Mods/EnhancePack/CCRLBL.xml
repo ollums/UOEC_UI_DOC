@@ -1,0 +1,11 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+    <Label name="CCRLBL" font="font_verdana_bold_shadow_med" maxchars="200" textalign="left"   handleinput="true" wordwrap="true" linespacing="18" layer="background">
+      <Size>
+        <AbsPoint x="300" y="20" />
+      </Size>
+      <Color r="13" g="56" b="77" a="100" />
+    </Label>
+			
+	</Windows>
+</Interface>

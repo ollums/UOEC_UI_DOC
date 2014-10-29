@@ -1,0 +1,14 @@
+
+0 - 20: Arcane Circle
+
+20 - 32: Thunderstorm
+
+32 - 38: Reaper Form
+
+38 - 65: Summon Fey
+
+65 - 83: Essence of Wind
+
+83 - 92: Wildfire
+
+92 - 120: Word of Death

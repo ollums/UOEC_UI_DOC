@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="CrystalBG" file="CrystalBallBase.dds" />
+    <Texture name="CrystalRear" file="CrystalBallRear.dds" />
+<!-- CITIES -->
+    <Texture name="bucsden" file="Locations/bucsden.dds" />
+    <Texture name="britain" file="Locations/britain.dds" />
+    <Texture name="cove" file="Locations/cove.dds" />
+    <Texture name="delucia" file="Locations/delucia.dds" />
+    <Texture name="haven" file="Locations/haven.dds" />
+    <Texture name="jhelom" file="Locations/jhelom.dds" />
+    <Texture name="magincia" file="Locations/magincia.dds" />
+    <Texture name="minoc" file="Locations/minoc.dds" />
+    <Texture name="moonglow" file="Locations/moonglow.dds" />
+    <Texture name="nujelm" file="Locations/nujelm.dds" />
+    <Texture name="ocllo" file="Locations/ocllo.dds" />
+    <Texture name="papua" file="Locations/papua.dds" />
+    <Texture name="serpent" file="Locations/serpent.dds" />
+    <Texture name="skara" file="Locations/skara.dds" />
+    <Texture name="trinsic" file="Locations/trinsic.dds" />
+    <Texture name="vesper" file="Locations/vesper.dds" />
+    <Texture name="wind" file="Locations/wind.dds" />
+    <Texture name="yew" file="Locations/yew.dds" />
+    <Texture name="luna" file="Locations/luna.dds" />
+    <Texture name="umbra" file="Locations/umbra.dds" />
+    <Texture name="zento" file="Locations/zento.dds" />
+    <Texture name="royal" file="Locations/royal.dds" />
+    <Texture name="verlor" file="Locations/verlor.dds" />
+
+    <!-- Moongate -->
+    <Texture name="britain_moon" file="Locations/britain_moon.dds" />
+    <Texture name="haven_moon" file="Locations/haven_moon.dds" />
+    <Texture name="bucsden_moon" file="Locations/bucsden_moon.dds" />
+    <Texture name="jhelom_moon" file="Locations/jhelom_moon.dds" />
+    <Texture name="magincia_moon" file="Locations/magincia_moon.dds" />
+    <Texture name="minoc_moon" file="Locations/minoc_moon.dds" />
+    <Texture name="moonglow_moon" file="Locations/moonglow_moon.dds" />
+    <Texture name="skara_moon" file="Locations/skara_moon.dds" />
+    <Texture name="trinsic_moon" file="Locations/trinsic_moon.dds" />
+    <Texture name="yew_moon" file="Locations/yew_moon.dds" />
+    <Texture name="compassion" file="Locations/compassion.dds" />
+    <Texture name="honesty" file="Locations/honesty.dds" />
+    <Texture name="honor" file="Locations/honor.dds" />
+    <Texture name="humility" file="Locations/humility.dds" />
+    <Texture name="justice" file="Locations/justice.dds" />
+    <Texture name="sacrifice" file="Locations/sacrifice.dds" />
+    <Texture name="spirituality" file="Locations/spirituality.dds" />
+    <Texture name="valor" file="Locations/valor.dds" />
+    <Texture name="chaos" file="Locations/chaos.dds" />
+    <Texture name="luna_moon" file="Locations/luna_moon.dds" />
+    <Texture name="umbra_moon" file="Locations/umbra_moon.dds" />
+    <Texture name="isamu" file="Locations/isamu.dds" />
+    <Texture name="makoto" file="Locations/makoto.dds" />
+    <Texture name="homare" file="Locations/homare.dds" />
+    <Texture name="royal_moon" file="Locations/royal_moon.dds" />
+
+    <!-- Dungeons -->
+    <Texture name="covetous" file="Locations/covetous.dds" />
+    <Texture name="deceit" file="Locations/deceit.dds" />
+    <Texture name="despise" file="Locations/despise.dds" />
+    <Texture name="destard" file="Locations/destard.dds" />
+    <Texture name="ice" file="Locations/ice.dds" />
+    <Texture name="fire" file="Locations/fire.dds" />
+    <Texture name="hythloth" file="Locations/hythloth.dds" />
+    <Texture name="orccave" file="Locations/orccave.dds" />
+    <Texture name="shame" file="Locations/shame.dds" />
+    <Texture name="wrong" file="Locations/wrong.dds" />
+    <Texture name="doom" file="Locations/doom.dds" />
+    <Texture name="citadel" file="Locations/citadel.dds" />
+    <Texture name="fandancer" file="Locations/fandancer.dds" />
+    <Texture name="yomotsu" file="Locations/yomotsu.dds" />
+    <Texture name="bedlam" file="Locations/bedlam.dds" />
+    <Texture name="labyrinth" file="Locations/labyrinth.dds" />
+    <Texture name="underworld" file="Locations/underworld.dds" />
+    <Texture name="abyss" file="Locations/abyss.dds" />
+    <Texture name="wind_dung" file="Locations/wind_dung.dds" />
+	  <Texture name="grove" file="Locations/grove.dds" />
+	  <Texture name="caves" file="Locations/caves.dds" />
+	  <Texture name="palace" file="Locations/palace.dds" />
+	  <Texture name="prism" file="Locations/prism.dds" />
+	  <Texture name="sanctuary" file="Locations/sanctuary.dds" />
+  </Assets>
+  <Scripts>
+    <Script file="CrystalPortal.lua" />
+  </Scripts>
+  <Windows>
+    <Label name="CP_ItemTitle" font="UO_DefaultText" linespacing="20" autoresize="true" wordwrap="true" maxchars="64" textalign="left">
+      <Color r="255" g="255" b="255" a="255" />
+      <EventHandlers>
+        <EventHandler event="OnMouseOver" function="CrystalPortal.LabelOnMouseOver" />
+      </EventHandlers>
+    </Label>
+    <Window name="CP_LabelRadioButton">
+      <Size>
+        <AbsPoint x="350" y="32" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonDown" function="CrystalPortal.CheckEnable" />
+      </EventHandlers>
+      <Windows>
+        <Button name="$parentButton" backgroundtexture="UO_Core" highlighttexture="UO_Core" >
+          <Size>
+            <AbsPoint x="22" y="22" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left">
+              <AbsPoint x="5" y="0"/>
+            </Anchor>
+          </Anchors>
+          <TexCoords>
+            <Normal x="166" y="25" />
+            <NormalHighlit x="166" y="25" />
+            <Pressed x="193" y="25" />
+            <PressedHighlit x="193" y="25" />
+            <Disabled x="166" y="25" />
+          </TexCoords>
+          <EventHandlers>
+            <EventHandler event="OnLButtonDown" function="CrystalPortal.CheckEnable" />
+          </EventHandlers>
+        </Button>
+        <Label name="$parentLabel" inherits="CP_ItemTitle">
+          <Size>
+            <AbsPoint x="700" y="16" />
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentButton">
+              <AbsPoint x="10" y="0" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255" a="255" />
+        </Label>
+        <EventHandlers>
+          <EventHandler event="OnLButtonDown" function="CrystalPortal.CheckEnable" />
+        </EventHandlers>
+      </Windows>
+    </Window>
+    
+    <Window name="CrystalPortal" movable="true" layer="popup">
+      <Size>
+        <AbsPoint x="663" y="500" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="ResizeWindow">
+          <AbsPoint x="10" y="-20"/>
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="CrystalPortal.Initialize" />
+        <EventHandler event="OnShown" function="CrystalPortal.OnShown" />
+        <EventHandler event="OnShutdown" function="CrystalPortal.Shutdown" />
+      </EventHandlers>
+      <Windows>
+        <!-- Default chrome. Alter this at your own peril. -->
+        <Window name="$parentChrome" inherits="UO_DefaultWindow" frameonly="false">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" />
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+        </Window>
+        
+        <Window name="$parentTrammel" inherits="CP_LabelRadioButton" >
+          <Size>
+            <AbsPoint x="150" y="32" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="center" relativeTo="$parent">
+              <AbsPoint x="-200" y="100" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parentFelucca" inherits="CP_LabelRadioButton" >
+          <Size>
+            <AbsPoint x="150" y="32" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright" relativeTo="$parentTrammel">
+              <AbsPoint x="150" y="0" />
+            </Anchor>
+          </Anchors>
+        </Window>
+
+        <FullResizeImage name="$parentGoldLine1" inherits="UO_Default_Horizontal_Gold_Line" layer="popup">
+          <Size>
+            <AbsPoint x="300" y="2" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="center" relativeTo="$parent">
+              <AbsPoint x="-150" y="160" />
+            </Anchor>
+          </Anchors>
+        </FullResizeImage>
+
+        <Window name="$parentBank" inherits="CP_LabelRadioButton" >
+          <Size>
+            <AbsPoint x="150" y="32" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="center" relativeTo="$parentGoldLine1">
+              <AbsPoint x="-60" y="60" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parentMoongate" inherits="CP_LabelRadioButton" >
+          <Size>
+            <AbsPoint x="150" y="32" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright" relativeTo="$parentBank">
+              <AbsPoint x="150" y="0" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parentDungeon" inherits="CP_LabelRadioButton" >
+          <Size>
+            <AbsPoint x="150" y="32" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="center" relativeTo="$parentBank">
+              <AbsPoint x="0" y="60" />
+            </Anchor>
+          </Anchors>
+        </Window>
+
+        <FullResizeImage name="$parentGoldLine2" inherits="UO_Default_Horizontal_Gold_Line" layer="popup">
+          <Size>
+            <AbsPoint x="300" y="2" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="center" relativeTo="$parentBank">
+              <AbsPoint x="60" y="120" />
+            </Anchor>
+          </Anchors>
+        </FullResizeImage>
+
+          <Label name="$parentDestLabel" inherits="CP_ItemTitle" >
+            <Size>
+              <AbsPoint x="250" y="20" />
+            </Size>
+            <Anchors>
+              <Anchor point="top" relativePoint="center" relativeTo="$parentGoldLine2">
+                <AbsPoint x="0" y="50" />
+              </Anchor>
+            </Anchors>
+            <Color r="255" g="255" b="255" a="255" />
+          </Label>
+          <ComboBox name="$parentDestCombo" inherits="UO_Default_LongComboBox" >
+            <Anchors>
+              <Anchor point="top" relativePoint="center" relativeTo="$parentDestLabel">
+                <AbsPoint x="0" y="60" />
+              </Anchor>
+            </Anchors>
+            <EventHandlers>
+              <EventHandler event="OnSelChanged" function="CrystalPortal.ChangeImage" />
+            </EventHandlers>
+          </ComboBox>
+          <Button name="$parentGo" inherits="UO_Default_GumpButton" >
+            <Anchors>
+              <Anchor point="top" relativePoint="center" relativeTo="$parentDestCombo">
+                <AbsPoint x="0" y="60" />
+              </Anchor>
+            </Anchors>
+            <EventHandlers>
+                <EventHandler event="OnLButtonUp" function="CrystalPortal.GO"/>
+            </EventHandlers>
+        </Button>
+
+        <DynamicImage name="$parentBG" texture="CrystalBG" layer="overlay">
+          <Size>
+            <AbsPoint x="313" y="466" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+              <AbsPoint x="-20" y="35" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0" />
+        </DynamicImage>
+        <DynamicImage name="$parentImage" layer="default" poppable= "false"> 
+          <Size>
+            <AbsPoint x="294" y="294" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBG">
+              <AbsPoint x="8" y="16" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0" />
+        </DynamicImage>
+        <DynamicImage name="$parentRear" texture="CrystalRear" layer="background">
+          <Size>
+            <AbsPoint x="300" y="230" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parentBG">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0" />
+        </DynamicImage>
+        
+      </Windows>
+      
+    </Window>
+    
+  </Windows>
+</Interface>

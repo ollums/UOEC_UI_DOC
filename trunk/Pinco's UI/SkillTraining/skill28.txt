@@ -1,0 +1,2 @@
+
+To train Item Identification, use the skill and target an item. Each attempt has a chance to raise the skill.

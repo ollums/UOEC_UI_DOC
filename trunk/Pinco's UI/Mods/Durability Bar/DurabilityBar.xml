@@ -1,0 +1,258 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="DurabilityBar.lua" />
+  </Scripts>
+  <Windows>
+    <Button name="ShowItemsButtonTemplate" inherits="UO_Default_SmallNextButton">
+      <Size>
+        <AbsPoint x="34" y="23" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="DurabilityBar.ShowItems" />
+        <EventHandler event="OnRButtonUp" function="DurabilityBar.RContextMenu" />
+        <EventHandler event="OnMouseOver" function="DurabilityBar.ShowItemsToolTip" />
+        <EventHandler event="OnMouseOverEnd" function="DurabilityBar.ShowPetToolTipEnd" />
+      </EventHandlers>
+    </Button>
+
+    <Button name="HideItemsButtonTemplate" inherits="UO_Default_SmallPreviousButton">
+      <Size>
+        <AbsPoint x="34" y="23" />
+      </Size>
+
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="DurabilityBar.HideItems" />
+        <EventHandler event="OnRButtonUp" function="DurabilityBar.RContextMenu" />
+        <EventHandler event="OnMouseOver" function="DurabilityBar.HideItemsToolTip" />
+        <EventHandler event="OnMouseOverEnd" function="DurabilityBar.HidePetToolTipEnd" />
+      </EventHandlers>
+    </Button>
+
+    <Button name="ShowItemsButtonTemplateR" inherits="UO_Default_SmallPreviousButton">
+      <Size>
+        <AbsPoint x="34" y="23" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="DurabilityBar.ShowItems" />
+        <EventHandler event="OnRButtonUp" function="DurabilityBar.RContextMenu" />
+        <EventHandler event="OnMouseOver" function="DurabilityBar.ShowItemsToolTip" />
+        <EventHandler event="OnMouseOverEnd" function="DurabilityBar.ShowPetToolTipEnd" />
+      </EventHandlers>
+    </Button>
+
+    <Button name="HideItemsButtonTemplateR" inherits="UO_Default_SmallNextButton">
+      <Size>
+        <AbsPoint x="34" y="23" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="DurabilityBar.HideItems" />
+        <EventHandler event="OnRButtonUp" function="DurabilityBar.RContextMenu" />
+        <EventHandler event="OnMouseOver" function="DurabilityBar.HideItemsToolTip" />
+        <EventHandler event="OnMouseOverEnd" function="DurabilityBar.HidePetToolTipEnd" />
+      </EventHandlers>
+    </Button>
+
+    <Window name="DurabilityBar" layer="background" movable="true" handleinput="true">
+      <Size>
+        <AbsPoint x="190" y="37" />
+      </Size>
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft">
+          <AbsPoint x="0" y="200" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="DurabilityBar.Initialize" />
+        <EventHandler event="OnShutdown" function="DurabilityBar.Shutdown" />
+        <EventHandler event="OnLButtonDown" function="DurabilityBar.OnMouseDrag" />
+        <EventHandler event="OnMouseWheel" function="DurabilityBar.Scale" />
+        <EventHandler event="OnUpdate" function="DurabilityBar.Update" />
+      </EventHandlers>
+      <Windows>
+        <Window name="$parentHideView" moveable="false">
+          <Size>
+            <AbsPoint x="40" y="37" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+
+          <Windows>
+            <Button name="$parentShowButton" inherits="ShowItemsButtonTemplate">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft">
+                  <AbsPoint x="10" y="0" />
+                </Anchor>
+              </Anchors>
+            </Button>
+            <Button name="$parentShowButtonR" inherits="ShowItemsButtonTemplateR">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft">
+                  <AbsPoint x="10" y="0" />
+                </Anchor>
+              </Anchors>
+            </Button>
+            <Label name="$parentName" font="font_sagoe_bold_shadow_med" maxchars="16" textalign="left" handleinput="false" wordwrap="true" linespacing="18" autoresize="true" autoresizewidth="true">
+              <Size>
+                <AbsPoint x="150" y="0" />
+              </Size>
+              <Anchors>
+                <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent">
+                  <AbsPoint x="10" y="-20" />
+                </Anchor>
+              </Anchors>
+            </Label>
+          </Windows>
+        </Window>
+
+        <Window name="$parentShowView" movable="false">
+          <Size>
+            <AbsPoint x="190" y="37" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+
+          <Windows>
+
+            <DynamicImage name="$parentTitleBar" texture="HealthbarBg" layer="background" alpha="0.3" textureScale="2">
+              <Size>
+                <AbsPoint x="190" y="37" />
+              </Size>
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"  />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"  />
+              </Anchors>
+            </DynamicImage>
+
+            <FullResizeImage name="$parentFrame" inherits="UO_Simple_Frame" layer="background" frameonly="false">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" />
+                <Anchor point="bottomright" relativePoint="bottomright" />
+              </Anchors>
+            </FullResizeImage>
+
+            <Label name="$parentName" font="font_sagoe_bold_shadow_18" maxchars="16" textalign="center" handleinput="false" wordwrap="true" linespacing="18">
+              <Size>
+                <AbsPoint x="150" y="10" />
+              </Size>
+              <Anchors>
+                <Anchor point="top" relativePoint="top">
+                  <AbsPoint x="0" y="5" />
+                </Anchor>
+              </Anchors>
+            </Label>
+
+            <!-- Left arrow circle button -->
+            <Button name="$parentHideButton" inherits="HideItemsButtonTemplate" >
+              <Anchors>
+                <Anchor point="topright" relativePoint="topleft">
+                  <AbsPoint x="-37" y="7" />
+                </Anchor>
+              </Anchors>
+            </Button>
+            <Button name="$parentHideButtonR" inherits="HideItemsButtonTemplateR" >
+              <Anchors>
+                <Anchor point="topright" relativePoint="topleft">
+                  <AbsPoint x="-37" y="7" />
+                </Anchor>
+              </Anchors>
+            </Button>
+            
+          </Windows>
+        </Window>
+
+      </Windows>
+    </Window>
+    <!--End of DurabilityBar -->
+
+
+    
+    
+    <Window name="ItemHealthBar" movable="false" draganddrop="true">
+      <Size>
+        <AbsPoint x="190" y="30" />
+      </Size>
+      <Windows>
+        <FullResizeImage name="$parentBackground" inherits="UO_Simple_Black_Background" layer="background" alpha="0.5">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" />
+            <Anchor point="bottomright" relativePoint="bottomright" />
+          </Anchors>
+        </FullResizeImage>
+        <FullResizeImage name="$parentFrame" inherits="UO_Simple_Frame" layer="background" frameonly="false">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" />
+            <Anchor point="bottomright" relativePoint="bottomright" />
+          </Anchors>
+        </FullResizeImage>
+       
+       
+        
+        <Label name="$parentName" font="comics_bold_14" maxchars="60" textalign="center" handleinput="false" wordwrap="false" linespacing="18" popable="false">
+          <Size>
+            <AbsPoint x="180" y="16" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBackground">
+              <AbsPoint x="5" y="0" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255" a="255" />
+        </Label>
+
+        <StatusBar name="$parentHealthBar" foreground="RedLine" handleinput="false" layer="overlay">
+          <Size>
+            <AbsPoint x="130" y="10" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottom" relativePoint="center" relativeTo="$parent">
+              <AbsPoint x="0" y="-20" />
+            </Anchor>
+          </Anchors>
+        </StatusBar>
+
+		  <StatusBar name="$parentHealthBartotal" foreground="RedLine" handleinput="false">
+			  <Size>
+				  <AbsPoint x="130" y="10" />
+			  </Size>
+			  <Anchors>
+				  <Anchor point="bottom" relativePoint="center" relativeTo="$parent">
+					  <AbsPoint x="0" y="-20" />
+				  </Anchor>
+			  </Anchors>
+		  </StatusBar>
+       
+     
+        <Label name="$parentHealthBarPerc" font="font_verdana_bold_shadow_small" maxchars="50" textalign="center" handleinput="false" wordwrap="false" linespacing="18" popable="false" layer="overlay">
+          <Size>
+            <AbsPoint x="130" y="10" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentHealthBar">
+              <AbsPoint x="5" y="-5" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255" a="255" />
+        </Label>
+      </Windows>
+      <EventHandlers>
+        <EventHandler event="OnShutdown" function="DurabilityBar.OnShutDown" />
+        <EventHandler event="OnLButtonDown" function="DurabilityBar.OnLButtonDown" />
+        <EventHandler event="OnLButtonDblClk" function="DurabilityBar.OnLButtonDblClk" />
+        <EventHandler event="OnRButtonUp" function="DurabilityBar.OnRButtonUp" />
+        <EventHandler event="OnMouseOver" function="DurabilityBar.OnMouseOver" />
+        <EventHandler event="OnMouseOverEnd" function="DurabilityBar.OnMouseOverEnd" />
+        <EventHandler event="OnMouseWheel" function="DurabilityBar.Scale" />
+      </EventHandlers>
+    </Window>
+  
+
+  </Windows>
+  
+  
+</Interface>

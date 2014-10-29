@@ -1,0 +1,7 @@
+
+You can choose 1 of these 2 options:
+
+1. Chop trees	
+2. Attack creatures with an axe.
+
+|GOLEM|

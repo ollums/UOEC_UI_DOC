@@ -1,0 +1,8 @@
+
+0 - 40: Train at NPC Healer in New Haven. 
+
+40 - 60: Heal a damaged player. 
+
+60 - 80: Cure a normal poisoned player, using a poison trap box is best. 
+
+80 - 120: Resurrect a dead player (they don't have to accept the resurrection and you will still gain).

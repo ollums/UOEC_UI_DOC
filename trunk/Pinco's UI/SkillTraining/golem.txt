@@ -1,0 +1,30 @@
+
+						--- Setup ---
+
+1.	Acquire a 100% poison weapon in your skill. Make sure that the weapon you get does not have any hit spell on it. If it does, it will make this method unfeasible.
+
+2.	Acquire a GM Tinker made Golem. Hopefully you have a friend who has GM tinkering, and they can make you one. If not, they shouldn't cost too much.
+
+3.	Once you have your Golem, have someone with 110 Animal Lore find out what its wrestling skill is. The value of this number is revealed in the next step.
+
+4.	Acquire a set of +20 (or greater) jewelry in your melee skill. Your goal with this is that when you put on the jewelry, your skill should be between 10 and 20 points lower than the Wrestling on the Golem at all times. This is to maximize gains. At 40-70 skill you will likely have to use jewelry to boost your fighting skill into the proper range.
+
+5.	Join a guild if you are not in one already. You can also start your own which is not very costly.
+
+						--- The Trick ---
+
+·	Grab your Golem and stand someplace. The popular place for this training is outside the Luna bank.
+
+·	Equip your weapon and jewelry. Remember your skill should be no farther than 20 below the Golem's wrestling.
+
+·	Say "all guard me". This will make your golem highlight green to you.
+
+·	Say "all stop". This will make the golem stop guarding you, with new pet commands you say "all follow me" and golem never attacks you and will always follow you.
+
+·	Use the Context Menu on the golem and select the "kill/attack" option and target yourself, then say "all stop".
+
+If you do this right, the Golem should stop attacking you right away and you should start to gain. Please be aware, you may have to go through steps 3-5 several times before it works right. If you keep getting hit, just keep using the 'all stop' command. 
+
+As your skill increases you should remove the skill enhancement jewelry as needed. Eventually you will surpass the Golem's skill. This is okay because as long as you are 20 points below or above your opponents fighting skill, you can gain your own. 
+
+Note: While this method can be fully automated, it is important not to train unattended.

@@ -1,0 +1,13 @@
+
+Provoke 2 of the following creatures:
+
+0 - 30: Train at NPC Bard.
+
+30 - 40: Cows, Hinds, Sheep, most farm animals 
+
+40 - 65: Bulls, Scorpions, Great Harts, Polar Bears 
+
+65 - 90: Giant Beetles
+
+90 - 120: Take the Provocation Mastery from Britain Conservatory, then continuously cast a provocation spell.
+Having an high Mana Regeneration suit combined with Meditation and possibly Focus will grants a faster training.

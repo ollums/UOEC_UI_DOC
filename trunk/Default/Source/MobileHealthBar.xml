@@ -1,0 +1,86 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="Source/MobileHealthBar.lua" />
+	</Scripts>
+	<Windows>
+		<Window name="MobileHealthBar" movable="false" draganddrop="true">
+			<Size>
+				<AbsPoint x="175" y="55" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="UO_Simple_Black_Background" layer="background" alpha="0.5">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<FullResizeImage name="$parentFrame" inherits="UO_Simple_Frame" layer="background" frameonly="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<Button name="$parentCloseButton" backgroundtexture="UO_Core" highlighttexture="UO_Core" texturescale="1.28" layer="popup">
+					<Size>
+						<AbsPoint x="9" y="9" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" />
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="MobileHealthBar.CloseWindow" />
+					</EventHandlers>
+					<TexCoords>
+						<Normal x="182" y="309" />
+						<NormalHighlit x="182" y="275" />
+						<Pressed x="182" y="309"  />
+						<PressedHighlit x="182" y="275" />
+						<Disabled x="182" y="309" />
+					</TexCoords>
+				</Button>
+				<Label name="$parentName" font="UO_DefaultText" maxchars="60" textalign="left" handleinput="false" wordwrap="false" linespacing="18" popable="false">
+					<Size>
+						<AbsPoint x="145" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="25" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentHealthBarLabel" font="UO_DefaultText" maxchars="2" textalign="center" handleinput="false" wordwrap="false" linespacing="18" popable="false">
+					<Size>
+						<AbsPoint x="16" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="5" y="25" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<StatusBar name="$parentHealthBar" inherits="TargetStatusBar" handleinput="false">
+					<Size>
+						<AbsPoint x="140" y="6" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="25" y="32" />
+						</Anchor>
+					</Anchors>
+				</StatusBar>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnShutdown" function="MobileHealthBar.OnShutdown" />
+				<EventHandler event="OnLButtonDown" function="MobileHealthBar.OnLButtonDown" />
+				<EventHandler event="OnLButtonUp" function="MobileHealthBar.OnLButtonUp" />
+				<EventHandler event="OnLButtonDblClk" function="MobileHealthBar.OnLButtonDblClk" />
+				<EventHandler event="OnRButtonUp" function="MobileHealthBar.OnRButtonUp" />
+				<EventHandler event="OnMouseDrag" function="MobileHealthBar.OnMouseDrag" />
+				<EventHandler event="OnMouseOver" function="MobileHealthBar.OnMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="MobileHealthBar.OnMouseOverEnd" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

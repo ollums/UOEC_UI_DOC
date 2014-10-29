@@ -1,0 +1,440 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="diablo_health" file="DiabloHealth.dds" />
+    <Texture name="StoneBackground" file="StoneBackground.dds" />
+    <Texture name="DiabloStamina" file="stamina.dds" />
+    <Texture name="AlwaysRun" file="alwaysrun.dds" />
+	  <Texture name="Bleed" file="bleed.dds" />
+    <Texture name="Medit" file="Meditation.dds" />
+    <Texture name="MindRot" file="mindRot.dds" />
+    <Texture name="BloodOath" file="bloodOath.dds" />
+  </Assets>
+  <Windows>
+    <AnimatedImage name="BloodOathEffect" fps="24" texture="BloodOath" movable="false" handleinput="false" layer="popup" poppable="false" sticky="false">
+      <Size>
+        <AbsPoint x="232" y="188"/>
+      </Size>
+      <AnimFrames>
+        <AnimFrame id="1" x="0" y="0" />
+        <AnimFrame id="2" x="242" y="0" />
+        <AnimFrame id="3" x="484" y="0" />
+        <AnimFrame id="4" x="726" y="0" />
+        <AnimFrame id="5" x="968" y="0" />
+        <AnimFrame id="6" x="1210" y="0" />
+        <AnimFrame id="7" x="1452" y="0" />
+        <AnimFrame id="8" x="1694" y="0" />
+        <AnimFrame id="9" x="1936" y="0" />
+        <AnimFrame id="10" x="2178" y="0" />
+        <AnimFrame id="11" x="2420" y="0" />
+        <AnimFrame id="12" x="2662" y="0" />
+        <AnimFrame id="13" x="2904" y="0" />
+        <AnimFrame id="14" x="3146" y="0" />
+        <AnimFrame id="15" x="3388" y="0" />
+        <AnimFrame id="16" x="3630" y="0" />
+        <AnimFrame id="17" x="3872" y="0" />
+        <AnimFrame id="18" x="4114" y="0" />
+        <AnimFrame id="19" x="4356" y="0" />
+        <AnimFrame id="20" x="4598" y="0" />
+        <AnimFrame id="21" x="4840" y="0" />
+        <AnimFrame id="22" x="5082" y="0" />
+        <AnimFrame id="23" x="5324" y="0" />
+        <AnimFrame id="24" x="5566" y="0" />
+        <AnimFrame id="25" x="5808" y="0" />
+        <AnimFrame id="26" x="6050" y="0" />
+        <AnimFrame id="27" x="6292" y="0" />
+        <AnimFrame id="28" x="6534" y="0" />
+        <AnimFrame id="29" x="6776" y="0" />
+        <AnimFrame id="30" x="7018" y="0" />
+        <AnimFrame id="31" x="0" y="198" />
+        <AnimFrame id="32" x="242" y="198" />
+        <AnimFrame id="33" x="484" y="198" />
+        <AnimFrame id="34" x="726" y="198" />
+        <AnimFrame id="35" x="968" y="198" />
+        <AnimFrame id="36" x="1210" y="198" />
+        <AnimFrame id="37" x="1452" y="198" />
+        <AnimFrame id="38" x="1694" y="198" />
+        <AnimFrame id="39" x="1936" y="198" />
+        <AnimFrame id="40" x="2178" y="198" />
+        <AnimFrame id="41" x="2420" y="198" />
+        <AnimFrame id="42" x="2662" y="198" />
+        <AnimFrame id="43" x="2904" y="198" />
+        <AnimFrame id="44" x="3146" y="198" />
+        <AnimFrame id="45" x="3388" y="198" />
+        <AnimFrame id="46" x="3630" y="198" />
+        <AnimFrame id="47" x="3872" y="198" />
+        <AnimFrame id="48" x="4114" y="198" />
+        <AnimFrame id="49" x="4356" y="198" />
+        <AnimFrame id="50" x="4598" y="198" />
+      </AnimFrames>
+    </AnimatedImage>
+    
+    <AnimatedImage name="MindRotEffect" fps="24" texture="MindRot" movable="false" handleinput="false" layer="popup" poppable="false" sticky="false">
+      <Size>
+        <AbsPoint x="232" y="188"/>
+      </Size>
+      <AnimFrames>
+        <AnimFrame id="1" x="0" y="0" />
+        <AnimFrame id="2" x="242" y="0" />
+        <AnimFrame id="3" x="484" y="0" />
+        <AnimFrame id="4" x="726" y="0" />
+        <AnimFrame id="5" x="968" y="0" />
+        <AnimFrame id="6" x="1210" y="0" />
+        <AnimFrame id="7" x="1452" y="0" />
+        <AnimFrame id="8" x="1694" y="0" />
+        <AnimFrame id="9" x="1936" y="0" />
+        <AnimFrame id="10" x="2178" y="0" />
+        <AnimFrame id="11" x="2420" y="0" />
+        <AnimFrame id="12" x="2662" y="0" />
+        <AnimFrame id="13" x="2904" y="0" />
+        <AnimFrame id="14" x="3146" y="0" />
+        <AnimFrame id="15" x="3388" y="0" />
+        <AnimFrame id="16" x="3630" y="0" />
+        <AnimFrame id="17" x="3872" y="0" />
+        <AnimFrame id="18" x="4114" y="0" />
+        <AnimFrame id="19" x="4356" y="0" />
+        <AnimFrame id="20" x="4598" y="0" />
+        <AnimFrame id="21" x="4840" y="0" />
+        <AnimFrame id="22" x="5082" y="0" />
+        <AnimFrame id="23" x="5324" y="0" />
+        <AnimFrame id="24" x="5566" y="0" />
+        <AnimFrame id="25" x="5808" y="0" />
+        <AnimFrame id="26" x="6050" y="0" />
+        <AnimFrame id="27" x="6292" y="0" />
+        <AnimFrame id="28" x="6534" y="0" />
+        <AnimFrame id="29" x="6776" y="0" />
+        <AnimFrame id="30" x="7018" y="0" />
+        <AnimFrame id="31" x="0" y="198" />
+        <AnimFrame id="32" x="242" y="198" />
+        <AnimFrame id="33" x="484" y="198" />
+        <AnimFrame id="34" x="726" y="198" />
+        <AnimFrame id="35" x="968" y="198" />
+        <AnimFrame id="36" x="1210" y="198" />
+        <AnimFrame id="37" x="1452" y="198" />
+        <AnimFrame id="38" x="1694" y="198" />
+        <AnimFrame id="39" x="1936" y="198" />
+        <AnimFrame id="40" x="2178" y="198" />
+        <AnimFrame id="41" x="2420" y="198" />
+        <AnimFrame id="42" x="2662" y="198" />
+        <AnimFrame id="43" x="2904" y="198" />
+        <AnimFrame id="44" x="3146" y="198" />
+        <AnimFrame id="45" x="3388" y="198" />
+        <AnimFrame id="46" x="3630" y="198" />
+        <AnimFrame id="47" x="3872" y="198" />
+        <AnimFrame id="48" x="4114" y="198" />
+        <AnimFrame id="49" x="4356" y="198" />
+        <AnimFrame id="50" x="4598" y="198" />
+      </AnimFrames>
+    </AnimatedImage>
+    
+    <AnimatedImage name="MeditEffect" fps="24" texture="Medit" movable="false" handleinput="false" layer="popup" poppable="false" sticky="false">
+      <Size>
+        <AbsPoint x="232" y="188"/>
+      </Size>
+      <AnimFrames>
+        <AnimFrame id="1" x="0" y="0" />
+        <AnimFrame id="2" x="242" y="0" />
+        <AnimFrame id="3" x="484" y="0" />
+        <AnimFrame id="4" x="726" y="0" />
+        <AnimFrame id="5" x="968" y="0" />
+        <AnimFrame id="6" x="1210" y="0" />
+        <AnimFrame id="7" x="1452" y="0" />
+        <AnimFrame id="8" x="1694" y="0" />
+        <AnimFrame id="9" x="1936" y="0" />
+        <AnimFrame id="10" x="2178" y="0" />
+        <AnimFrame id="11" x="2420" y="0" />
+        <AnimFrame id="12" x="2662" y="0" />
+        <AnimFrame id="13" x="2904" y="0" />
+        <AnimFrame id="14" x="3146" y="0" />
+        <AnimFrame id="15" x="3388" y="0" />
+        <AnimFrame id="16" x="3630" y="0" />
+        <AnimFrame id="17" x="3872" y="0" />
+        <AnimFrame id="18" x="4114" y="0" />
+        <AnimFrame id="19" x="4356" y="0" />
+        <AnimFrame id="20" x="4598" y="0" />
+        <AnimFrame id="21" x="4840" y="0" />
+        <AnimFrame id="22" x="5082" y="0" />
+        <AnimFrame id="23" x="5324" y="0" />
+        <AnimFrame id="24" x="5566" y="0" />
+        <AnimFrame id="25" x="5808" y="0" />
+        <AnimFrame id="26" x="6050" y="0" />
+        <AnimFrame id="27" x="6292" y="0" />
+        <AnimFrame id="28" x="6534" y="0" />
+        <AnimFrame id="29" x="6776" y="0" />
+        <AnimFrame id="30" x="7018" y="0" />
+        <AnimFrame id="31" x="0" y="198" />
+        <AnimFrame id="32" x="242" y="198" />
+        <AnimFrame id="33" x="484" y="198" />
+        <AnimFrame id="34" x="726" y="198" />
+        <AnimFrame id="35" x="968" y="198" />
+        <AnimFrame id="36" x="1210" y="198" />
+        <AnimFrame id="37" x="1452" y="198" />
+        <AnimFrame id="38" x="1694" y="198" />
+        <AnimFrame id="39" x="1936" y="198" />
+        <AnimFrame id="40" x="2178" y="198" />
+        <AnimFrame id="41" x="2420" y="198" />
+        <AnimFrame id="42" x="2662" y="198" />
+        <AnimFrame id="43" x="2904" y="198" />
+        <AnimFrame id="44" x="3146" y="198" />
+        <AnimFrame id="45" x="3388" y="198" />
+        <AnimFrame id="46" x="3630" y="198" />
+        <AnimFrame id="47" x="3872" y="198" />
+        <AnimFrame id="48" x="4114" y="198" />
+        <AnimFrame id="49" x="4356" y="198" />
+        <AnimFrame id="50" x="4598" y="198" />
+      </AnimFrames>
+    </AnimatedImage>
+	  <AnimatedImage name="BleedEffect" fps="12" texture="Bleed" movable="false" handleinput="false" layer="popup" poppable="false" sticky="false">
+		  <Size>
+			  <AbsPoint x="232" y="188"/>
+		  </Size>
+		  <AnimFrames>
+			 <AnimFrame id="1" x="0" y="0" />
+			  <AnimFrame id="2" x="242" y="0" />
+			  <AnimFrame id="3" x="484" y="0" />
+			  <AnimFrame id="4" x="726" y="0" />
+			  <AnimFrame id="5" x="968" y="0" />
+			  <AnimFrame id="6" x="1210" y="0" />
+			  <AnimFrame id="7" x="1452" y="0" />
+			  <AnimFrame id="8" x="1694" y="0" />
+			  <AnimFrame id="9" x="1936" y="0" />
+			  <AnimFrame id="10" x="2178" y="0" />
+			  <AnimFrame id="11" x="2420" y="0" />
+			  <AnimFrame id="12" x="2662" y="0" />
+			  <AnimFrame id="13" x="2904" y="0" />
+			  <AnimFrame id="14" x="3146" y="0" />
+			  <AnimFrame id="15" x="3388" y="0" />
+			  <AnimFrame id="16" x="3630" y="0" />
+			  <AnimFrame id="17" x="3872" y="0" />
+			  <AnimFrame id="18" x="4114" y="0" />
+			  <AnimFrame id="19" x="4356" y="0" />
+			  <AnimFrame id="20" x="4598" y="0" />
+			  <AnimFrame id="21" x="4840" y="0" />
+			  <AnimFrame id="22" x="5082" y="0" />
+			  <AnimFrame id="23" x="5324" y="0" />
+			  <AnimFrame id="24" x="5566" y="0" />
+		  </AnimFrames>
+	  </AnimatedImage>
+    <DynamicImage name="DiabloBottomBorder" texture="StoneBackground" layer="background" poppable="false"  sticky="true" handleinput="false">
+
+      <Size>
+        <AbsPoint x="5000" y="47" />
+      </Size>
+      <TexCoords x="0" y="0" />
+    </DynamicImage>
+
+    <Button name="DiabloAlwaysRun" backgroundtexture="AlwaysRun" highlighttexture="AlwaysRun" layer="background" poppable="false"  sticky="true">
+      <Size>
+        <AbsPoint x="28" y="35" />
+      </Size>
+      <TexCoords>
+        <Normal  x="0" y="0" />
+        <NormalHighlit x="38" y="0" />
+        <Pressed x="38" y="0" />
+        <PressedHighlit x="38" y="0" />
+      </TexCoords>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="DiabloHealth.RunButton_OnLButtonUp" />
+        <EventHandler event="OnMouseOver" function="DiabloHealth.RunButton_OnMouseOver" />
+        <EventHandler event="OnMouseOverEnd" function="PartyHealthBar.OnMouseOverEnd" />
+      </EventHandlers>
+    </Button>
+    
+    <HorizontalResizeImage name="Diablo_Staminabar" texture="DiabloStamina">
+      <Size>
+        <AbsPoint x="300" y="31" />
+      </Size>
+      <Sizes left="300" middle="0" right="0" />
+      <TexCoords>
+        <Left x="5" y="88" />
+        <Middle x="155" y="88" />
+        <Right x="305" y="88" />
+      </TexCoords>
+    </HorizontalResizeImage>
+
+    <Window name="DiabloStamina" layer="background" handleinput="false" poppable="false" sticky="true" >
+      <Size>
+        <AbsPoint x="304" y="44" />
+      </Size>
+
+
+      <Windows>
+        <DynamicImage name="$parentBG" texture="DiabloStamina" layer="overlay">
+          <Size>
+            <AbsPoint x="300" y="35" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="0" y="2" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="2" y="2" />
+        </DynamicImage>
+
+        <StatusBar name="$parentBar" foreground="Diablo_Staminabar" handleinput="false">
+          <Size>
+            <AbsPoint x="295" y="29" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBG">
+              <AbsPoint x="3" y="3" />
+            </Anchor>
+          </Anchors>
+        </StatusBar>
+
+        <DynamicImage name="$parentTop" texture="DiabloStamina">
+          <Size>
+            <AbsPoint x="297" y="30" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBG">
+              <AbsPoint x="1" y="3" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="5" y="47" />
+        </DynamicImage>
+
+        <Label name="$parentLabel" font="font_verdana_MEDBIG" textalign="center"   handleinput="false" wordwrap="true" linespacing="18">
+          <Size>
+            <AbsPoint x="150" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parentBG">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="132" b="33" a="255" />
+        </Label>
+        
+      </Windows>
+  </Window>
+    
+    <Window name="DiabloHealth" layer="background" handleinput="false">
+      <Size>
+        <AbsPoint x="232" y="188" />
+      </Size>
+
+      <Anchors>
+        <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="Root">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <Windows>
+
+        <VerticalResizeImage name="$parentFrame" texture="diablo_health" reverseFill="true">
+          <Size>
+            <AbsPoint x="226" y="202" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parent">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <Sizes top="1" middle="200" bottom="1" />
+          <TexCoords>
+            <Left x="280" y="0" />
+            <Middle x="280" y="1" />
+            <Right x="280" y="187" />
+          </TexCoords>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentFill" texture="diablo_health" reverseFill="true">
+          <Size>
+            <AbsPoint x="190" y="177" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="$parent">
+              <AbsPoint x="51" y="-16" />
+            </Anchor>
+          </Anchors>
+          <Sizes top="1" middle="243" bottom="1" />
+          <TexCoords>
+            <Left x="340" y="204" />
+            <Middle x="308" y="153" />
+            <Right x="340" y="356" />
+          </TexCoords>
+        </VerticalResizeImage>
+        <DynamicImage name="$parentTextBackground" texture="UO_ResizeFrame" layer="background">
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="25" y="-75" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentLabel" font="font_verdana_BIG" textalign="center"   handleinput="false" wordwrap="true" linespacing="18">
+          <Size>
+            <AbsPoint x="150" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="20" y="-60" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="132" b="33" a="255" />
+        </Label>
+      </Windows>
+
+    </Window>
+
+    <Window name="DiabloMana" layer="background" handleinput="false">
+      <Size>
+        <AbsPoint x="232" y="188" />
+      </Size>
+      <Anchors>
+        <Anchor point="bottomright" relativePoint="bottomright" relativeTo="Root">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <Windows>
+        <VerticalResizeImage name="$parentFrame" texture="diablo_health" reverseFill="true">
+          <Size>
+            <AbsPoint x="228" y="203" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+              <AbsPoint x="0" y="2" />
+            </Anchor>
+          </Anchors>
+          <Sizes top="1" middle="200" bottom="1" />
+          <TexCoords>
+            <Left x="0" y="0" />
+            <Middle x="0" y="1" />
+            <Right x="0" y="187" />
+          </TexCoords>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentFill" texture="diablo_health" reverseFill="true">
+          <Size>
+            <AbsPoint x="192" y="177" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+              <AbsPoint x="-48" y="-12" />
+            </Anchor>
+          </Anchors>
+          <Sizes top="1" middle="176" bottom="1" />
+          <TexCoords>
+            <Left x="14" y="204" />
+            <Middle x="8" y="220" />
+            <Right x="14" y="356" />
+          </TexCoords>
+        </VerticalResizeImage>
+        <DynamicImage name="$parentTextBackground" texture="UO_ResizeFrame" layer="background">
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="-25" y="-75" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentLabel" font="font_verdana_BIG" textalign="center"   handleinput="false" wordwrap="true" linespacing="18">
+          <Size>
+            <AbsPoint x="150" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="-25" y="-60" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="132" b="33" a="255" />
+        </Label>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

@@ -1,0 +1,16 @@
+
+0 - 30: Train from an NPC Paladin in Luna
+
+30 - 45: Hold a weapon in hand and cast Consecrate Weapon
+
+45 - 60: Cast Divine Fury
+
+60 - 70: Cast Enemy of One
+
+70 - 90: Cast Holy Light
+
+90 - 115: Cast Noble Sacrifice
+
+The only method to gain after 115 is through the Guaranteed Gain System (GGS) or the Satyr Trick or by using scrolls of transcendence, as it is impossible to forcefully train any further due to the fact that every Chivalry spell has a 100% success chance at 115 skill and higher.
+
+|SATYR|

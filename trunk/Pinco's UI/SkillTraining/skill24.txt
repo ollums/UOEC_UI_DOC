@@ -1,0 +1,16 @@
+
+0 - 30: Train at NPC Rancher, Ranger Guildmaster, or Shepherd. 
+
+30 - 35: Polar Bear
+
+35 - 40: Snow Leopard
+
+40 - 50: White Wolf/Grizzly Bear/Great Heart
+
+50 - 70: Bull
+
+70 - 85: Cu Sidhe/Unicorn/firebeetle
+
+85 - 100: Greater Dragon
+
+If char has no stealth continue with Cu Sidhe/Unicorn/firebeetle

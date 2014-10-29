@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="Source/MiniTextuePack.lua" />
+	</Scripts>
+	<Assets>
+		<Texture name="DefaultIcon" file="Textures/IconBGs/Default.dds" />
+    <Texture name="GoldenIcon" file="Textures/IconBGs/golden.dds" />
+		<Texture name="DermottCopperIcon" file="Textures/IconBGs/DermottCopper.dds" />
+		<Texture name="DecorsGrayIcon" file="Textures/IconBGs/DecorsGray.dds" />
+    <Texture name="NalifParchmentIcon" file="Textures/IconBGs/NalifParchment.dds" />
+    <Texture name="UndeadIcon" file="Textures/IconBGs/Bones.dds" />
+    <Texture name="PinkIcon" file="Textures/IconBGs/pink.dds" />
+    <Texture name="NightBlueIcon" file="Textures/IconBGs/NightBlue.dds" />
+    <Texture name="NoxGreenIcon" file="Textures/IconBGs/NoxGreen.dds" />
+    <Texture name="BloodRedIcon" file="Textures/IconBGs/BloodRed.dds" />
+    <Texture name="ParchmentIcon" file="Textures/IconBGs/parchment.dds" />
+    <Texture name="GlassIcon" file="Textures/IconBGs/Glass.dds" />
+    <Texture name="CrystalIcon" file="Textures/IconBGs/Crystal.dds" />
+    <Texture name="DarkstoneIcon" file="Textures/IconBGs/Dermottdarkstone.dds" />
+    <Texture name="LeatherIcon" file="Textures/IconBGs/Dermottleather.dds" />
+    <Texture name="WoodIcon" file="Textures/IconBGs/DermottWood.dds" />
+    <Texture name="TDIcon" file="Textures/IconBGs/DermottTD.dds" />
+    <Texture name="StoneIcon" file="Textures/IconBGs/DermottStone.dds" />
+    <Texture name="BrightGreenIcon" file="Textures/IconBGs/BrightGreen.dds" />
+    <Texture name="BlackIcon" file="Textures/IconBGs/Black.dds" />
+
+    <Texture name="DefaultLabel" file="Textures/PaperdollLabel/Default.dds" />
+    <Texture name="GoldenLabel" file="Textures/PaperdollLabel/Default.dds" />
+    <Texture name="DecorsGrayLabel" file="Textures/PaperdollLabel/DecorsGray.dds" />
+    <Texture name="DermottCopperLabel" file="Textures/PaperdollLabel/DermottCopper.dds" />
+    <Texture name="NalifParchmentLabel" file="Textures/PaperdollLabel/NalifParchment.dds" />
+    <Texture name="UndeadLabel" file="Textures/PaperdollLabel/Bones.dds" />
+    <Texture name="PinkLabel" file="Textures/PaperdollLabel/pink.dds" />
+    <Texture name="ParchmentLabel" file="Textures/PaperdollLabel/parchment.dds" />
+    <Texture name="GlassLabel" file="Textures/PaperdollLabel/Glass.dds" />
+    <Texture name="CrystalLabel" file="Textures/PaperdollLabel/Crystal.dds" />
+    <Texture name="NoxGreenLabel" file="Textures/PaperdollLabel/NoxGreen.dds" />
+    <Texture name="NightBlueLabel" file="Textures/PaperdollLabel/NightBlue.dds" />
+    <Texture name="BloodRedLabel" file="Textures/PaperdollLabel/BloodRed.dds" />
+    <Texture name="DarkstoneLabel" file="Textures/PaperdollLabel/Dermottdarkstone.dds" />
+    <Texture name="LeatherLabel" file="Textures/PaperdollLabel/Dermottleather.dds" />
+    <Texture name="WoodLabel" file="Textures/PaperdollLabel/DermottWood.dds" />
+    <Texture name="TDLabel" file="Textures/PaperdollLabel/DermottTD.dds" />
+    <Texture name="StoneLabel" file="Textures/PaperdollLabel/DermottStone.dds" />
+    <Texture name="BrightGreenLabel" file="Textures/PaperdollLabel/BrightGreen.dds" />
+    <Texture name="BlackLabel" file="Textures/PaperdollLabel/Black.dds" />
+	</Assets>
+</Interface>

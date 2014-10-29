@@ -1,0 +1,18 @@
+
+0 - 40: Train at NPC Tinker in New Haven 
+
+40 - 45: Scissors (2 ingots each) 
+
+45 - 60: Tongs' (1 ingot each, sell to blacksmith or tinker) 
+
+60 - 75: Lockpicks (1 ingot each, sell to provisioner) 
+
+75 - 85: Bracelets (3 ingots each, sell to jeweler) 
+
+85 - 90: Spyglasss (4 ingots each, sell to shipwright) 
+
+90 - 95: Rings (3 ingots each, sell to jewelers) 
+
+95 - 100: Scales or Spyglasses (4 ingots each)
+
+|SATYR|

@@ -1,0 +1,175 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="Hourglass_Base" file="Base.dds" />
+		<Texture name="Hourglass_UP" file="upBall.dds" />
+		<Texture name="Hourglass_DOWN" file="downBall.dds" />
+	</Assets>
+	<Windows>
+		<Window name="Hourglass" movable="true">
+
+			<EventHandlers>
+				<EventHandler event="OnShutdown" function="Hourglass.Shutdown" />
+				<EventHandler event="OnLButtonDown" function="Hourglass.OnMouseDrag" />
+				<EventHandler event="OnMouseWheel" function="EnhancePack.Scale" />
+			</EventHandlers>
+
+
+			<Windows name="Parts">
+
+				<DynamicImage name="HourglassBackground" layer="background" texture="Hourglass_Base">
+
+				</DynamicImage>
+
+				<DynamicImage name="HourglassTextBackground" texture="UO_ResizeFrame" layer="background">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="HourglassBackground">
+							<AbsPoint x="5" y="85" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnRButtonUp" function="Hourglass.Close" />
+					</EventHandlers>
+				</DynamicImage>
+
+				<Button name="HourglassRedButton" backgroundtexture="hud_image2" highlighttexture="hud_image2">
+					<Size>
+						<AbsPoint x="18" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="HourglassTextBackground" >
+							<AbsPoint x="-2" y="66" />
+						</Anchor>
+					</Anchors>
+					<TexCoords>
+						<Normal  x="0" y="287" />
+						<NormalHighlit x="36" y="287" />
+						<Pressed x="36" y="287" />
+						<PressedHighlit x="36" y="287" />
+					</TexCoords>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Hourglass.RedButton_OnLButtonUp" />
+						<EventHandler event="OnMouseOver" function="Hourglass.RedButton_Tooltip" />
+					</EventHandlers>
+				</Button>
+
+				<Button name="HourglassGreenButton" backgroundtexture="hud_image2" highlighttexture="hud_image2">
+					<Size>
+						<AbsPoint x="18" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="HourglassTextBackground" >
+							<AbsPoint x="2" y="66" />
+						</Anchor>
+					</Anchors>
+					<TexCoords>
+						<Normal  x="18" y="287" />
+						<NormalHighlit x="54" y="287" />
+						<Pressed x="54" y="287" />
+						<PressedHighlit x="54" y="287" />
+					</TexCoords>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Hourglass.GreenButton_OnLButtonUp" />
+						<EventHandler event="OnMouseOver" function="Hourglass.GreenButton_Tooltip" />
+					</EventHandlers>
+				</Button>
+
+				<Label name="HourglassTimeLabel" font="font_verdana_bold_shadow_med" maxchars="20" textalign="center" handleinput="false" wordwrap="true" linespacing="18" popable="false">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="top" relativePoint="top" relativeTo="HourglassTextBackground">
+							<AbsPoint x="0" y="7" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="HourglassTimeElapsedLabel" font="font_verdana_bold_shadow_med" maxchars="20" textalign="center" handleinput="false" wordwrap="true" linespacing="18" popable="false">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="HourglassTimeLabel">
+							<AbsPoint x="0" y="35" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<VerticalResizeImage name="upClose" layer="default" texture="Hourglass_UP" reverseFill="true" texturescale="0.3">
+					<Size>
+						<AbsPoint x="191" y="255" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="HourglassBackground">
+							<AbsPoint x="6" y="-116" />
+						</Anchor>
+					</Anchors>
+					<Sizes top="1" middle="110" bottom="589" />
+					<TexCoords>
+						<Top x="0" y="461" />
+						<Middle x="0" y="461" />
+						<Bottom x="0" y="461" />
+					</TexCoords>
+				</VerticalResizeImage>
+
+
+
+				<VerticalResizeImage name="downClose" layer="default" texture="Hourglass_DOWN" reverseFill="true" texturescale="0.3">
+					<Size>
+						<AbsPoint x="199" y="270" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="HourglassBackground">
+							<AbsPoint x="7" y="-20" />
+						</Anchor>
+					</Anchors>
+					<Sizes top="1" middle="135" bottom="589" />
+					<TexCoords>
+						<Top x="0" y="470" />
+						<Middle x="0" y="470" />
+						<Bottom x="0" y="470" />
+					</TexCoords>
+				</VerticalResizeImage>
+
+
+				<VerticalResizeImage name="upTap" layer="overlay" texture="Hourglass_UP" reverseFill="true" texturescale="0.3">
+					<Size>
+						<AbsPoint x="191" y="255" />
+					</Size>
+					<Anchors>
+						<Anchor point="top" relativePoint="top" relativeTo="HourglassBackground">
+							<AbsPoint x="6" y="16" />
+						</Anchor>
+					</Anchors>
+					<Sizes top="0" middle="127" bottom="382" />
+					<TexCoords>
+						<Top x="0" y="127" />
+						<Middle x="0" y="127" />
+						<Bottom x="0" y="127" />
+					</TexCoords>
+				</VerticalResizeImage>
+
+				<VerticalResizeImage name="downTap" layer="overlay" texture="Hourglass_DOWN" reverseFill="true" texturescale="0.301">
+					<Size>
+						<AbsPoint x="255" y="306" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="HourglassBackground">
+							<AbsPoint x="9" y="-15" />
+						</Anchor>
+					</Anchors>
+					<Sizes top="0" middle="153" bottom="306" />
+					<TexCoords>
+						<Top x="0" y="153" />
+						<Middle x="0" y="153" />
+						<Bottom x="0" y="153" />
+					</TexCoords>
+				</VerticalResizeImage>
+
+			</Windows>
+
+		</Window>
+	</Windows>
+</Interface>

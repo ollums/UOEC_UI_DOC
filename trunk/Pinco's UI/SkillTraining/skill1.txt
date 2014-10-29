@@ -1,0 +1,18 @@
+
+0 - 30: Train at NPC Alchemist.
+
+30 - 45: Agility Potion.
+
+45 - 55: Total Refreshment Potion.
+
+55 - 65: Greater Agility Potion.
+
+65 - 75: Greater Strength Potion.
+
+75 - 85: Greater Heal Potion.
+
+85 - 95: Greater Cure Potion.
+
+95 - 100: Greater Conflagration Potion.
+
+|SATYR|

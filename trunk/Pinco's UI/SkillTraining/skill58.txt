@@ -1,0 +1,12 @@
+
+0 - 40: Train at Dimethro The Wrestling Instructor in New Haven.
+
+40 - 65: Goto Jhelom pits and hire a 6gp wrestling npc.
+
+65 - 85: Hire a 8gp wrestler npc.
+
+85 - 120: Summon Daemon for wrestling.
+
+NOTE: Equip a Fishing Pole to use the Golem Trick.
+
+|GOLEM|

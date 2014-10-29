@@ -1,0 +1,851 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="VLineMoongate" file="Line.dds" />
+	</Assets>
+	<Scripts>
+		<Script file="Moongate.lua" />
+	</Scripts>
+	<Windows>
+		<Label name="Moongate_ItemTitle" font="UO_DefaultText" linespacing="20" autoresize="true" wordwrap="true" maxchars="64" textalign="left">
+			<Color r="255" g="255" b="255" a="255" />
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="CrystalPortal.LabelOnMouseOver" />
+			</EventHandlers>
+		</Label>
+		<Window name="Moongate_LabelCheckButton">
+			<Size>
+				<AbsPoint x="350" y="32" />
+			</Size>
+			<Windows>
+				<Button name="$parentButton" inherits="UO_Default_Check_Button" texturescale="1.5">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left">
+							<AbsPoint x="5" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentLabel" inherits="Settings_ItemTitle">
+					<Size>
+						<AbsPoint x="700" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="Moongate_LabelRadioButton">
+			<Size>
+				<AbsPoint x="350" y="32" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Moongate.ChangeMap" />
+			</EventHandlers>
+			<Windows>
+				<Button name="$parentButton" backgroundtexture="UO_Core" highlighttexture="UO_Core" >
+					<Size>
+						<AbsPoint x="22" y="22" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left">
+							<AbsPoint x="5" y="0"/>
+						</Anchor>
+					</Anchors>
+					<TexCoords>
+						<Normal x="166" y="25" />
+						<NormalHighlit x="166" y="25" />
+						<Pressed x="193" y="25" />
+						<PressedHighlit x="193" y="25" />
+						<Disabled x="166" y="25" />
+					</TexCoords>
+					<EventHandlers>
+						<EventHandler event="OnLButtonDown" function="Moongate.ChangeMap" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentLabel" inherits="Moongate_ItemTitle">
+					<Size>
+						<AbsPoint x="700" y="16" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<EventHandlers>
+					<EventHandler event="OnLButtonDown" function="Moongate.ChangeMap" />
+				</EventHandlers>
+			</Windows>
+		</Window>
+
+		<Window name="Moongate" movable="true" layer="popup">
+			<Size>
+				<AbsPoint x="663" y="450" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="ResizeWindow">
+					<AbsPoint x="10" y="-20"/>
+				</Anchor>
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnInitialize" function="Moongate.Initialize" />
+				<EventHandler event="OnShown" function="Moongate.OnShown" />
+				<EventHandler event="OnHidden" function="Moongate.OnHidden" />
+				<EventHandler event="OnShutdown" function="Moongate.Shutdown" />
+				<EventHandler event="OnUpdate" function="Moongate.OnUpdate" />
+			</EventHandlers>
+			<Windows>
+				<!-- Default chrome. Alter this at your own peril. -->
+				<Window name="$parentChrome" inherits="UO_DefaultWindow" frameonly="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright"/>
+					</Anchors>
+				</Window>
+
+				<Label name="$parentDestLabel" inherits="Moongate_ItemTitle" >
+					<Size>
+						<AbsPoint x="250" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="50" y="50" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<DynamicImage name="$parentGoldLine1" texture="VLineMoongate" layer="overlay">
+					<Size>
+						<AbsPoint x="3" y="409" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="300" y="80" />
+						</Anchor>
+					</Anchors>
+					<TexCoords x="0" y="0" />
+				</DynamicImage>
+
+				
+
+				<Window name="$parentTrammel" inherits="Moongate_LabelRadioButton" >
+					<Size>
+						<AbsPoint x="150" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="50" y="80" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentFelucca" inherits="Moongate_LabelRadioButton" >
+					<Size>
+						<AbsPoint x="150" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrammel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Window name="$parentIlshenar" inherits="Moongate_LabelRadioButton" >
+					<Size>
+						<AbsPoint x="150" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFelucca">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Window name="$parentMalas" inherits="Moongate_LabelRadioButton" >
+					<Size>
+						<AbsPoint x="150" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIlshenar">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Window name="$parentTokuno" inherits="Moongate_LabelRadioButton" >
+					<Size>
+						<AbsPoint x="150" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMalas">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<Window name="$parentTerMur" inherits="Moongate_LabelRadioButton" >
+					<Size>
+						<AbsPoint x="150" y="32" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTokuno">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+
+				<Button name="$parentGo" inherits="UO_Default_Medium_Select_Button" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTerMur">
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Moongate.GO"/>
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentGoDefault" inherits="UO_Default_Medium_Select_Button" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGo">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Moongate.GODefault"/>
+					</EventHandlers>
+				</Button>
+
+				<Button name="$parentSetDefault" inherits="UO_Default_Medium_Select_Button" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGoDefault">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Moongate.SetDefault"/>
+					</EventHandlers>
+				</Button>
+
+
+				<ScrollWindow name="MoongateTrammelWindow" childscrollwindow="MoongateTrammelWindowScrollChild" scrollbar="MoongateTrammelWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="300" y="540" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="330" y="70" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+						<Window name="$parentScrollChild" >
+							<Size>
+								<AbsPoint x="300" y="540"/>
+							</Size>
+							<Windows>
+									 
+								<Window name="$parentMoonglow" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentBritain" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMoonglow">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentJhelom" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBritain">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentYew" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentJhelom">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentMinoc" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentYew">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentTrinsic" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMinoc">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentSkaraBrae" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrinsic">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentMagincia" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSkaraBrae">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentHaven" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMagincia">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+								
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+
+				<ScrollWindow name="MoongateFeluccaWindow" childscrollwindow="MoongateFeluccaWindowScrollChild" scrollbar="MoongateFeluccaWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="300" y="540" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="330" y="70" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+						<Window name="$parentScrollChild" >
+							<Size>
+								<AbsPoint x="300" y="540"/>
+							</Size>
+							<Windows>
+
+								<Window name="$parentMoonglow" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentBritain" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMoonglow">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentJhelom" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBritain">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentYew" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentJhelom">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentMinoc" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentYew">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentTrinsic" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMinoc">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentSkaraBrae" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrinsic">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentMagincia" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSkaraBrae">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentBucca" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMagincia">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+
+				<ScrollWindow name="MoongateIlshenarWindow" childscrollwindow="MoongateIlshenarWindowScrollChild" scrollbar="MoongateIlshenarWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="300" y="540" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="330" y="70" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+						<Window name="$parentScrollChild" >
+							<Size>
+								<AbsPoint x="300" y="540"/>
+							</Size>
+							<Windows>
+
+								<Window name="$parentCompassion" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentHonesty" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCompassion">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentHonor" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHonesty">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentHumilty" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHonor">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentJustice" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHumilty">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentSacrifice" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentJustice">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentSpirituality" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSacrifice">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentValor" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSpirituality">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentChaos" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentValor">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+
+
+				<ScrollWindow name="MoongateMalasWindow" childscrollwindow="MoongateMalasWindowScrollChild" scrollbar="MoongateMalasWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="300" y="540" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="330" y="70" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+						<Window name="$parentScrollChild" >
+							<Size>
+								<AbsPoint x="300" y="540"/>
+							</Size>
+							<Windows>
+
+								<Window name="$parentLuna" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentUmbra" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLuna">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+
+
+				<ScrollWindow name="MoongateTokunoWindow" childscrollwindow="MoongateTokunoWindowScrollChild" scrollbar="MoongateTokunoWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="300" y="540" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="330" y="70" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+						<Window name="$parentScrollChild" >
+							<Size>
+								<AbsPoint x="300" y="540"/>
+							</Size>
+							<Windows>
+
+								<Window name="$parentIsamu" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentMakoto" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIsamu">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+
+								<Window name="$parentHomare" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMakoto">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+								
+								
+							</Windows>							
+						</Window>
+					</Windows>
+				</ScrollWindow>
+
+
+				<ScrollWindow name="MoongateTerMurWindow" childscrollwindow="MoongateTerMurWindowScrollChild" scrollbar="MoongateTerMurWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="300" y="540" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="330" y="70" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+						<Window name="$parentScrollChild" >
+							<Size>
+								<AbsPoint x="300" y="540"/>
+							</Size>
+							<Windows>
+
+								<Window name="$parentRoyalCity" inherits="Moongate_LabelCheckButton" >
+									<Size>
+										<AbsPoint x="150" y="32" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="20" y="20" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonDown" function="Moongate.CheckLocation" />
+									</EventHandlers>
+								</Window>
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+				
+			</Windows>
+
+		</Window>
+
+	</Windows>
+</Interface>

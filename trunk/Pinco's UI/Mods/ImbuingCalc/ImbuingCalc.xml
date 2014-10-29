@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="ImbuingCalc.lua" />
+  </Scripts>
+  <Windows>
+
+
+    <Button name="ImbShowButtonTemplate" backgroundtexture="hud_image" highlighttexture="hud_image" layer="popup">
+      <Size>
+        <AbsPoint x="40" y="40" />
+      </Size>
+      <TexCoords>
+        <Normal  x="179" y="857" />
+        <NormalHighlit x="179" y="857" />
+        <Pressed x="179" y="857" />
+        <PressedHighlit x="179" y="857" />
+        <Disabled x="179" y="857" />
+      </TexCoords>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="ImbuingCalcWindow.ShowMat" />
+        <EventHandler event="OnMouseOver" function="ImbuingCalcWindow.ShowMatToolTip" />
+      </EventHandlers>
+    </Button>
+
+    <Button name="ImbHideButtonTemplate" backgroundtexture="hud_image" highlighttexture="hud_image" layer="overlay">
+      <Size>
+        <AbsPoint x="36" y="36" />
+      </Size>
+      <TexCoords>
+        <Normal  x="142" y="857" />
+        <NormalHighlit x="142" y="857" />
+        <Pressed x="142" y="857" />
+        <PressedHighlit x="142" y="857" />
+        <Disabled x="142" y="857" />
+      </TexCoords>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="ImbuingCalcWindow.HideMat" />
+        <EventHandler event="OnMouseOver" function="ImbuingCalcWindow.HideMatToolTip" />
+      </EventHandlers>
+    </Button>
+
+    <Button name="GridViewSocketBaseTemplate" texturescale="1.125">
+      <Size>
+        <AbsPoint x="56" y="56" />
+        <!-- if changed, ContainerWindow.lua must be updated -->
+      </Size>
+      <TexCoords>
+        <Normal texture="hud_image" x="0" y="754" />
+        <Disabled texture="hud_image" x="0" y="754" />
+        <Pressed texture="hud_image" x="0" y="754" />
+      </TexCoords>
+    </Button>
+
+    <Button name="GridViewSocketTemplateIC" inherits="GridViewSocketBaseTemplate" draganddrop="true">
+      <Windows>
+        <DynamicImage name="$parentIcon" texturescale="1.125" handleinput="false" layer="default">
+          <Size>
+            <AbsPoint x="48" y="48" />
+          </Size>
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentQuantity" font="UO_DefaultText" maxchars="6" textalign="left" autoresize="true" wordwrap="false" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="60" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft">
+              <AbsPoint x="2" y="-2" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255" a="255" />
+        </Label>
+      </Windows>
+      <TexCoords>
+        <Normal texture="hud_image" x="0" y="754" />
+        <NormalHighlit texture="hud_image" x="50" y="754" />
+        <Disabled texture="hud_image" x="0" y="754" />
+        <Pressed texture="hud_image" x="0" y="754" />
+        <PressedHighlit texture="hud_image" x="50" y="754" />
+      </TexCoords>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="ImbuingCalcWindow.OnItemRelease" />
+        <EventHandler event="OnMouseOverEnd" function="ItemProperties.ClearMouseOverItem" />
+        <EventHandler event="OnMouseOver" function="ImbuingCalcWindow.ItemMouseOver" />
+      </EventHandlers>
+    </Button>
+
+
+
+
+    <Button name="ImbRowTemplate">
+      <Size>
+        <AbsPoint x="450" y="25" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="ImbuingCalcWindow.Context" />
+        <EventHandler event="OnRButtonUp" function="ImbuingCalcWindow.Context" />
+        <EventHandler event="OnMouseOver" function="ImbuingCalcWindow.ItemCioMouseOver" />
+        <EventHandler event="OnMouseOverEnd" function="ImbuingCalcWindow.ClearMouseOverItem" />
+
+      </EventHandlers>
+      <Windows>
+        <Label name="$parentLabel" font="UO_DefaultText" maxchars="256" textalign="left" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="220" y="25" />
+          </Size>
+        </Label>
+        <Label name="$parentVal" font="UO_DefaultText" maxchars="256" textalign="center" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="150" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentLabel">
+              <AbsPoint x="10" y="0" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentCap" font="UO_DefaultText" maxchars="256" textalign="center" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="150" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentVal">
+              <AbsPoint x="10" y="0" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentNewVal" font="UO_DefaultText" maxchars="256" textalign="center" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="150" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentCap">
+              <AbsPoint x="10" y="0" />
+            </Anchor>
+          </Anchors>
+        </Label>
+      </Windows>
+    </Button>
+
+
+    <!-- Settings Window -->
+    <Window name="ImbuingCalcWindow" movable="true" >
+      <Size>
+        <AbsPoint x="740" y="620" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" />
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="ImbuingCalcWindow.Initialize" />
+        <EventHandler event="OnShutdown" function="ImbuingCalcWindow.Shutdown"/>
+        <EventHandler event="OnUpdate" function="ImbuingCalcWindow.Update"  />
+        <EventHandler event="OnShown" function="ImbuingCalcWindow.ClearAll"  />
+        <EventHandler event="OnHidden" function="ImbuingCalcWindow.Shutdown" />
+      </EventHandlers>
+      <Windows>
+        <!-- Default chrome. Alter this at your own peril. -->
+        <Window name="$parentChrome" inherits="UO_DefaultWindow">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"/>
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+        </Window>
+        <!-- End of default chrome boilerplate code -->
+
+        <ComboBox name="$parentMods" inherits="UO_Default_LongComboBox">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft">
+              <AbsPoint x="150" y="-20" />
+            </Anchor>
+          </Anchors>
+        </ComboBox>
+
+        <!-- Buttons -->
+        <Button name="$parentAddMod" inherits="UO_Default_Medium_Select_Button" >
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentMods">
+              <AbsPoint x="10" y="-5" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="ImbuingCalcWindow.AddMod" />
+          </EventHandlers>
+        </Button>
+
+        <Label name="$parentTotalLabel" font="UO_DefaultText" maxchars="256" textalign="right" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="200" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parentMods">
+              <AbsPoint x="50" y="-20" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentTotalVal" font="UO_DefaultText" maxchars="256" textalign="left" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="100" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentTotalLabel">
+              <AbsPoint x="10" y="0" />
+            </Anchor>
+          </Anchors>
+        </Label>
+
+
+        <Label name="$parentPOFLabel" font="UO_DefaultText" maxchars="256" textalign="left" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="300" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parentTotalLabel">
+              <AbsPoint x="30" y="-20" />
+            </Anchor>
+          </Anchors>
+        </Label>
+
+
+        <Label name="$parentSoketLabel" font="UO_DefaultText" maxchars="256" textalign="right" autoresize="true" handleinput="false">
+          <Size>
+            <AbsPoint x="150" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="166" y="74" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Button name="$parentSoket" inherits="GridViewSocketTemplateIC" >
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentSoketLabel">
+              <AbsPoint x="30" y="-24" />
+            </Anchor>
+          </Anchors>
+        </Button>
+
+
+
+        <Button name="$parentShowButton" inherits="ImbShowButtonTemplate">
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright">
+              <AbsPoint x="0" y="30" />
+            </Anchor>
+          </Anchors>
+        </Button>
+
+
+
+
+        <!-- Scrolling Window-->
+        <ScrollWindow name="ImbuingCalcContentWindow" childscrollwindow="ImbuingCalcContentWindowScrollChild" scrollbar="ImbuingCalcContentWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+          <Size>
+            <AbsPoint x="710" y="450" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="15" y="105" />
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+            <Window name="$parentScrollChild" >
+              <Size>
+                <AbsPoint x="695" y="456"/>
+              </Size>
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft"/>
+              </Anchors>
+              <Windows>
+
+
+                <Window name="ImbuingCalcContent" >
+                  <Size>
+                    <AbsPoint x="695" y="0" />
+                  </Size>
+                  <Windows>
+
+
+
+
+                  </Windows>
+                </Window>
+              </Windows>
+            </Window>
+          </Windows>
+        </ScrollWindow>
+
+
+
+      </Windows>
+    </Window>
+
+    <!-- Settings Window -->
+    <Window name="ImbuingCalcMaterialsWindow" movable="false" >
+      <Size>
+        <AbsPoint x="340" y="620" />
+      </Size>
+      <EventHandlers>
+
+      </EventHandlers>
+      <Windows>
+
+        <!-- Default chrome. Alter this at your own peril. -->
+        <Window name="$parentChrome" inherits="UO_DefaultWindow">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"/>
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+        </Window>
+        <!-- End of default chrome boilerplate code -->
+
+        <!-- Left arrow circle button -->
+        <Button name="$parentHideButton" inherits="ImbHideButtonTemplate" >
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topright" relativeTo="$parent">
+              <AbsPoint x="37" y="30" />
+            </Anchor>
+          </Anchors>
+        </Button>
+
+        <Label name="$parentTitle" inherits="UO_Default_Label_Color"  font="UO_Title" maxchars="256" handleinput="false" layer="popup" autoresizewidth="true" align="center">
+          <Size>
+            <AbsPoint x="0" y="25" />
+          </Size>
+          <Color r="217" g="217" b="25" a="255" />
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parentHideButton">
+              <AbsPoint x="90" y="10" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        
+        <!-- Scrolling Window-->
+        <ScrollWindow name="ImbuingCalcMaterialsContentWindow" childscrollwindow="ImbuingCalcMaterialsContentWindowScrollChild" scrollbar="ImbuingCalcMaterialsContentWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+          <Size>
+            <AbsPoint x="300" y="450" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="15" y="40" />
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" />
+
+            <Window name="$parentScrollChild" >
+              <Size>
+                <AbsPoint x="300" y="456"/>
+              </Size>
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft"/>
+              </Anchors>
+              <Windows>
+
+
+                <Window name="ImbuingCalcMaterialsContent" >
+                  <Size>
+                    <AbsPoint x="300" y="0" />
+                  </Size>
+                  <Windows>
+
+
+
+
+                  </Windows>
+                </Window>
+              </Windows>
+            </Window>
+          </Windows>
+        </ScrollWindow>
+
+
+
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

@@ -1,0 +1,4 @@
+
+0 - 30:  Train at an NPC Beggar or Gipsy
+
+30 - 100: Activate the skill via macro or skill button and target a NPC.

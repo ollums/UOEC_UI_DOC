@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Interface.xsd">
+  <Assets>
+    <Texture name="MapIcons_Customs" file="Icons/customs.dds" />
+    <Texture name="MapIcons_Leather" file="Icons/leather.dds" />
+    <Texture name="MapIcons_Stairs" file="Icons/stairs.dds" />
+    <Texture name="MapIcons_Eye" file="Icons/eye.dds" />
+    <Texture name="MapIcons_X" file="Icons/x.dds" />
+    <Texture name="MapIcons_Teleporter" file="Icons/teleporter.dds" />
+    <Texture name="MapIcons_Cemetery" file="Icons/cemetery.dds" />
+    <Texture name="MapIcons_Dock" file="Icons/Dock.dds" />
+    <Texture name="MapIcons_Gate" file="Icons/gate.dds" />
+    <Texture name="MapIcons_Waves" file="Icons/waves.dds" />
+    <Texture name="MapIcons_Serpent_Pillar" file="Icons/pillar.dds" />
+    <Texture name="MapIcons_Party" file="Icons/party.dds" />
+    <Texture name="MapIcons_Sink" file="Icons/sink.dds" />
+    <Texture name="MapIcons_Boat" file="Icons/boat.dds" />
+    <Texture name="MapIcons_Target" file="Icons/target.dds" />
+	<Texture name="MapIcons_Mark" file="Icons/mark.dds" />
+  </Assets>
+</Interface>

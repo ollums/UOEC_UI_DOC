@@ -1,0 +1,80 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="WodAnim" file="Textures/Pinco/wodAnim.dds"/>
+  </Assets>
+	<Windows>
+		<AnimatedImage name="WodEffect" fps="24" texture="WodAnim" movable="false" handleinput="false" layer="popup" poppable="false" sticky="false">
+			<Size>
+				<AbsPoint x="50" y="50"/>
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			<AnimFrames>
+<AnimFrame id="1" x="0" y="0" />
+<AnimFrame id="2" x="60" y="0" />
+<AnimFrame id="3" x="120" y="0" />
+<AnimFrame id="4" x="180" y="0" />
+<AnimFrame id="5" x="240" y="0" />
+<AnimFrame id="6" x="300" y="0" />
+<AnimFrame id="7" x="360" y="0" />
+<AnimFrame id="8" x="420" y="0" />
+<AnimFrame id="9" x="480" y="0" />
+<AnimFrame id="10" x="540" y="0" />
+<AnimFrame id="11" x="600" y="0" />
+<AnimFrame id="12" x="660" y="0" />
+<AnimFrame id="13" x="720" y="0" />
+<AnimFrame id="14" x="780" y="0" />
+<AnimFrame id="15" x="840" y="0" />
+<AnimFrame id="16" x="900" y="0" />
+<AnimFrame id="17" x="960" y="0" />
+<AnimFrame id="18" x="1020" y="0" />
+<AnimFrame id="19" x="1080" y="0" />
+<AnimFrame id="20" x="1140" y="0" />
+<AnimFrame id="21" x="1200" y="0" />
+<AnimFrame id="22" x="1260" y="0" />
+<AnimFrame id="23" x="1320" y="0" />
+<AnimFrame id="24" x="1380" y="0" />
+<AnimFrame id="25" x="1440" y="0" />
+<AnimFrame id="26" x="1500" y="0" />
+<AnimFrame id="27" x="1560" y="0" />
+<AnimFrame id="28" x="1620" y="0" />
+<AnimFrame id="29" x="1680" y="0" />
+<AnimFrame id="30" x="1740" y="0" />
+<AnimFrame id="31" x="0" y="60" />
+<AnimFrame id="32" x="60" y="60" />
+<AnimFrame id="33" x="120" y="60" />
+<AnimFrame id="34" x="180" y="60" />
+<AnimFrame id="35" x="240" y="60" />
+<AnimFrame id="36" x="300" y="60" />
+<AnimFrame id="37" x="360" y="60" />
+<AnimFrame id="38" x="420" y="60" />
+<AnimFrame id="39" x="480" y="60" />
+<AnimFrame id="40" x="540" y="60" />
+<AnimFrame id="41" x="600" y="60" />
+<AnimFrame id="42" x="660" y="60" />
+<AnimFrame id="43" x="720" y="60" />
+<AnimFrame id="44" x="780" y="60" />
+<AnimFrame id="45" x="840" y="60" />
+<AnimFrame id="46" x="900" y="60" />
+<AnimFrame id="47" x="960" y="60" />
+<AnimFrame id="48" x="1020" y="60" />
+<AnimFrame id="49" x="1080" y="60" />
+<AnimFrame id="50" x="1140" y="60" />
+<AnimFrame id="51" x="1200" y="60" />
+<AnimFrame id="52" x="1260" y="60" />
+<AnimFrame id="53" x="1320" y="60" />
+<AnimFrame id="54" x="1380" y="60" />
+<AnimFrame id="55" x="1440" y="60" />
+<AnimFrame id="56" x="1500" y="60" />
+<AnimFrame id="57" x="1560" y="60" />
+<AnimFrame id="58" x="1620" y="60" />
+<AnimFrame id="59" x="1680" y="60" />
+<AnimFrame id="60" x="1740" y="60" />
+			</AnimFrames>
+		</AnimatedImage>
+
+	</Windows>
+</Interface>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<Include file="/Source/legacy-ui-templates.xml" />	
+  <Assets>
+   <Texture name="Legacy_Buttons" file="/Textures/legacy-buttons.dds" />
+   <Texture name="Legacy_Gumps_Runebook" file="/Textures/legacy-gumps-runebook.dds" />
+</Assets>
+
+</Interface>

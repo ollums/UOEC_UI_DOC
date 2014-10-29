@@ -1,0 +1,4 @@
+
+0 - 30: Train from an NPC Cook
+
+30 - 100: Grab as much fish steak as you can, separe 1 at time (CTRL + Right Click) from the stack and cook it. This metod will took 15.000-20.000 fish steaks. Cooking more than 1 fish steak at time is only a waste of resources.

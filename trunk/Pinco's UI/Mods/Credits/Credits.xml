@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="Logo" file="logo.dds" />
+  </Assets>
+  <Scripts>
+    <Script file="Credits.lua" />
+  </Scripts>
+  <Windows>
+    <Label name="SectionTitle" font="UO_DefaultText" maxchars="64" textalign="left">
+      <Color r="255" g="255" b="255" a="255" />
+    </Label>
+
+    <Label name="Settings_ItemTitle" font="UO_DefaultText" linespacing="20" autoresize="true" wordwrap="true" maxchars="64" textalign="left">
+      <Color r="255" g="255" b="255" a="255" />
+      <EventHandlers>
+       
+      </EventHandlers>
+    </Label>
+
+   
+    <!-- Settings Window -->
+    <Window name="CreditsWindow" movable="true" >
+      <Size>
+        <AbsPoint x="740" y="620" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" />
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="CreditsWindow.Initialize" />
+		    <EventHandler event="OnShutdown" function="CreditsWindow.Shutdown"/>
+        <EventHandler event="OnShown" function="CreditsWindow.OnShown" />
+        <EventHandler event="OnUpdate" function="CreditsWindow.OnUpdate" />
+        <EventHandler event="OnHidden" function="CreditsWindow.Close" />
+      </EventHandlers>
+      <Windows>
+        <!-- Default chrome. Alter this at your own peril. -->
+        <Window name="$parentChrome" inherits="UO_DefaultWindow">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"/>
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+        </Window>
+        <!-- End of default chrome boilerplate code -->
+
+
+        
+
+        <!-- Scrolling Window-->
+        <ScrollWindow name="CreditsContentWindow" childscrollwindow="CreditsContentWindowScrollChild" scrollbar="CreditsContentWindowScrollbar" lineheight="18" autoHideScrollBar="true">
+          <Size>
+            <AbsPoint x="720" y="570" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="15" y="35" />
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <!--<VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" /> -->
+
+            <Window name="$parentScrollChild" >
+              <Size>
+                <AbsPoint x="720" y="1700"/>
+              </Size>
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft"/>
+              </Anchors>
+              <Windows>
+
+                
+                <Window name="CreditsContent" >
+                  <Size>
+                    <AbsPoint x="695" y="3000" />
+                  </Size>
+                  <Windows>
+                    <AnimatedImage name="AnimLogo" fps="10" texture="Logo" movable="false" handleinput="false" layer="overlay" poppable="false" sticky="false" textureScale="1.0">
+                      <Size>
+                        <AbsPoint x="210" y="210"/>
+                      </Size>
+                      <Anchors>
+                        <Anchor point="top" relativePoint="top" >
+                          <AbsPoint x="0" y="570" />
+                        </Anchor>
+                      </Anchors>
+                      <AnimFrames>
+
+                        <AnimFrame id="1" x="0" y="0" />
+                        <AnimFrame id="2" x="225" y="0" />
+                        <AnimFrame id="3" x="450" y="0" />
+                        <AnimFrame id="4" x="675" y="0" />
+                        <AnimFrame id="5" x="900" y="0" />
+                        <AnimFrame id="6" x="1125" y="0" />
+                        <AnimFrame id="7" x="1350" y="0" />
+                        <AnimFrame id="8" x="1575" y="0" />
+                        <AnimFrame id="9" x="1800" y="0" />
+                        <AnimFrame id="10" x="2025" y="0" />
+                        <AnimFrame id="11" x="2250" y="0" />
+                        <AnimFrame id="12" x="2475" y="0" />
+                        <AnimFrame id="13" x="2700" y="0" />
+                        <AnimFrame id="14" x="2925" y="0" />
+                        <AnimFrame id="15" x="3150" y="0" />
+                        <AnimFrame id="16" x="3375" y="0" />
+                        <AnimFrame id="17" x="3600" y="0" />
+                        <AnimFrame id="18" x="3825" y="0" />
+                        <AnimFrame id="19" x="4050" y="0" />
+                        <AnimFrame id="20" x="4275" y="0" />
+                        <AnimFrame id="21" x="4500" y="0" />
+                        <AnimFrame id="22" x="4725" y="0" />
+                        <AnimFrame id="23" x="4950" y="0" />
+                        <AnimFrame id="24" x="5175" y="0" />
+                        <AnimFrame id="25" x="5400" y="0" />
+                        <AnimFrame id="26" x="5625" y="0" />
+                        <AnimFrame id="27" x="5850" y="0" />
+                        <AnimFrame id="28" x="6075" y="0" />
+                        <AnimFrame id="29" x="6300" y="0" />
+                        <AnimFrame id="30" x="6525" y="0" />
+                        <AnimFrame id="31" x="0" y="221" />
+                        <AnimFrame id="32" x="225" y="221" />
+                        <AnimFrame id="33" x="450" y="221" />
+                        <AnimFrame id="34" x="675" y="221" />
+                        <AnimFrame id="35" x="900" y="221" />
+                        <AnimFrame id="36" x="1125" y="221" />
+                        <AnimFrame id="37" x="1350" y="221" />
+                        <AnimFrame id="38" x="1575" y="221" />
+                        <AnimFrame id="39" x="1800" y="221" />
+                        <AnimFrame id="40" x="2025" y="221" />
+                        <AnimFrame id="41" x="2250" y="221" />
+                        <AnimFrame id="42" x="2475" y="221" />
+                        <AnimFrame id="43" x="2700" y="221" />
+                        <AnimFrame id="44" x="2925" y="221" />
+                        <AnimFrame id="45" x="3150" y="221" />
+                      </AnimFrames>
+                    </AnimatedImage>
+                    
+                    <Label name="CreditsWindowText1" font="UO_DefaultText" maxchars="16383" linespacing="20" textalign="center" autoresize="true" handleinput="false" wordwrap="true" >
+                      <Size>
+                        <AbsPoint x="685" y="0" />
+                      </Size>
+                      <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" >
+                          <AbsPoint x="10" y="790" />
+                        </Anchor>
+                      </Anchors>
+                      <Color r="255" g="255" b="255" a="255" />
+                    </Label>
+
+
+                  </Windows>
+                </Window>
+              </Windows>
+            </Window>
+          </Windows>
+        </ScrollWindow>
+
+
+
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

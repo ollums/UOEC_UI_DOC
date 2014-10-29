@@ -1,0 +1,49 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="StatusDetailsTemplate" handleinput="false">
+			<Windows>
+				<Label name="$parentLabel" font="UO_Default_Outline_Text" maxchars="256" textalign="right" autoresize="false" handleinput="false">
+					<Size>
+						<AbsPoint x="280" y="18"/>
+					</Size>
+				</Label>
+				<Label name="$parentValue" font="UO_Default_Outline_Text" maxchars="256" textalign="left" autoresize="true" handleinput="false">
+					<Size>
+						<AbsPoint x="800" y="18"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parentLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="QuickDetailsWindow" movable="false" layer="default">
+			<EventHandlers>
+				<EventHandler event="OnInitialize" function="QuickDetailsWindow.Initialize" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="50" y="50"/>
+			</Size>
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft">
+					<AbsPoint x="200" y="100" />
+				</Anchor>
+			</Anchors>
+			<Windows>
+				<Button name="$parentDetailsTextRoot" inherits="CoreWindowResizeButtonBottomRight" handleinput="true" layer="default" >
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="QuickDetailsWindow.Tooltip" />
+						<EventHandler event="OnRButtonUp" function="QuickDetailsWindow.ShowDetailsContextMenu" />
+						<EventHandler event="OnLButtonDown" function="QuickDetailsWindow.Move" />
+						<EventHandler event="OnMouseWheel" function="EnhancePack.Scale" />
+						<EventHandler event="OnShutdown" function="QuickDetailsWindow.Shutdown" />
+            <EventHandler event="OnUpdate" function="QuickDetailsWindow.update" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

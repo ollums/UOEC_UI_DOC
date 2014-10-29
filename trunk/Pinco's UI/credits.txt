@@ -1,0 +1,61 @@
+---=== Pinco's UI ===---
+
+-= Design, Coding and Production =-
+Pinco
+
+-= Art and Graphics =-
+Pinco
+Yorgan
+
+-= Animations =-
+Yorgan
+
+-= Music Composers =-
+Domenico Mirabelli
+Two Steps from Hell
+Immediate Music
+Karliene Raynolds
+Steve Fawkner
+Paul Romero
+Rob King
+Steve Baca
+Paul James
+Inon Zur
+Michael Hoenig
+Jeremy Soule
+Jim Soule
+Mason B. Fisher
+Bill Brown
+Stephen Rippy
+Jeff Van Dyke
+Kevin Manthei
+Jamie Christopherson
+Trevor Jones
+Johan Lindgren
+
+and many others that I can't find the name...
+
+
+-= Special Thanks =-
+Dermott of LS for his works on texture packs.
+All the one who created some of the scripts used to begin this project.
+All the users providing donations able to keep alive this project.
+All the users that provides ideas and bug reports.
+
+
+-= Supporters =-
+A big THANK YOU to everyone who donated money for this project.
+
+In particular:
+
+Bill Mechefske
+Freddy Smets
+Jennifer Boggs 
+
+
+-= Find us on the web =-
+Pinco's UI home:	http://www.guain.it/PincoUI
+Pinco's Team YouTube channel:	http://www.youtube.com/user/PincoTeam
+
+
+Pinco's UI First Release: November 23, 2010

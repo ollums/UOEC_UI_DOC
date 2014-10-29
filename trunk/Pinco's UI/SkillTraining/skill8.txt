@@ -1,0 +1,14 @@
+
+0- 40.0 Train at Blacksmith NPC in New Haven.
+
+40.0-45.0: Mace 
+
+45.0-50.0: Maul
+
+50.0 - 75.0: Kryss 
+
+75.1 - 89.9: Shuriken
+
+90.0 - 100: Circlet
+
+100.1 - 120: Royal Circlet

@@ -1,0 +1,715 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="Source/ItemProperties.lua" />
+	</Scripts>
+	<Assets>
+		<Texture name="ItmPropsElements" file="Textures/Pinco/ItmPropsElements.dds"/>
+		<Texture name="ListDot" file="Textures/Pinco/Dot.dds"/>
+		<Texture name="PropsLine" file="Textures/Pinco/Line.dds"/>
+	</Assets>
+	<Windows>	
+		<Label name="ItemPropItemDef" font="UO_DefaultText" maxchars="768" textalign="center" autoresize="true" wordwrap="true">
+			<Size>
+				<AbsPoint x="330" y="64" />
+			</Size>
+		</Label>
+		
+		<Label name="ItemSpecialPropDef_RightAlign" font="font_verdana_shadow_med2_15" maxchars="768" textalign="right" autoresizewidth="true" autoresize="false" wordwrap="false">
+			<Size>
+				<AbsPoint x="200" y="20" />
+			</Size>
+			<Color r="113" g="107" b="197" a="255" />
+		</Label>
+
+		<Label name="ItemSpecialPropDef_LeftAlign" font="font_verdana_shadow_med2_15" maxchars="768" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+			<Size>
+				<AbsPoint x="200" y="20" />
+			</Size>
+			<Color r="113" g="107" b="197" a="255" />
+		</Label>
+
+		<Label name="ItemDescriptionDef" font="font_verdana_shadow_med2_13" maxchars="1000" textalign="center" autoresizewidth="false" autoresize="true" wordwrap="true">
+			<Size>
+				<AbsPoint x="400" y="20" />
+			</Size>
+			<Color r="125" g="125" b="125" a="255" />
+		</Label>
+		
+		<Window name="NewItemPropItemDef" movable="false" layer="overlay">
+			<Size>
+				<AbsPoint x="347" y="20" />
+			</Size>
+			<Windows>
+				<DynamicImage name="$parentDot" texturescale="1" layer="overlay" popable="false" texture="ListDot">
+					<Size>
+						<AbsPoint x="10" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				<Label name="$parentProp" font="font_verdana_shadow_med2_15" maxchars="768" textalign="left" autoresizewidth="true"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="230" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentDot">
+							<AbsPoint x="7" y="-5" />
+						</Anchor>
+					</Anchors>
+
+				</Label>
+				<Label name="$parentCap" font="font_verdana_shadow_med2_13" maxchars="768" textalign="left" autoresizewidth="true"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="330" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentProp">
+							<AbsPoint x="5" y="2" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				<Label name="$parentChange" font="font_verdana_shadow_med2_13" maxchars="768" textalign="left" autoresizewidth="true"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="330" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentCap">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="ItemProperties" movable="true" layer="overlay">
+			<Size>
+				<AbsPoint x="0" y="0" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnInitialize" function="ItemProperties.Initialize" />
+				<EventHandler event="OnShutdown" function="ItemProperties.Shutdown" />
+			</EventHandlers>
+			<Windows>
+				<!-- Body background -->
+				<FullResizeImage name="$parentWindowBackground" inherits="UO_Simple_Black_Background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft"/>
+						<Anchor point="bottomright" relativePoint="bottomright"/>
+					</Anchors>
+				</FullResizeImage>
+
+				<!-- Inner Frame Boilerplate -->
+				<FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<!-- End of Inner Frame Boilerplate -->
+			</Windows>
+		</Window>
+
+
+		<Window name="WeaponPropertiesTemplate" movable="true" layer="overlay">
+			<Size>
+				<AbsPoint x="450" y="500" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentWindowBackground" inherits="UO_Simple_Black_Background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft"/>
+						<Anchor point="bottomright" relativePoint="bottomright"/>
+					</Anchors>
+				</FullResizeImage>
+
+				<FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame" >
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+
+
+
+
+				<DynamicImage name="$parentSpecial1" texturescale="0.78" layer="overlay" popable="false">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="30" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="$parentSpecial2" texturescale="0.78" layer="overlay" popable="false">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+							<AbsPoint x="-20" y="30" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<Label name="$parentItemName" font="font_verdana_bold_shadow_med2_20" maxchars="100" textalign="center" autoresizewidth="false" autoresize="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="300" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="top" relativePoint="top">
+							<AbsPoint x="0" y="3" />
+						</Anchor>
+					</Anchors>
+					<Color r="153" g="153" b="153" a="255" />
+				</Label>
+
+				<Label name="$parentItemExc" font="font_verdana_shadow_med2_15" maxchars="50" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentItemName">
+							<AbsPoint x="0" y="2" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Label name="$parentCraftedBy" font="font_verdana_shadow_med2_13" maxchars="50" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="300" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentItemExc">
+							<AbsPoint x="0" y="-1" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentEngrave" font="font_verdana_shadow_med2_15" maxchars="200" textalign="center" autoresizewidth="false"  autoresize="true" wordwrap="true">
+					<Size>
+						<AbsPoint x="450" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentCraftedBy">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="51" a="255" />
+				</Label>
+
+
+				<FullResizeImage name="$parentInnerFrame" inherits="UO_Default_Inner_Window_Frame" >
+					<Size>
+						<AbsPoint x="450" y="127" />
+					</Size>
+					<Anchors>
+						<Anchors>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+
+						</Anchors>
+
+					</Anchors>
+				</FullResizeImage>
+
+				<Label name="$parentItemType" font="font_verdana_shadow_med2_15" maxchars="50" textalign="left" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="200" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentInnerFrame">
+							<AbsPoint x="20" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentLayer" font="font_verdana_shadow_med2_15" maxchars="50" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="200" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentInnerFrame">
+							<AbsPoint x="-10" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+
+				<Label name="$parentDPS" font="font_verdana_bold_shadow_med2_36" maxchars="50" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="100" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentItemType">
+							<AbsPoint x="20" y="15" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentDPSChange" font="font_verdana_shadow_med2_18" maxchars="50" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDPS">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				
+				<Label name="$parentDPSLabel" font="font_verdana_shadow_med2_15" maxchars="50" textalign="left" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="200" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDPS">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<DynamicImage name="$parentElementsTable" texturescale="1" layer="overlay" popable="false" texture="ItmPropsElements">
+					<Size>
+						<AbsPoint x="400" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDPSLabel">
+							<AbsPoint x="-15" y="8" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<Label name="$parentDMGPhys" font="font_verdana_shadow_med2_15" maxchars="4" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentElementsTable">
+							<AbsPoint x="27" y="7" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentPhysCap" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDMGPhys">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentPhysDiff" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPhysCap">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentDMGFire" font="font_verdana_shadow_med2_15" maxchars="4" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentDMGPhys">
+							<AbsPoint x="27" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentFireCap" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDMGFire">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentFireDiff" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFireCap">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				
+				<Label name="$parentDMGCold" font="font_verdana_shadow_med2_15" maxchars="4" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentDMGFire">
+							<AbsPoint x="35" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentColdCap" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDMGCold">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				<Label name="$parentColdDiff" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColdCap">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentDMGPois" font="font_verdana_shadow_med2_15" maxchars="4" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentDMGCold">
+							<AbsPoint x="27" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentPoisCap" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDMGPois">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				<Label name="$parentPoisDiff" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPoisCap">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentDMGEner" font="font_verdana_shadow_med2_15" maxchars="4" textalign="center" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentDMGPois">
+							<AbsPoint x="29" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentEnerCap" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDMGEner">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				<Label name="$parentEnerDiff" font="font_verdana_shadow_med2_13" maxchars="768" textalign="center" autoresizewidth="false"  autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnerCap">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentDMGVal" font="font_verdana_shadow_med2_13" maxchars="50" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="80" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementsTable">
+							<AbsPoint x="10" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentDMGLabel" font="font_verdana_shadow_med2_13" maxchars="50" textalign="left" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="200" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentDMGVal">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+
+				<Label name="$parentSPDVal" font="font_verdana_shadow_med2_13" maxchars="50" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentDMGVal">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentSPDLabel" font="font_verdana_shadow_med2_13" maxchars="50" textalign="left" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="200" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentSPDVal">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentRNGVal" font="font_verdana_shadow_med2_13" maxchars="50" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="50" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentSPDVal">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentRNGLabel" font="font_verdana_shadow_med2_13" maxchars="50" textalign="left" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="200" y="17" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentRNGVal">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+
+				<DynamicImage name="$parentBottomDockspot" texturescale="1" layer="overlay" popable="false">
+					<Size>
+						<AbsPoint x="1" y="1" />
+					</Size>
+				</DynamicImage>
+
+				<Label name="$parentSTRReq" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentBottomDockspot">
+							<AbsPoint x="95" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentSKLReq" font="font_verdana_shadow_med2_15" maxchars="250" textalign="right" autoresize="false"  autoresizewidth="true" wordwrap="false">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSTRReq">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<Label name="$parentRACEReq" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSKLReq">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+				<DynamicImage name="$parentLine" texturescale="1" layer="overlay" popable="false" texture="PropsLine">
+					<Size>
+						<AbsPoint x="400" y="2" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentRACEReq">
+							<AbsPoint x="-15" y="10" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<Label name="$parentUsesVal" font="font_verdana_shadow_med2_15" maxchars="200" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="110" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentRACEReq">
+							<AbsPoint x="0" y="17" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentUsesLabel" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentUsesVal">
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+				
+				<Label name="$parentDurabilityVal" font="font_verdana_shadow_med2_15" maxchars="200" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="110" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentUsesVal">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentDurabilityLabel" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentDurabilityVal">
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentWeightVal" font="font_verdana_shadow_med2_15" maxchars="200" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="110" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentDurabilityVal">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentWeightLabel" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentWeightVal">
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentImbuingVal" font="font_verdana_shadow_med2_15" maxchars="200" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="110" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentWeightVal">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentImbuingLabel" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentImbuingVal">
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				<Label name="$parentUnravelVal" font="font_verdana_shadow_med2_15" maxchars="200" textalign="left" autoresizewidth="true" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="110" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentImbuingVal">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentUnravelLabel" font="font_verdana_shadow_med2_15" maxchars="200" textalign="right" autoresize="false" wordwrap="false">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentUnravelVal">
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="125" g="125" b="125" a="255" />
+				</Label>
+
+				
+				
+			</Windows>
+		</Window>
+
+	</Windows>
+</Interface>

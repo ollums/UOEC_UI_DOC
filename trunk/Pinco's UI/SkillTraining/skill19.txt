@@ -1,0 +1,12 @@
+
+If you have a Crystal Ball of Knowledge, turn it on and try out different fishing locations until the ball reports "Challenging" skill level.
+ 
+0 - 30: Train at NPC Fisher 
+
+30 - 50: Fish in shallow water. Stand on the shore of islands such as Moonglow or Haven and walk around. 
+
+50 - 75: Fish off of a dock, a few tiles from the shore. The farther out, the higher the skill level. A crystal ball comes in very handy. 
+
+75 - 120: Fish in deep water (gains after 85.0 are only possible in in deep water). Deep water requires the use of a boat to reach. Get on one and sail around. Be prepared to fight Sea Serpents. 
+
+When a fishing spot has been "used up" you will get the message "The fish don't seem to be biting here". Then is is time to move to another location.

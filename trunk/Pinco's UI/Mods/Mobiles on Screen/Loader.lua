@@ -1,0 +1,1 @@
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/Mobiles on Screen", "MobilesOnScreenWindow.xml", "MobilesOnScreenWindow.xml" )

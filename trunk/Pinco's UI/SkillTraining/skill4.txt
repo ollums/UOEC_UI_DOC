@@ -1,0 +1,21 @@
+
+0 - 30: Train at Herdsman or Veterinarian NPC 
+
+30 - 43.1: Cows, Goats, Pigs or Sheeps. 
+
+43.1 - 55.1: Hinds, Timber Wolves. 
+
+55.1 - 79.1: Polar Bears, Walruses, Brown Bears. 
+
+79.1 - 91.1: Great Harts, Grizzly Bears. 
+
+91.1 - 103.1: Bulls.
+
+103.1 - 115.1: Dire Wolves, Ridgebacks.
+
+115.1 - 120: Ki-Rins, Unicorns.
+
+
+Using skill bonus items could help you to reach beasts who grants you better gains (or non aggressive beasts like ki-rins).
+
+You can also start from 85.0 if you have an Advanced Character token and spare lot of time.

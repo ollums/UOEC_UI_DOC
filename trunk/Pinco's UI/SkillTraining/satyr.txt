@@ -1,0 +1,26 @@
+
+						--- Setup ---
+
+·	You need to be able to access Twisted Weald to do this and you need to either be on, or have completed, the Lorekeeper Calendor the Keeper of Tradition who is located in the city of Heartwood. Young characters can start this quest without any problems. 	
+
+·	A pack animal, loaded with supplies, of some kind is required. It can be helpful to command the pack animal to stay at the entrance so that it can be picked up easily once you have been discorded.
+
+						--- The Trick ---
+
+·	Go into Twisted Weald, find a satyr and pull up its healthbar.
+
+·	Attack it by double clicking its gump in war mode and it will attempt to use discordance on you.
+
+·	Let it follow you around until you have been discorded. You will know this because you will see all of your skills drop.
+
+·	Then quickly get through the sparkle to leave Twisted Weald.
+
+·	When attacking it I recommend you get to the exit as quickly as possible as it will try to provoke other creatures in the area onto you. With lowered skills you definitely don't want a Cu Sidhe attacking you; even a Pixie can be hard to kill if you're young. If they do target you, they must either be killed or you must leave the server and come back.
+
+·	Once you leave via the sparkle the satyr will loose interest in attacking you. However, you are still discorded and you can re-enter without fear of it attacking you; this will NOT however stop critters that may have been provoked onto you from attacking you. This is when an invisibility spell or a pixie swatter with weapon skill comes in handy.
+
+·	Now as long as you stay close to the satyr you will stay discorded until it respawns.
+	
+It takes a while to get the hang of it and may several tries before getting it down. 
+
+Unlike other debuffs, no icon indicator will appear in the buff/debuff gump while a character is Discorded.

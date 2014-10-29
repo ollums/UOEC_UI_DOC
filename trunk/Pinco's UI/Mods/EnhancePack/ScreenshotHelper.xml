@@ -1,0 +1,37 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- MAIN WINDOW DEFINITION -->
+    <Window name="ScreenshotHelper" movable="true">
+      <Size>
+        <AbsPoint x="450" y="450"/>
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0"/>
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="ScreenshotHelper.Initialize"/>
+        <EventHandler event="OnShutdown" function="ScreenshotHelper.Shutdown"/>
+        <EventHandler event="OnRButtonUp" function="ScreenshotHelper.OnRClick" />
+      </EventHandlers>
+      <Windows>
+        <!-- General Window Settings -->
+        <DynamicImage name="$parentBackground" texture="UO_ResizeFrame" layer="background">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo=""/>
+            <Anchor point="bottomright" relativePoint="bottomright" relativeTo=""/>
+          </Anchors>
+        </DynamicImage>
+        <DynamicImage name="$parentIcon" texture="">
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="$parentBackground">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

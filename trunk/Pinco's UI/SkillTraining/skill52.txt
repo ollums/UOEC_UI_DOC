@@ -1,0 +1,16 @@
+
+0 - 30: Train at NPC Tailor 
+
+30.0 - 41.4: Short Pants (6 Cloth) 
+
+41.4 - 54: Cloaks (14 Cloth) 
+
+54 - 78: Robes (16 Cloth) 
+
+78 - 110: Elven Shirts (10 Cloth)
+
+110 - 117: Gargish Cloth Kilt (6 Cloth)
+
+117 - 120: Gargish Cloth Arms (8 Cloth)
+
+|SATYR|

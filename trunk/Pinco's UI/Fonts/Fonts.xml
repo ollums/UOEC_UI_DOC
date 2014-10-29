@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Font name="font_verdana_bold" face="Verdana" file="fonts/verdanab.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="true"/>
+		<Font name="font_arialuni_bold" face="Arial" file="fonts/arialuni.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="true"/>
+		<Font name="font_verdana" face="Verdana" file="fonts/verdana.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="false"/>
+		<Font name="font_verdana_italic_small" face="Verdana" file="fonts/verdanai.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic" face="Verdana" file="fonts/verdanai.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_BIG" face="Verdana" file="fonts/verdanab.ttf" height="40" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="true" bold="true"/>
+		<Font name="font_verdana_MEDBIG" face="Verdana" file="fonts/verdanab.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="true" bold="true"/>
+		<Font name="font_verdana_bold_shadow" face="Verdana" file="fonts/verdanab.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_verdana_bold_med" face="Verdana" file="fonts/verdanab.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med" face="Verdana" file="fonts/verdanab.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_verdana_bold_shadow_small" face="Verdana" file="fonts/verdanab.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="font_verdana_bold_shadow_small_1" face="Verdana" file="fonts/verdanab.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="font_verdana_bold_shadow_status" face="Verdana" file="fonts/verdanab.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="font_verdana_shadow_med2" face="Verdana" file="fonts/verdana.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="false"/>
+		<Font name="font_verdana_bold_shadow_med2" face="Verdana" file="fonts/verdanab.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med3" face="Verdana" file="fonts/verdanab.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2" face="Verdana" file="fonts/verdanai.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_shadow_med" face="Verdana" file="fonts/verdana.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="false"/>
+		<Font name="chiller" face="CHILLER" file="fonts/CHILLER.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="comics" face="Comics" file="fonts/comic.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="comics_bold" face="Comics" file="fonts/comicbd.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="times" face="Times" file="fonts/times.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="times_bold" face="Times" file="fonts/timesbd.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="avatar" face="avatar" file="fonts/avatar.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="avatar_bold" face="avatar" file="fonts/avatar.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="gothic" face="gothic" file="fonts/GOTHUT__.ttf" height="42" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="handwriting" face="handwriting" file="fonts/handwriting.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="murder" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="diablo" face="diablo" file="fonts/avqest.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="magic_school" face="magic" file="fonts/MagicSchoolTwo.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="samurai" face="samurai" file="fonts/samurai.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="runic" face="runes" file="fonts/Runes.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="gargrunic" face="gargish runes" file="fonts/gargishrune.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="false"/>
+		<Font name="font_sagoe_bold_shadow_med" face="Sagoe" file="fonts/segoeprb.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="UO" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic" face="Magic:The Gathering" file="fonts/magic.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+
+		<!--  *************** Examples ***************  -->
+		<!-- <Font name="font_arialblack12" face="Arial Black" file="fonts/fonts/ariblk.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/> -->
+		<!-- <Font name="font_arialblack16" face="Arial Black" file="fonts/fonts/ariblk.ttf" height="16" texsize="512" antialias="true" hinting="true" autohinting="true" outline="false" shadow="true" shadowsize="1" /> -->
+		<!--  ****************************************  -->
+		<!-- Chat Font -->
+
+		<Font name="UO_Overhead_Chat_8" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_9" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_10" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_11" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_12" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_13" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_14" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_15" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_16" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_17" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_18" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_19" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_20" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_21" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_22" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_23" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_24" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_25" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_26" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_27" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_28" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_29" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_30" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_31" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_32" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_33" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_34" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_35" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_30" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+		<Font name="UO_Overhead_Chat_36" face="Gothic-Regular" file="fonts/VL-PGothic-Regular.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" shadowsize="1" />
+
+
+		<Font name="UO_DefaultText_8" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_9" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_10" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_11" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_12" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_13" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_14" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_15" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_16" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_17" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_18" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_19" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_20" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_21" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_22" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_23" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_24" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_25" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_26" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_27" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_28" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_29" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_30" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_31" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_32" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_33" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_34" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_35" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+		<Font name="UO_DefaultText_36" face="MyriadPro" file="fonts/MyriadPro-Regular.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false"/>
+
+		<Font name="UO_DefaultText_ASIA_8" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="8" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_9" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="9" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_10" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="10" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_11" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="11" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_12" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="12" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_13" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="13" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_14" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="14" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_15" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="15" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_16" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="16" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_17" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="17" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_18" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="18" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_19" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="19" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_20" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="20" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_21" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="21" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_22" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="22" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_23" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="23" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_24" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="24" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_25" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="25" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_26" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="26" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_27" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="27" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_28" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="28" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_29" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="29" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_30" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="30" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_31" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="31" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_32" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="32" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_33" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="33" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_34" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="34" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_35" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="35" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+		<Font name="UO_DefaultText_ASIA_36" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="36" texsize="1024" antialias="true" hinting="true" autohinting="false" outline="false" shadow="true" shadowsize="1" />
+
+
+
+		<Font name="avatar_8" face="avatar" file="fonts/avatar.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_9" face="avatar" file="fonts/avatar.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_10" face="avatar" file="fonts/avatar.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_11" face="avatar" file="fonts/avatar.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_12" face="avatar" file="fonts/avatar.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_13" face="avatar" file="fonts/avatar.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_14" face="avatar" file="fonts/avatar.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_15" face="avatar" file="fonts/avatar.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_16" face="avatar" file="fonts/avatar.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_17" face="avatar" file="fonts/avatar.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_18" face="avatar" file="fonts/avatar.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_19" face="avatar" file="fonts/avatar.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_20" face="avatar" file="fonts/avatar.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_21" face="avatar" file="fonts/avatar.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_22" face="avatar" file="fonts/avatar.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_23" face="avatar" file="fonts/avatar.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_24" face="avatar" file="fonts/avatar.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_25" face="avatar" file="fonts/avatar.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_26" face="avatar" file="fonts/avatar.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_27" face="avatar" file="fonts/avatar.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_28" face="avatar" file="fonts/avatar.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_29" face="avatar" file="fonts/avatar.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_30" face="avatar" file="fonts/avatar.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_31" face="avatar" file="fonts/avatar.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_32" face="avatar" file="fonts/avatar.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_33" face="avatar" file="fonts/avatar.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_34" face="avatar" file="fonts/avatar.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_35" face="avatar" file="fonts/avatar.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="avatar_36" face="avatar" file="fonts/avatar.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="avatar_bold_8" face="avatar" file="fonts/avatar.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_9" face="avatar" file="fonts/avatar.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_10" face="avatar" file="fonts/avatar.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_11" face="avatar" file="fonts/avatar.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_12" face="avatar" file="fonts/avatar.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_13" face="avatar" file="fonts/avatar.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_14" face="avatar" file="fonts/avatar.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_15" face="avatar" file="fonts/avatar.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_16" face="avatar" file="fonts/avatar.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_17" face="avatar" file="fonts/avatar.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_18" face="avatar" file="fonts/avatar.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_19" face="avatar" file="fonts/avatar.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_20" face="avatar" file="fonts/avatar.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_21" face="avatar" file="fonts/avatar.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_22" face="avatar" file="fonts/avatar.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_23" face="avatar" file="fonts/avatar.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_24" face="avatar" file="fonts/avatar.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_25" face="avatar" file="fonts/avatar.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_26" face="avatar" file="fonts/avatar.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_27" face="avatar" file="fonts/avatar.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_28" face="avatar" file="fonts/avatar.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_29" face="avatar" file="fonts/avatar.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_30" face="avatar" file="fonts/avatar.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_31" face="avatar" file="fonts/avatar.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_32" face="avatar" file="fonts/avatar.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_33" face="avatar" file="fonts/avatar.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_34" face="avatar" file="fonts/avatar.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_35" face="avatar" file="fonts/avatar.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="avatar_bold_36" face="avatar" file="fonts/avatar.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+
+		<Font name="chiller_8" face="CHILLER" file="fonts/CHILLER.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_9" face="CHILLER" file="fonts/CHILLER.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_10" face="CHILLER" file="fonts/CHILLER.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_11" face="CHILLER" file="fonts/CHILLER.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_12" face="CHILLER" file="fonts/CHILLER.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_13" face="CHILLER" file="fonts/CHILLER.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_14" face="CHILLER" file="fonts/CHILLER.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_15" face="CHILLER" file="fonts/CHILLER.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_16" face="CHILLER" file="fonts/CHILLER.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_17" face="CHILLER" file="fonts/CHILLER.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_18" face="CHILLER" file="fonts/CHILLER.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_19" face="CHILLER" file="fonts/CHILLER.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_20" face="CHILLER" file="fonts/CHILLER.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_21" face="CHILLER" file="fonts/CHILLER.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_22" face="CHILLER" file="fonts/CHILLER.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_23" face="CHILLER" file="fonts/CHILLER.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_24" face="CHILLER" file="fonts/CHILLER.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_25" face="CHILLER" file="fonts/CHILLER.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_26" face="CHILLER" file="fonts/CHILLER.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_27" face="CHILLER" file="fonts/CHILLER.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_28" face="CHILLER" file="fonts/CHILLER.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_29" face="CHILLER" file="fonts/CHILLER.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_30" face="CHILLER" file="fonts/CHILLER.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_31" face="CHILLER" file="fonts/CHILLER.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_32" face="CHILLER" file="fonts/CHILLER.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_33" face="CHILLER" file="fonts/CHILLER.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_34" face="CHILLER" file="fonts/CHILLER.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_35" face="CHILLER" file="fonts/CHILLER.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="chiller_36" face="CHILLER" file="fonts/CHILLER.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="comics_8" face="Comics" file="fonts/comic.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_9" face="Comics" file="fonts/comic.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_10" face="Comics" file="fonts/comic.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_11" face="Comics" file="fonts/comic.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_12" face="Comics" file="fonts/comic.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_13" face="Comics" file="fonts/comic.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_14" face="Comics" file="fonts/comic.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_15" face="Comics" file="fonts/comic.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_16" face="Comics" file="fonts/comic.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_17" face="Comics" file="fonts/comic.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_18" face="Comics" file="fonts/comic.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_19" face="Comics" file="fonts/comic.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_20" face="Comics" file="fonts/comic.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_21" face="Comics" file="fonts/comic.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_22" face="Comics" file="fonts/comic.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_23" face="Comics" file="fonts/comic.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_24" face="Comics" file="fonts/comic.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_25" face="Comics" file="fonts/comic.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_26" face="Comics" file="fonts/comic.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_27" face="Comics" file="fonts/comic.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_28" face="Comics" file="fonts/comic.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_29" face="Comics" file="fonts/comic.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_30" face="Comics" file="fonts/comic.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_31" face="Comics" file="fonts/comic.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_32" face="Comics" file="fonts/comic.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_33" face="Comics" file="fonts/comic.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_34" face="Comics" file="fonts/comic.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_35" face="Comics" file="fonts/comic.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="comics_36" face="Comics" file="fonts/comic.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="comics_bold_8" face="Comics" file="fonts/comicbd.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_9" face="Comics" file="fonts/comicbd.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_10" face="Comics" file="fonts/comicbd.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_11" face="Comics" file="fonts/comicbd.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_12" face="Comics" file="fonts/comicbd.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_13" face="Comics" file="fonts/comicbd.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_14" face="Comics" file="fonts/comicbd.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_15" face="Comics" file="fonts/comicbd.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_16" face="Comics" file="fonts/comicbd.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_17" face="Comics" file="fonts/comicbd.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_18" face="Comics" file="fonts/comicbd.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_19" face="Comics" file="fonts/comicbd.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_20" face="Comics" file="fonts/comicbd.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_21" face="Comics" file="fonts/comicbd.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_22" face="Comics" file="fonts/comicbd.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_23" face="Comics" file="fonts/comicbd.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_24" face="Comics" file="fonts/comicbd.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_25" face="Comics" file="fonts/comicbd.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_26" face="Comics" file="fonts/comicbd.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_27" face="Comics" file="fonts/comicbd.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_28" face="Comics" file="fonts/comicbd.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_29" face="Comics" file="fonts/comicbd.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_30" face="Comics" file="fonts/comicbd.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_31" face="Comics" file="fonts/comicbd.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_32" face="Comics" file="fonts/comicbd.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_33" face="Comics" file="fonts/comicbd.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_34" face="Comics" file="fonts/comicbd.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_35" face="Comics" file="fonts/comicbd.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="comics_bold_36" face="Comics" file="fonts/comicbd.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+
+		<Font name="diablo_8" face="diablo" file="fonts/avqest.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_9" face="diablo" file="fonts/avqest.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_10" face="diablo" file="fonts/avqest.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_11" face="diablo" file="fonts/avqest.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_12" face="diablo" file="fonts/avqest.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_13" face="diablo" file="fonts/avqest.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_14" face="diablo" file="fonts/avqest.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_15" face="diablo" file="fonts/avqest.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_16" face="diablo" file="fonts/avqest.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_17" face="diablo" file="fonts/avqest.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_18" face="diablo" file="fonts/avqest.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_19" face="diablo" file="fonts/avqest.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_20" face="diablo" file="fonts/avqest.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_21" face="diablo" file="fonts/avqest.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_22" face="diablo" file="fonts/avqest.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_23" face="diablo" file="fonts/avqest.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_24" face="diablo" file="fonts/avqest.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_25" face="diablo" file="fonts/avqest.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_26" face="diablo" file="fonts/avqest.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_27" face="diablo" file="fonts/avqest.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_28" face="diablo" file="fonts/avqest.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_29" face="diablo" file="fonts/avqest.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_30" face="diablo" file="fonts/avqest.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_31" face="diablo" file="fonts/avqest.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_32" face="diablo" file="fonts/avqest.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_33" face="diablo" file="fonts/avqest.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_34" face="diablo" file="fonts/avqest.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_35" face="diablo" file="fonts/avqest.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="diablo_36" face="diablo" file="fonts/avqest.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="gothic_8" face="gothic" file="fonts/GOTHUT__.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_9" face="gothic" file="fonts/GOTHUT__.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_10" face="gothic" file="fonts/GOTHUT__.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_11" face="gothic" file="fonts/GOTHUT__.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_12" face="gothic" file="fonts/GOTHUT__.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_13" face="gothic" file="fonts/GOTHUT__.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_14" face="gothic" file="fonts/GOTHUT__.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_15" face="gothic" file="fonts/GOTHUT__.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_16" face="gothic" file="fonts/GOTHUT__.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_17" face="gothic" file="fonts/GOTHUT__.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_18" face="gothic" file="fonts/GOTHUT__.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_19" face="gothic" file="fonts/GOTHUT__.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_20" face="gothic" file="fonts/GOTHUT__.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_21" face="gothic" file="fonts/GOTHUT__.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_22" face="gothic" file="fonts/GOTHUT__.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_23" face="gothic" file="fonts/GOTHUT__.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_24" face="gothic" file="fonts/GOTHUT__.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_25" face="gothic" file="fonts/GOTHUT__.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_26" face="gothic" file="fonts/GOTHUT__.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_27" face="gothic" file="fonts/GOTHUT__.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_28" face="gothic" file="fonts/GOTHUT__.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_29" face="gothic" file="fonts/GOTHUT__.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_30" face="gothic" file="fonts/GOTHUT__.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_31" face="gothic" file="fonts/GOTHUT__.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_32" face="gothic" file="fonts/GOTHUT__.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_33" face="gothic" file="fonts/GOTHUT__.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_34" face="gothic" file="fonts/GOTHUT__.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_35" face="gothic" file="fonts/GOTHUT__.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gothic_36" face="gothic" file="fonts/GOTHUT__.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="handwriting_8" face="handwriting" file="fonts/handwriting.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_9" face="handwriting" file="fonts/handwriting.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_10" face="handwriting" file="fonts/handwriting.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_11" face="handwriting" file="fonts/handwriting.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_12" face="handwriting" file="fonts/handwriting.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_13" face="handwriting" file="fonts/handwriting.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_14" face="handwriting" file="fonts/handwriting.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_15" face="handwriting" file="fonts/handwriting.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_16" face="handwriting" file="fonts/handwriting.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_17" face="handwriting" file="fonts/handwriting.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_18" face="handwriting" file="fonts/handwriting.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_19" face="handwriting" file="fonts/handwriting.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_20" face="handwriting" file="fonts/handwriting.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_21" face="handwriting" file="fonts/handwriting.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_22" face="handwriting" file="fonts/handwriting.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_23" face="handwriting" file="fonts/handwriting.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_24" face="handwriting" file="fonts/handwriting.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_25" face="handwriting" file="fonts/handwriting.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_26" face="handwriting" file="fonts/handwriting.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_27" face="handwriting" file="fonts/handwriting.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_28" face="handwriting" file="fonts/handwriting.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_29" face="handwriting" file="fonts/handwriting.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="handwriting_30" face="handwriting" file="fonts/handwriting.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="magic_school_8" face="magic" file="fonts/MagicSchoolTwo.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_9" face="magic" file="fonts/MagicSchoolTwo.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_10" face="magic" file="fonts/MagicSchoolTwo.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_11" face="magic" file="fonts/MagicSchoolTwo.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_12" face="magic" file="fonts/MagicSchoolTwo.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_13" face="magic" file="fonts/MagicSchoolTwo.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_14" face="magic" file="fonts/MagicSchoolTwo.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_15" face="magic" file="fonts/MagicSchoolTwo.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_16" face="magic" file="fonts/MagicSchoolTwo.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_17" face="magic" file="fonts/MagicSchoolTwo.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_18" face="magic" file="fonts/MagicSchoolTwo.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_19" face="magic" file="fonts/MagicSchoolTwo.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_20" face="magic" file="fonts/MagicSchoolTwo.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_21" face="magic" file="fonts/MagicSchoolTwo.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_22" face="magic" file="fonts/MagicSchoolTwo.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_23" face="magic" file="fonts/MagicSchoolTwo.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_24" face="magic" file="fonts/MagicSchoolTwo.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_25" face="magic" file="fonts/MagicSchoolTwo.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_26" face="magic" file="fonts/MagicSchoolTwo.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_27" face="magic" file="fonts/MagicSchoolTwo.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_28" face="magic" file="fonts/MagicSchoolTwo.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_29" face="magic" file="fonts/MagicSchoolTwo.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_30" face="magic" file="fonts/MagicSchoolTwo.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_31" face="magic" file="fonts/MagicSchoolTwo.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_32" face="magic" file="fonts/MagicSchoolTwo.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_33" face="magic" file="fonts/MagicSchoolTwo.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_34" face="magic" file="fonts/MagicSchoolTwo.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_35" face="magic" file="fonts/MagicSchoolTwo.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="magic_school_36" face="magic" file="fonts/MagicSchoolTwo.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="magic_8" face="Magic:The Gathering" file="fonts/magic.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_9" face="Magic:The Gathering" file="fonts/magic.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_10" face="Magic:The Gathering" file="fonts/magic.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_11" face="Magic:The Gathering" file="fonts/magic.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_12" face="Magic:The Gathering" file="fonts/magic.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_13" face="Magic:The Gathering" file="fonts/magic.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_14" face="Magic:The Gathering" file="fonts/magic.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_15" face="Magic:The Gathering" file="fonts/magic.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_16" face="Magic:The Gathering" file="fonts/magic.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_17" face="Magic:The Gathering" file="fonts/magic.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_18" face="Magic:The Gathering" file="fonts/magic.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_19" face="Magic:The Gathering" file="fonts/magic.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_20" face="Magic:The Gathering" file="fonts/magic.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_21" face="Magic:The Gathering" file="fonts/magic.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_22" face="Magic:The Gathering" file="fonts/magic.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_23" face="Magic:The Gathering" file="fonts/magic.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_24" face="Magic:The Gathering" file="fonts/magic.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_25" face="Magic:The Gathering" file="fonts/magic.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_26" face="Magic:The Gathering" file="fonts/magic.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_27" face="Magic:The Gathering" file="fonts/magic.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_28" face="Magic:The Gathering" file="fonts/magic.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_29" face="Magic:The Gathering" file="fonts/magic.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_30" face="Magic:The Gathering" file="fonts/magic.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_31" face="Magic:The Gathering" file="fonts/magic.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_32" face="Magic:The Gathering" file="fonts/magic.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_33" face="Magic:The Gathering" file="fonts/magic.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_34" face="Magic:The Gathering" file="fonts/magic.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_35" face="Magic:The Gathering" file="fonts/magic.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="magic_36" face="Magic:The Gathering" file="fonts/magic.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+
+		<Font name="gargrunic_8" face="gargish runes" file="fonts/gargishrune.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_9" face="gargish runes" file="fonts/gargishrune.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_10" face="gargish runes" file="fonts/gargishrune.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_11" face="gargish runes" file="fonts/gargishrune.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_12" face="gargish runes" file="fonts/gargishrune.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_13" face="gargish runes" file="fonts/gargishrune.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_14" face="gargish runes" file="fonts/gargishrune.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_15" face="gargish runes" file="fonts/gargishrune.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_16" face="gargish runes" file="fonts/gargishrune.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_17" face="gargish runes" file="fonts/gargishrune.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_18" face="gargish runes" file="fonts/gargishrune.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_19" face="gargish runes" file="fonts/gargishrune.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_20" face="gargish runes" file="fonts/gargishrune.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_21" face="gargish runes" file="fonts/gargishrune.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_22" face="gargish runes" file="fonts/gargishrune.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_23" face="gargish runes" file="fonts/gargishrune.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_24" face="gargish runes" file="fonts/gargishrune.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_25" face="gargish runes" file="fonts/gargishrune.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_26" face="gargish runes" file="fonts/gargishrune.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_27" face="gargish runes" file="fonts/gargishrune.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_28" face="gargish runes" file="fonts/gargishrune.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_29" face="gargish runes" file="fonts/gargishrune.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_30" face="gargish runes" file="fonts/gargishrune.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_31" face="gargish runes" file="fonts/gargishrune.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_32" face="gargish runes" file="fonts/gargishrune.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_33" face="gargish runes" file="fonts/gargishrune.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_34" face="gargish runes" file="fonts/gargishrune.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_35" face="gargish runes" file="fonts/gargishrune.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="gargrunic_36" face="gargish runes" file="fonts/gargishrune.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="samurai_8" face="samurai" file="fonts/samurai.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_9" face="samurai" file="fonts/samurai.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_10" face="samurai" file="fonts/samurai.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_11" face="samurai" file="fonts/samurai.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_12" face="samurai" file="fonts/samurai.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_13" face="samurai" file="fonts/samurai.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_14" face="samurai" file="fonts/samurai.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_15" face="samurai" file="fonts/samurai.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_16" face="samurai" file="fonts/samurai.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_17" face="samurai" file="fonts/samurai.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_18" face="samurai" file="fonts/samurai.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_19" face="samurai" file="fonts/samurai.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_20" face="samurai" file="fonts/samurai.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_21" face="samurai" file="fonts/samurai.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_22" face="samurai" file="fonts/samurai.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_23" face="samurai" file="fonts/samurai.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_24" face="samurai" file="fonts/samurai.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_25" face="samurai" file="fonts/samurai.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_26" face="samurai" file="fonts/samurai.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_27" face="samurai" file="fonts/samurai.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_28" face="samurai" file="fonts/samurai.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_29" face="samurai" file="fonts/samurai.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_30" face="samurai" file="fonts/samurai.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_31" face="samurai" file="fonts/samurai.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_32" face="samurai" file="fonts/samurai.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_33" face="samurai" file="fonts/samurai.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_34" face="samurai" file="fonts/samurai.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_35" face="samurai" file="fonts/samurai.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="samurai_36" face="samurai" file="fonts/samurai.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="times_8" face="Times" file="fonts/times.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_9" face="Times" file="fonts/times.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_10" face="Times" file="fonts/times.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_11" face="Times" file="fonts/times.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_12" face="Times" file="fonts/times.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_13" face="Times" file="fonts/times.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_14" face="Times" file="fonts/times.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_15" face="Times" file="fonts/times.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_16" face="Times" file="fonts/times.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_17" face="Times" file="fonts/times.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_18" face="Times" file="fonts/times.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_19" face="Times" file="fonts/times.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_20" face="Times" file="fonts/times.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_21" face="Times" file="fonts/times.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_22" face="Times" file="fonts/times.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_23" face="Times" file="fonts/times.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_24" face="Times" file="fonts/times.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_25" face="Times" file="fonts/times.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_26" face="Times" file="fonts/times.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_27" face="Times" file="fonts/times.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_28" face="Times" file="fonts/times.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_29" face="Times" file="fonts/times.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_30" face="Times" file="fonts/times.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_31" face="Times" file="fonts/times.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_32" face="Times" file="fonts/times.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_33" face="Times" file="fonts/times.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_34" face="Times" file="fonts/times.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_35" face="Times" file="fonts/times.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="times_36" face="Times" file="fonts/times.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="times_bold_8" face="Times" file="fonts/timesbd.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_9" face="Times" file="fonts/timesbd.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_10" face="Times" file="fonts/timesbd.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_11" face="Times" file="fonts/timesbd.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_12" face="Times" file="fonts/timesbd.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_13" face="Times" file="fonts/timesbd.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_14" face="Times" file="fonts/timesbd.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_15" face="Times" file="fonts/timesbd.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_16" face="Times" file="fonts/timesbd.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_17" face="Times" file="fonts/timesbd.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_18" face="Times" file="fonts/timesbd.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_19" face="Times" file="fonts/timesbd.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_20" face="Times" file="fonts/timesbd.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_21" face="Times" file="fonts/timesbd.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_22" face="Times" file="fonts/timesbd.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_23" face="Times" file="fonts/timesbd.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_24" face="Times" file="fonts/timesbd.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_25" face="Times" file="fonts/timesbd.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_26" face="Times" file="fonts/timesbd.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_27" face="Times" file="fonts/timesbd.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_28" face="Times" file="fonts/timesbd.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_29" face="Times" file="fonts/timesbd.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_30" face="Times" file="fonts/timesbd.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_31" face="Times" file="fonts/timesbd.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_32" face="Times" file="fonts/timesbd.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_33" face="Times" file="fonts/timesbd.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_34" face="Times" file="fonts/timesbd.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_35" face="Times" file="fonts/timesbd.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="times_bold_36" face="Times" file="fonts/timesbd.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+
+		<Font name="UO_8" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_9" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_10" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_11" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_12" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_13" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_14" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_15" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_16" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_17" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_18" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_19" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_20" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_21" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_22" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_23" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_24" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_25" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_26" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_27" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_28" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_29" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_30" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_31" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_32" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_33" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_34" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_35" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_36" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="false" outline="true" shadow="false"/>
+
+		<Font name="font_verdana_shadow_med2_8" face="Verdana" file="fonts/verdana.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_9" face="Verdana" file="fonts/verdana.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_10" face="Verdana" file="fonts/verdana.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_11" face="Verdana" file="fonts/verdana.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_12" face="Verdana" file="fonts/verdana.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_13" face="Verdana" file="fonts/verdana.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_14" face="Verdana" file="fonts/verdana.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_15" face="Verdana" file="fonts/verdana.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_16" face="Verdana" file="fonts/verdana.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_17" face="Verdana" file="fonts/verdana.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_18" face="Verdana" file="fonts/verdana.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_19" face="Verdana" file="fonts/verdana.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_20" face="Verdana" file="fonts/verdana.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_21" face="Verdana" file="fonts/verdana.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_22" face="Verdana" file="fonts/verdana.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_23" face="Verdana" file="fonts/verdana.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_24" face="Verdana" file="fonts/verdana.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_25" face="Verdana" file="fonts/verdana.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_26" face="Verdana" file="fonts/verdana.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_27" face="Verdana" file="fonts/verdana.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_28" face="Verdana" file="fonts/verdana.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_29" face="Verdana" file="fonts/verdana.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_30" face="Verdana" file="fonts/verdana.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_31" face="Verdana" file="fonts/verdana.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_32" face="Verdana" file="fonts/verdana.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_33" face="Verdana" file="fonts/verdana.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_34" face="Verdana" file="fonts/verdana.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_35" face="Verdana" file="fonts/verdana.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="font_verdana_shadow_med2_36" face="Verdana" file="fonts/verdana.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="font_verdana_bold_shadow_med2_8" face="Verdana" file="fonts/verdanab.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_9" face="Verdana" file="fonts/verdanab.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_10" face="Verdana" file="fonts/verdanab.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_11" face="Verdana" file="fonts/verdanab.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_12" face="Verdana" file="fonts/verdanab.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_13" face="Verdana" file="fonts/verdanab.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_14" face="Verdana" file="fonts/verdanab.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_15" face="Verdana" file="fonts/verdanab.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_16" face="Verdana" file="fonts/verdanab.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_17" face="Verdana" file="fonts/verdanab.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_18" face="Verdana" file="fonts/verdanab.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_19" face="Verdana" file="fonts/verdanab.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_20" face="Verdana" file="fonts/verdanab.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_21" face="Verdana" file="fonts/verdanab.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_22" face="Verdana" file="fonts/verdanab.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_23" face="Verdana" file="fonts/verdanab.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_24" face="Verdana" file="fonts/verdanab.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_25" face="Verdana" file="fonts/verdanab.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_26" face="Verdana" file="fonts/verdanab.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_27" face="Verdana" file="fonts/verdanab.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_28" face="Verdana" file="fonts/verdanab.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_29" face="Verdana" file="fonts/verdanab.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_30" face="Verdana" file="fonts/verdanab.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_31" face="Verdana" file="fonts/verdanab.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_32" face="Verdana" file="fonts/verdanab.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_33" face="Verdana" file="fonts/verdanab.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_34" face="Verdana" file="fonts/verdanab.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_35" face="Verdana" file="fonts/verdanab.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_bold_shadow_med2_36" face="Verdana" file="fonts/verdanab.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+
+		<Font name="font_verdana_italic_shadow_med2_8" face="Verdana" file="fonts/verdanai.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_9" face="Verdana" file="fonts/verdanai.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_10" face="Verdana" file="fonts/verdanai.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_11" face="Verdana" file="fonts/verdanai.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_12" face="Verdana" file="fonts/verdanai.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_13" face="Verdana" file="fonts/verdanai.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_14" face="Verdana" file="fonts/verdanai.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_15" face="Verdana" file="fonts/verdanai.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_16" face="Verdana" file="fonts/verdanai.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_17" face="Verdana" file="fonts/verdanai.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_18" face="Verdana" file="fonts/verdanai.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_19" face="Verdana" file="fonts/verdanai.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_20" face="Verdana" file="fonts/verdanai.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_21" face="Verdana" file="fonts/verdanai.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_22" face="Verdana" file="fonts/verdanai.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_23" face="Verdana" file="fonts/verdanai.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_24" face="Verdana" file="fonts/verdanai.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_25" face="Verdana" file="fonts/verdanai.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_26" face="Verdana" file="fonts/verdanai.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_27" face="Verdana" file="fonts/verdanai.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_28" face="Verdana" file="fonts/verdanai.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_29" face="Verdana" file="fonts/verdanai.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_30" face="Verdana" file="fonts/verdanai.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_31" face="Verdana" file="fonts/verdanai.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_32" face="Verdana" file="fonts/verdanai.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_33" face="Verdana" file="fonts/verdanai.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_34" face="Verdana" file="fonts/verdanai.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_35" face="Verdana" file="fonts/verdanai.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+		<Font name="font_verdana_italic_shadow_med2_36" face="Verdana" file="fonts/verdanai.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="true"/>
+
+
+		<Font name="murder_8" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_9" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_10" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_11" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_12" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_13" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_14" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_15" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_16" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_17" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_18" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_19" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_20" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_21" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_22" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_23" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_24" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_25" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_26" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_27" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_28" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_29" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_30" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_31" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_32" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_33" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_34" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_35" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+		<Font name="murder_36" face="youmurder" file="fonts/youmurdererbb_reg.otf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="true" shadow="false" bold="false"/>
+
+		<Font name="UO_NeueText_8" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="8" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_9" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="9" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_10" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="10" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_11" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="11" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_12" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="12" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_13" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="13" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_14" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="14" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_15" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="15" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_16" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="16" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_17" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="17" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_18" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="18" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_19" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="19" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_20" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="20" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_21" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="21" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_22" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="22" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_23" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="23" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_24" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="24" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_25" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="25" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_26" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="26" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_27" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="27" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_28" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="28" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_29" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="29" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_30" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="30" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_31" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="31" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_32" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="32" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_33" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="33" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_34" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="34" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_35" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="35" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+		<Font name="UO_NeueText_36" face="NeueHammerUnzialeLTStd" file="fonts/NeueHammerUnzialeLTStd.ttf" height="36" texsize="512" antialias="true" hinting="true" autohinting="false" outline="true" shadow="false"/>
+
+
+		<Font name="nol_UO_15" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"/>
+		<Font name="nol_UO_16" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"/>
+		<Font name="nol_UO_17" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"/>
+		<Font name="nol_UO_18" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"/>
+		<Font name="nol_UO_20" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"/>
+		<Font name="nol_UO_22" face="Rough UO Classic" file="fonts/uo-classic.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"/>
+
+		<Font name="font_verdana_italic_small_8" face="Verdana" file="fonts/verdanai.ttf" height="8" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_9" face="Verdana" file="fonts/verdanai.ttf" height="9" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_10" face="Verdana" file="fonts/verdanai.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_11" face="Verdana" file="fonts/verdanai.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_12" face="Verdana" file="fonts/verdanai.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_13" face="Verdana" file="fonts/verdanai.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_14" face="Verdana" file="fonts/verdanai.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_15" face="Verdana" file="fonts/verdanai.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_16" face="Verdana" file="fonts/verdanai.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_17" face="Verdana" file="fonts/verdanai.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_18" face="Verdana" file="fonts/verdanai.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_19" face="Verdana" file="fonts/verdanai.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_20" face="Verdana" file="fonts/verdanai.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_21" face="Verdana" file="fonts/verdanai.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_22" face="Verdana" file="fonts/verdanai.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_23" face="Verdana" file="fonts/verdanai.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_24" face="Verdana" file="fonts/verdanai.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_25" face="Verdana" file="fonts/verdanai.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_26" face="Verdana" file="fonts/verdanai.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_27" face="Verdana" file="fonts/verdanai.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_28" face="Verdana" file="fonts/verdanai.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_29" face="Verdana" file="fonts/verdanai.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_30" face="Verdana" file="fonts/verdanai.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_31" face="Verdana" file="fonts/verdanai.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_32" face="Verdana" file="fonts/verdanai.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_33" face="Verdana" file="fonts/verdanai.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_34" face="Verdana" file="fonts/verdanai.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_35" face="Verdana" file="fonts/verdanai.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+		<Font name="font_verdana_italic_small_36" face="Verdana" file="fonts/verdanai.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false"/>
+
+		<Font name="font_sagoe_bold_shadow_10" face="Sagoe" file="fonts/segoeprb.ttf" height="10" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_11" face="Sagoe" file="fonts/segoeprb.ttf" height="11" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_12" face="Sagoe" file="fonts/segoeprb.ttf" height="12" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_13" face="Sagoe" file="fonts/segoeprb.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_14" face="Sagoe" file="fonts/segoeprb.ttf" height="14" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_15" face="Sagoe" file="fonts/segoeprb.ttf" height="15" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_16" face="Sagoe" file="fonts/segoeprb.ttf" height="16" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_17" face="Sagoe" file="fonts/segoeprb.ttf" height="17" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_18" face="Sagoe" file="fonts/segoeprb.ttf" height="18" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_19" face="Sagoe" file="fonts/segoeprb.ttf" height="19" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_20" face="Sagoe" file="fonts/segoeprb.ttf" height="20" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_21" face="Sagoe" file="fonts/segoeprb.ttf" height="21" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_22" face="Sagoe" file="fonts/segoeprb.ttf" height="22" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_23" face="Sagoe" file="fonts/segoeprb.ttf" height="23" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_24" face="Sagoe" file="fonts/segoeprb.ttf" height="24" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_25" face="Sagoe" file="fonts/segoeprb.ttf" height="25" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_26" face="Sagoe" file="fonts/segoeprb.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_27" face="Sagoe" file="fonts/segoeprb.ttf" height="27" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_28" face="Sagoe" file="fonts/segoeprb.ttf" height="28" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_29" face="Sagoe" file="fonts/segoeprb.ttf" height="29" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_30" face="Sagoe" file="fonts/segoeprb.ttf" height="30" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_31" face="Sagoe" file="fonts/segoeprb.ttf" height="31" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_32" face="Sagoe" file="fonts/segoeprb.ttf" height="32" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_33" face="Sagoe" file="fonts/segoeprb.ttf" height="33" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_34" face="Sagoe" file="fonts/segoeprb.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_35" face="Sagoe" file="fonts/segoeprb.ttf" height="35" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+		<Font name="font_sagoe_bold_shadow_36" face="Sagoe" file="fonts/segoeprb.ttf" height="36" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="true" bold="true"/>
+
+
+		<Font name="gothic_book" face="gothic" file="fonts/GOTHUT__.ttf" height="26" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="false"/>
+		<Font name="gothic_bookTitle" face="gothic" file="fonts/GOTHUT__.ttf" height="34" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="true"/>
+
+		<Font name="courier_book" face="courier new" file="fonts/courbd.ttf" height="13" texsize="256" antialias="true" hinting="false" autohinting="true" outline="false" shadow="false" bold="false" />
+
+		<Font name="UO_book_ASIA" face="Arphic StdKai M" file="fonts/bKAI08M.ttf" height="14" texsize="1024" antialias="true" hinting="false" autohinting="false" outline="false" shadow="false"  />
+
+	</Assets>
+</Interface>

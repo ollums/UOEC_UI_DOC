@@ -1,0 +1,12 @@
+
+0 - 30: Buy from NPC Mapmaker. 
+
+30 - 50: Local Maps. 
+
+50 - 65: City Maps. 
+
+65 - 99.5: World Maps. 
+
+99.5 - 100: Decode Level 4 Treasure Maps
+
+|SATYR|

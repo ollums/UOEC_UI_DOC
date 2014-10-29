@@ -1,0 +1,8 @@
+
+0 - 30: Train at NPC Stablemaster. 
+
+30 - 60: Heal creatures. 
+
+60 - 80: Cure a poisoned creature (need 60 Animal Lore). 
+
+80 - 120: Resurrect your dead pet but don't press OK (need 80 Animal Lore).

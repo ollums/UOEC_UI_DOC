@@ -1,0 +1,35 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- MAIN WINDOW DEFINITION -->
+    <Window name="ServerLine" movable="true">
+      <Size>
+        <AbsPoint x="1009" y="579"/>
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0"/>
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="ServerLine.Initialize"/>
+        <EventHandler event="OnShutdown" function="ServerLine.Shutdown"/>
+        <EventHandler event="OnRButtonUp" function="ServerLine.OnRClick" />
+	<EventHandler event="OnLButtonDown" function="ServerLine.OnLButtonDown" />
+        <EventHandler event="OnMouseWheel" function="EnhancePack.Scale" />
+	<EventHandler event="OnUpdate" function="ServerLine.Update"  />
+      </EventHandlers>
+      
+      <Windows>
+        <!-- General Window Settings -->
+        <DynamicImage name="$parentBackground" layer="background">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo=""/>
+            <Anchor point="bottomright" relativePoint="bottomright" relativeTo=""/>
+          </Anchors>
+        </DynamicImage>
+   
+	<DynamicImage name="$parentDot" movable="false" handleinput="true" layer="overlay" />
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

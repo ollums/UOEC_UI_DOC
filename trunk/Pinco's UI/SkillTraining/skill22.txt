@@ -1,0 +1,8 @@
+
+0 - 30: Train at NPC Healer or Judge 
+
+30 - 55: Use the skill on corpses or picked chests.
+
+55 - 100: Use the skill on picked chests.
+
+One method is to use the skill repeatedly on a picked paragon chest. It is possible to train from 30 to GM using a single paragon chest.

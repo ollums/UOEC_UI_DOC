@@ -1,0 +1,12 @@
+
+0 - 30: Train at NPC Thief or Tinker. 
+
+30 - 50: Pick locked boxes made by 50 skill Tinker. 
+
+50 - 70: Pick locked boxes made by 70 skill Tinker. 
+
+70 - 95: Pick locked boxes made by 100 skill Tinker.
+
+95 - 100: Pick level 4 treasure chests in dungeons or do level 4 Treasure Maps.
+
+|SATYR|

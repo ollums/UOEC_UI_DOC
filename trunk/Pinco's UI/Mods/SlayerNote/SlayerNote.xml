@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="SlayerNote.lua" />
+  </Scripts>
+  <Windows>
+    <Window name="SlayerNote" movable="true" layer="default">
+      <Size>
+        <AbsPoint x="180" y="30" />
+      </Size>
+      <EventHandlers>
+
+        <EventHandler event="OnInitialize" function="SlayerNote.Initialize" />
+        <EventHandler event="OnShutdown" function="SlayerNote.Shutdown" />
+        <EventHandler event="OnLButtonDown" function="SlayerNote.OnLButtonDown" />
+        <EventHandler event="OnRButtonUp" function="SlayerNote.OnRButtonDown" />
+        <EventHandler event="OnMouseOver" function="SlayerNote.MouseOver" />
+	<EventHandler event="OnMouseOverEnd" function="ItemProperties.ClearMouseOverItem" />
+        <EventHandler event="OnLButtonDblClk" function="SlayerNote.OnDblClick" />
+      </EventHandlers>
+      <Windows>
+        <Label name="$parentLabel" font="font_verdana_bold_shadow_med" maxchars="80" textalign="center" autoresize="true" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="180" y="30" />
+          </Size>
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="$parent" >
+              <AbsPoint x="0" y="-5" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255"/>
+
+        </Label>
+        <DynamicImage name="$parentImage" texture="hud_image" layer="background" handleinput="false" textureScale="1.2">
+          <Size>
+            <AbsPoint x="180" y="30" />
+          </Size>
+          <TexCoords x="-5" y="827" />
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="$parent" />
+          </Anchors>
+        </DynamicImage>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

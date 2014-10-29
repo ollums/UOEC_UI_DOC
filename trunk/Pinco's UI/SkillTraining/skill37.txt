@@ -1,0 +1,12 @@
+
+0 - 40: Train at NPC Mystic in Ter Mur 
+
+40 - 55: Cast Stone Form 
+
+55 - 72: Cast Mass Sleep on yourself 
+
+72 - 90: Cast Cleansing Wind on yourself 
+
+90 - 105: Cast Hail Storm 
+
+105 - 120:  Cast Nether Cyclone

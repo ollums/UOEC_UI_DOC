@@ -1,0 +1,1 @@
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/Container Search", "ContainerSearch.xml", "ContainerSearch.xml" )

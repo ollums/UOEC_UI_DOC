@@ -1,0 +1,14 @@
+
+0 - 30: Train from a Carpenter NPC. 
+
+30 - 50: Medium Crate. 
+
+50 - 53: Large Crate. 
+
+53 - 75: Wooden Shield. 
+
+75 - 79: Quarter Staff. 
+
+78.9 - 100: Gnarled Staff or Shepherd's Crook.
+
+|SATYR|

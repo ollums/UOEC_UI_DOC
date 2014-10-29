@@ -1,0 +1,57 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Label name="TargetWindowModHits" font="font_verdana_italic_small" maxchars="16" textalign="center"   handleinput="false" wordwrap="true" linespacing="18">
+			<Size>
+				<AbsPoint x="170" y="20" />
+			</Size>
+			<Color r="255" g="255" b="255" a="255" />
+		</Label>
+		<FullResizeImage name="TargetDownPart" inherits="UO_Default_Black_Background" handleinput="false">
+			<Size>
+				<AbsPoint x="400" y="115" />
+			</Size>
+		</FullResizeImage>
+		<DynamicImage name="TargetSquareIcon" texturescale="0.78" handleinput="true">
+			<Size>
+				<AbsPoint x="27" y="27" />
+			</Size>
+		</DynamicImage>
+		<Label name="TargetIconValue" font="font_verdana_italic_small" maxchars="16" textalign="center"   handleinput="false" wordwrap="true" linespacing="18">
+			<Size>
+				<AbsPoint x="80" y="20" />
+			</Size>
+			<Color r="255" g="255" b="255" a="255" />
+		</Label>
+		<Button name="TargetWindowShowDetails" layer="popup">
+			<Size>
+				<AbsPoint x="25" y="25" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnLButtonUp" function="EnhancePack.ToggleTargetDetails" />
+				<EventHandler event="OnMouseOver" function="EnhancePack.ToggleTargetDetailsTooltip" />
+			</EventHandlers>
+		</Button>
+		<Window name="DetailsTemplate" handleinput="false">
+			<Windows>
+				<Label name="$parentLabel" font="UO_Default_Outline_Text" maxchars="20" textalign="right" autoresize="true" handleinput="false">
+					<Size>
+						<AbsPoint x="125" y="18"/>
+					</Size>
+					<Color r="186" g="186" b="132" a="255" />
+				</Label>
+
+				<Label name="$parentValue" font="UO_Default_Outline_Text" maxchars="100" textalign="left" autoresize="true" handleinput="false">
+					<Size>
+						<AbsPoint x="200" y="18"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parentLabel">
+							<AbsPoint x="210" y="0"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

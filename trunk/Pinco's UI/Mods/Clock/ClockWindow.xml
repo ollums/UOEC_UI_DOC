@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="ClockWindow.lua" />
+  </Scripts>
+  <Windows>
+    <Window name="ClockWindow" movable="false" layer="default">
+      <Size>
+        <AbsPoint x="150" y="50" />
+      </Size>
+      <Anchors>
+        <Anchor point="top" relativePoint="top">
+          <AbsPoint x="0" y="200" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="ClockWindow.Initialize" />
+        <EventHandler event="OnShutdown" function="ClockWindow.Shutdown"/>
+        <EventHandler event="OnRButtonUp" function="ClockWindow.OnRClick" />
+        <EventHandler event="OnMouseOver" function="ClockWindow.OnMouseOver" />
+        <EventHandler event="OnMouseOverEnd" function="ClockWindow.MouseOverEnd" />
+        <EventHandler event="OnLButtonDown" function="ClockWindow.OnMouseDrag" />
+      </EventHandlers>
+      <Windows>
+
+        <!-- Body background -->
+        <FullResizeImage name="$parentWindowBackground" inherits="UO_Simple_Black_Background">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"/>
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+
+        </FullResizeImage>
+
+        <!-- Inner Frame Boilerplate -->
+        <FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame" >
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" />
+            <Anchor point="bottomright" relativePoint="bottomright" />
+          </Anchors>
+        </FullResizeImage>
+        <!-- End of Inner Frame Boilerplate -->
+        <Label name="$parentClock" font="UO_GoldButtonText" maxchars="64" textalign="left" autoresize="true" wordwrap="false" handleinput="false">
+          <Size>
+            <AbsPoint x="150" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="25" y="12" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255"/>
+        </Label>
+
+
+
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

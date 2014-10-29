@@ -1,0 +1,10 @@
+
+0 - 30: Train at NPC Thief.
+ 
+30 - 65: Stealth while wearing cloth/leather equipment. 
+
+65 - 95: Equip studded leather armor. 
+
+95 - 120: Equip a close helm with the full studded armor.
+
+If you can, stealth inside your home for better gains.

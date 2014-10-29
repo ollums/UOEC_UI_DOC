@@ -1,0 +1,24 @@
+
+0 - 40: Train from NPC Mage in New Haven.
+
+Now wear a Mage Weapon -29 spell channeling.
+Wearing a 100% Lower Reagent Cost set will allow you to spare lots of reagents. Wearing even 40% Lower Mana Cost with Faster Casting 2 and Faster Cast Recovery 4 allows you to spare time.
+
+
+Cast the following spells on your spellbook:
+
+0 - 24: Harm
+
+30 - 45: Cast Fireball 
+
+45 - 55: Cast Lightning
+
+55 - 65: Cast Paralyze 
+
+65 - 75: Cast Energy Bolt 
+
+75 - 90: Cast Flamestrike
+
+90 - 120: Cast Earthquake
+
+|SATYR|

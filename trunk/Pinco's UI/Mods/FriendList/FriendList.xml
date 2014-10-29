@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="FriendList.lua" />
+  </Scripts>
+  <Windows>
+    <Label name="SectionTitle" font="UO_DefaultText" maxchars="64" textalign="left">
+      <Color r="255" g="255" b="255" a="255" />
+    </Label>
+
+    <Label name="Settings_ItemTitle" font="UO_DefaultText" linespacing="20" autoresize="true" wordwrap="true" maxchars="64" textalign="left">
+      <Color r="255" g="255" b="255" a="255" />
+      <EventHandlers>
+
+      </EventHandlers>
+    </Label>
+
+    <Window name="Block" handleinput="false" >
+      <Windows>
+        <HorizontalResizeImage name="$parentHTop" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="526" y="4"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="0" y="-3"/>
+            </Anchor>
+            <Anchor point="topright" relativePoint="topright"  relativeTo="$parent"/>
+          </Anchors>
+        </HorizontalResizeImage>
+
+        <HorizontalResizeImage name="$parentHBottom" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="526" y="4"/>
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft"  relativeTo="$parent"/>
+            <Anchor point="bottomright" relativePoint="bottomright"  relativeTo="$parent"/>
+          </Anchors>
+        </HorizontalResizeImage>
+
+        <VerticalResizeImage name="$parentVLeft" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent" />
+            <Anchor point="bottomleft" relativePoint="bottomleft"  relativeTo="$parent"/>
+          </Anchors>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentVRight" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright"  relativeTo="$parent" >
+              <AbsPoint x="4" y="0"/>
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright"  relativeTo="$parent"/>
+          </Anchors>
+        </VerticalResizeImage>
+      </Windows>
+    </Window>
+    
+    <Window name="FriendGridHeaderTemplate" handleinput="false" >
+      <Size>
+        <AbsPoint x="1250" y="60"/>
+      </Size>
+      <Windows>
+
+        <Window name="$parentNAME">
+          <Size>
+            <AbsPoint x="300" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="2" y="16"/>
+            </Anchor>
+          </Anchors>
+
+
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_22" maxchars="128" textalign="top" autoresize="false" handleinput="false" linespacing="30">
+              <Size>
+                <AbsPoint x="300" y="30"/>
+              </Size>
+
+              <Color r="255" g="200" b="15"  />
+
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" >
+                  <AbsPoint x="0" y="5"/>
+                </Anchor>
+              </Anchors>
+
+            </Window>
+          </Windows>
+
+
+        </Window>
+
+        <Window name="$parentID" >
+          <Size>
+            <AbsPoint x="100" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentNAME">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_22" maxchars="128" textalign="top" autoresize="false" handleinput="true" >
+              <Size>
+                <AbsPoint x="100" y="30"/>
+              </Size>
+
+              <Color r="255" g="200" b="15"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" >
+                  <AbsPoint x="0" y="5"/>
+                </Anchor>
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentICQ" >
+          <Size>
+            <AbsPoint x="100" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentID">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_22" maxchars="128" textalign="top" autoresize="false" >
+              <Size>
+                <AbsPoint x="100" y="30"/>
+              </Size>
+
+              <Color r="255" g="200" b="15"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" >
+                  <AbsPoint x="0" y="5"/>
+                </Anchor>
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentEMAIL" >
+          <Size>
+            <AbsPoint x="300" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left"  relativeTo="$parentICQ">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_22" maxchars="128" textalign="top" autoresize="false" >
+              <Size>
+                <AbsPoint x="300" y="30"/>
+              </Size>
+
+              <Color r="255" g="200" b="15"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" >
+                  <AbsPoint x="0" y="5"/>
+                </Anchor>
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentTWITTER" >
+          <Size>
+            <AbsPoint x="150" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentEMAIL">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <Label name="$parentLabel"  font="font_sagoe_bold_shadow_22" maxchars="128" textalign="top" autoresize="false" >
+              <Size>
+                <AbsPoint x="150" y="30"/>
+              </Size>
+
+              <Color r="255" g="200" b="15"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" >
+                  <AbsPoint x="0" y="5"/>
+                </Anchor>
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentFACEBOOK">
+          <Size>
+            <AbsPoint x="300" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentTWITTER">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_22" maxchars="128" textalign="top" autoresize="false" >
+              <Size>
+                <AbsPoint x="300" y="30"/>
+              </Size>
+
+              <Color r="255" g="200" b="15"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" >
+                  <AbsPoint x="0" y="5"/>
+                </Anchor>
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+      </Windows>
+    </Window>
+
+
+    <Window name="FriendGridTemplate">
+      <Size>
+        <AbsPoint x="1250" y="30"/>
+      </Size>
+      <Windows>
+
+        <Window name="$parentNAME" handleinput="true">
+          <Size>
+            <AbsPoint x="300" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="2" y="16"/>
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="FriendList.Context" />
+            <EventHandler event="OnRButtonUp" function="FriendList.Context" />
+            <EventHandler event="OnMouseOver" function="FriendList.ItemMouseOver" />
+            <EventHandler event="OnMouseOverEnd" function="FriendList.ClearMouseOverItem" />
+          </EventHandlers>
+
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_14" maxchars="128" textalign="topcenter" autoresize="false" handleinput="false">
+              <Size>
+                <AbsPoint x="300" y="30"/>
+              </Size>
+
+              <Color r="255" g="255" b="255"  />
+
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" />
+              </Anchors>
+
+            </Window>
+          </Windows>
+
+
+        </Window>
+
+        <Window name="$parentID" handleinput="true">
+          <Size>
+            <AbsPoint x="100" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentNAME">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_12" maxchars="128" textalign="top" autoresize="false" handleinput="true" >
+              <Size>
+                <AbsPoint x="100" y="30"/>
+              </Size>
+
+              <Color r="255" g="255" b="255"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" />
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentICQ"  handleinput="true">
+          <Size>
+            <AbsPoint x="100" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentID">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="FriendList.OpenLink" />
+            <EventHandler event="OnMouseOver" function="FriendList.LinkMouseOver" />
+            <EventHandler event="OnMouseOverEnd" function="FriendList.ClearMouseOverItem" />
+          </EventHandlers>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_12" maxchars="128" textalign="top" autoresize="false" handleinput="false" >
+              <Size>
+                <AbsPoint x="100" y="30"/>
+              </Size>
+
+              <Color r="255" g="255" b="255"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" />
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentEMAIL" handleinput="true">
+          <Size>
+            <AbsPoint x="300" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left"  relativeTo="$parentICQ">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="FriendList.OpenLink" />
+            <EventHandler event="OnMouseOver" function="FriendList.LinkMouseOver" />
+            <EventHandler event="OnMouseOverEnd" function="FriendList.ClearMouseOverItem" />
+          </EventHandlers>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_12" maxchars="128" textalign="top" autoresize="false" handleinput="false" >
+              <Size>
+                <AbsPoint x="300" y="30"/>
+              </Size>
+
+              <Color r="255" g="255" b="255"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" />
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentTWITTER" handleinput="true" >
+          <Size>
+            <AbsPoint x="150" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentEMAIL">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="FriendList.OpenLink" />
+            <EventHandler event="OnMouseOver" function="FriendList.LinkMouseOver" />
+            <EventHandler event="OnMouseOverEnd" function="FriendList.ClearMouseOverItem" />
+          </EventHandlers>
+          <Windows>
+            <Label name="$parentLabel"  font="font_sagoe_bold_shadow_12" maxchars="15" textalign="top" autoresize="false" handleinput="false" >
+              <Size>
+                <AbsPoint x="150" y="30"/>
+              </Size>
+
+              <Color r="255" g="255" b="255"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" />
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+
+        <Window name="$parentFACEBOOK"  handleinput="true">
+          <Size>
+            <AbsPoint x="300" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="right" relativePoint="left" relativeTo="$parentTWITTER">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="FriendList.OpenLink" />
+            <EventHandler event="OnMouseOver" function="FriendList.LinkMouseOver" />
+            <EventHandler event="OnMouseOverEnd" function="FriendList.ClearMouseOverItem" />
+          </EventHandlers>
+          <Windows>
+            <Label name="$parentLabel" font="font_sagoe_bold_shadow_12" maxchars="128" textalign="top" autoresize="false" handleinput="false" >
+              <Size>
+                <AbsPoint x="300" y="30"/>
+              </Size>
+
+              <Color r="255" g="255" b="255"  />
+            </Label>
+
+            <Window name="$parentFrame" inherits="Block" layer="background">
+              <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLabel" />
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parentLabel" />
+              </Anchors>
+
+            </Window>
+          </Windows>
+        </Window>
+      </Windows>
+    </Window>
+
+    <Window name="SubSectionLabelTemplate">
+      <Size>
+        <AbsPoint/>
+      </Size>
+      <Windows>
+        <Label name="$parentLabel" font="UO_DefaultText">
+          <Size>
+            <AbsPoint x="650" y="20"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" />
+          </Anchors>
+          <Color r="255" g="231" b="132" a="255" />
+        </Label>
+
+        <FullResizeImage name="$parentGoldLine" inherits="UO_Default_Horizontal_Gold_Line" >
+          <Size>
+            <AbsPoint x="650" y="2" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parentLabel">
+              <AbsPoint x="0" y="30" />
+            </Anchor>
+          </Anchors>
+        </FullResizeImage>
+      </Windows>
+    </Window>
+
+
+    <Window name="MASKFriend" layer="overlay">
+      <Size>
+        <AbsPoint x="1280" y="300" />
+      </Size>
+      <Windows>
+        <FullResizeImage name="$parentFrame" inherits="UO_Default_Inner_Window_Frame" >
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" >
+              <AbsPoint x="0" y="-40" />
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright" />
+          </Anchors>
+        </FullResizeImage>
+        <!-- Scrolling Window-->
+        <ScrollWindow name="$parentScrollWindow" childscrollwindow="$parentScrollChild" scrollbar="$parentScrollbar" lineheight="60" autoHideScrollBar="true" layer="background">
+          <Size>
+            <AbsPoint x="1270" y="290" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" >
+              <AbsPoint x="5" y="0" />
+            </Anchor>
+          </Anchors>
+          <Windows>
+            <VerticalScrollbar name="$parentScrollbar" inherits="StandardVertScroll" layer="overlay"/>
+
+            <Window name="$parentScrollChild" >
+              <Size>
+                <AbsPoint x="1255" y="0"/>
+              </Size>
+            </Window>
+          </Windows>
+        </ScrollWindow>
+      </Windows>
+    </Window>
+
+
+    <!-- Settings Window -->
+    <Window name="FriendList" movable="true" >
+      <Size>
+        <AbsPoint x="1330" y="400" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" />
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="FriendList.Initialize" />
+        <EventHandler event="OnShutdown" function="FriendList.Shutdown"/>
+      </EventHandlers>
+      <Windows>
+        <!-- Default chrome. Alter this at your own peril. -->
+        <Window name="$parentChrome" inherits="UO_DefaultWindow">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"/>
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+        </Window>
+        <!-- End of default chrome boilerplate code -->
+
+        <!-- Buttons -->
+        <Button name="$parentAddFriendButton" inherits="UO_Default_Medium_Select_Button" layer="overlay">
+          <Anchors>
+            <Anchor point="bottom" relativePoint="center" relativeTo="FriendList">
+              <AbsPoint x="0" y="-35" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="FriendList.OnAddFriendButton" />
+          </EventHandlers>
+        </Button>
+
+
+
+        <FullResizeImage name="$parentGoldLine2" inherits="UO_Default_Horizontal_Gold_Line" >
+          <Size>
+            <AbsPoint x="2" y="2" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft" >
+              <AbsPoint x="10" y="-68" />
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright" >
+              <AbsPoint x="-10" y="-68"/>
+            </Anchor>
+          </Anchors>
+        </FullResizeImage>
+
+        <!-- End of Gold Lines -->
+
+        <Window name = "$parentList" inherits="MASKFriend">
+
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="25" y="85" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        
+
+
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

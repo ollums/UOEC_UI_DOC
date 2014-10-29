@@ -1,0 +1,4 @@
+
+0 - 40: Train at NPC The Tracking Instructor in New Haven. 
+
+40 - 100: Use the skill. It does not matter if you select a target to track or not you will still gain as long as the tracking window opened.

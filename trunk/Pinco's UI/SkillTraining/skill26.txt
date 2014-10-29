@@ -1,0 +1,43 @@
+
+0 - 75: unravel items (Do not train from NPC, you will need the resources obtained at this level!).
+
+					--- Preparation ---
+
+You will need to have a Blacksmith with Grandmaster or better skills, to reliably make your target items. The target items will be EXCEPTIONAL QUALITY PLATEMAIL JINGASA. Note that Jingasa are HELMETS, and are located in the Helmet section, not the Metal Armor section, of the Blacksmith crafting gump. And, as helmets, are substantially easier to craft than the rest of the Samurai Plate.
+The Jingasa are chosen for their ease of manufacture, and the automatic Mage Armor property that Samurai Empire expansion metal armor has when made exceptional. This gives you a base of 100% intensity to add additional properties to, at no cost. I suggest the "Light Platemail Jingasa" as 20 of them fit nicely in a backpack/pouch (4 columns of 5) or box (5 columns of 4). You will probably need only about 200-300 of these to get to 115 skill from 75, though you will only work on 20 or 40 at a time. As gains get progressively slower after 115, you will probably get 10 or less gains per container of 20 as you near 120, so the variance on the total amount needed will differ from person to person.
+
+Each item can have TWENTY successful Imbues. Typically, you'll do one high-end imbue one time, per item, followed by one mid or high level imbue or a second (third, with the free Mage Armor) property, and the remaining 18 all low-level imbues of a last property.
+
+If you have a Crystal Ball of Knowledge, turn it on and make sure to be always at "Challenging" skill level.
+
+					--- Training ---
+
+The following methods use only Amber (Lower Reagent Cost - LRC) and Citrine (Luck, Reflect Physical Damage - RPD), with Residue.
+
+
+Step 1 - First Imbue: Add Luck to each Jingasa. Initially, your target will be to bring it up to close to 50% success chance (where the optimum range supposedly starts), but eventually you'll work up to 89 or 90 Luck* as the default for this Imbue. (4 Residue, 8 Citrine for 89 Luck; 90 uses 1 citrine more than 89, and will give a slight increase to difficulty). Even as you get into the 110s, you'll still occasionally get a rare gain in this part of the process, but they will only be common below 100 skill. At around 70-75 skill, this will be a 19 Luck Imbue (the max 1 residue, 1 citrine imbue).
+
+Use Imbue Last Property to switch between items (hitting reimbue on failures, until success) to get all 20 items in the container imbued with this property. Once you hit where you're doing 89 or 90 luck as the first imbue, it's advisable to set up 2 or 3 containers of Jingasa at once, to keep things rolling (and to maximize the chance of a rare gain in set-up)
+
+Step 2(3) - Second (Third) Imbue: After reaching where 89 or 90 luck becomes your default first imbue, this becomes your third step. 
+In the "Casting" Section, choose "Lower Reagent Cost". Typically, you'll want to keep the LRC imbue in the 1-3% range (where the cost is 1 residue and 1 amber) with the success chance is around 45%-55%**, and this is done by choosing your first two steps properly. 
+Start with the first item in the bag.
+
+Step 3(4) - Third (Fourth) through Twentieth Imbues: Repeat last Imbue on the SAME item, until you hit the 20th successful Imbue (often, you'll know only by seeing the indication that you're going past the 20th), as that's where reimbue gains of the same item drop off (but can still happen). At that point, switch to the next item in line, using "Imbue Last Property", and doing the remaining Imbues on it on it to get to 20. "Lather, Rinse, Repeat", adding materials into you backpack as necessary. And, slowly adjust from 1% LRC up to 3% LRC, as needed, to keep your target success chance in the area around 50% (really, anywhere between 45% and 60% is probably good). Skip to the last step when you get where your success chance at 3% LRC gets out of your comfort range.
+
+Step 4(5) - When all the items in the training batch done (or you get out of your target difficulty range): 
+a. When you decide that the chance at 3% LRC isn't good enough, finish up the batch you're working on.
+b. Move any items that have been imbued 20 times to a new container, then unravel the bag you have all the 20-times-imbued items in, to reclaim a small amount of residue from them. 
+c. Go back to the luck Imbue step (or start with a fresh bag of jingasa, if the reason you stopped was running out of them). Increment your planned Luck imbue value up in your regimen 10 or 20 points (this may mean reimbuing a few items) if needed, and re-evaluate your LRC target number (increasing luck 10, and going from 3% to 1% LRC SHOULD result in the difficulty remaining as it was).
+d. When you hit 89 Luck and 3% LRC being too easy for your plans, move on to "later training"
+
+Later training (as you close in on 120): Add the following step into the above sequence (which displaces step 2 to become step 3, etc.) This is why the previous sections are numbered 2(3), 3(4), and 4(5)
+
+
+Step 2 - Second Imbue: At this point, go back to the first item in the container. Choose "Reflect Physical Damage". Again, choose an intensity that puts around the 50% success range, for a single successful imbue. But, as this is closer to the point where regular gains come in, you'll only want to do 1 container (or less) of the jingasa at a time (leave the others to do with a higher value)
+You can take this as high as 13%, without using special materials, and will probably do so, near the end of your training.
+
+Step 5e: Modify Step 4 above (now the 5th step) as follows:
+
+When you are at 89 luck, and at 1 RPD, and 3% LRC gets out of your personal optimal gain range, you'll begin incrementing RPD up, instead of taking Luck over 90.
+If your training style hits 13% RPD on the second step (possible if using the Royal city public forges), you may need to go higher LRC than 3% (possibly as much as 7% LRC = 1 residue, 3 gems) to stay near the low end of the "optimum range" for LRC.

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+	
+		<!--  *************** Examples ( These are defined in the CoreInterface ) ***************  -->
+		<!-- <Texture name="shield_texture" file="Textures/ShieldButton.dds" /> -->
+		<!-- <Texture name="buttons" file="Textures/Buttons.dds" />	-->
+		<!--  *********************************************************************************** -->
+		
+		<!-- UOKR Specific Textures -->
+		<Texture name="hud_image" file="Textures/00000020_Hud.dds" />
+		<Texture name="hud_image2" file="Textures/HUD2.dds" />
+		<Texture name="paperdoll_slots" file="Textures/SLOT_1.dds" />
+		<Texture name="paperdoll_slots2" file="Textures/SLOT_2.dds" />
+		<Texture name="housing" file="Textures/housing.dds" />
+        <Texture name="chat" file="Textures/chat.dds" />
+		<Texture name="anim_highlight_glow" file="Textures/highlight_glow01.dds" />
+        <Texture name="map_overlay" file="Textures/AtlasMap_overlay.dds" />
+        <Texture name="map_bg" file="Textures/AtlasMap_bg.dds" />
+        <Texture name="map_options_background" file="Textures/AtlasMap_option_bg.dds" />
+        <Texture name="map_parchment_widgets" file="Textures/UO_parchment.dds" />
+        <Texture name="TMapBG" file="Textures/treasuremap_bg.dds"/>
+        <Texture name="TMapOverlay" file="Textures/treasuremap_overlay.dds"/>
+	</Assets>
+</Interface>

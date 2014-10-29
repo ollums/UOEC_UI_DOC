@@ -1,0 +1,4 @@
+
+0 - 40: Train from an NPC Mage in New Haven.
+
+40 - 120: Cast Magic Arrow on a spellbook.

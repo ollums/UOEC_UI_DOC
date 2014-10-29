@@ -1,0 +1,710 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="Source/Generic/AnimalLore.lua" />
+  </Scripts>
+  <Windows>
+    <!-- Templates for dynamically added items -->
+    <HorizontalResizeImage name="HRDef" inherits="UO_Default_Horizontal_Rule">
+      <Size>
+        <AbsPoint x="580" y="4"/>
+      </Size>
+    </HorizontalResizeImage>
+
+
+    <!-- This is the template you use to display attributes -->
+    <Window name="AttributeTemplate" >
+      <Size>
+        <AbsPoint x="400" y="24"/>
+      </Size>
+      <Windows>
+        <DynamicImage name="$parentSquareIcon" texturescale="1" handleinput="true">
+          <Size>
+            <AbsPoint x="27" y="27" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left">
+              <AbsPoint x="6" y="0" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnMouseOver" function="AnimalLore.Stat_Tooltip" />
+          </EventHandlers>
+        </DynamicImage>
+        <Label name="$parentAttributeName" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="left" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="100" y="20"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parentSquareIcon">
+              <AbsPoint x="35" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentAttributeValue" font="UO_DefaultText" maxchars="64" textalign="left" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="180" y="20"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="150" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+      </Windows>
+    </Window>
+
+    <!-- Use this template to display a label + a value -->
+    <Window name="LabeledDataTemplate" >
+      <Size>
+        <AbsPoint x="500" y="24"/>
+      </Size>
+      <Windows>
+        <Label name="$parentLabel" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="left" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="200" y="20"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parentSquareIcon">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentValue" font="UO_DefaultText" maxchars="64" textalign="left" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="500" y="20"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="190" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+      </Windows>
+    </Window>
+    
+    <!-- Use this to put captions on sections of a gump -->
+    <Label name="TableCaptionTemplate" inherits="UO_Default_Label_Color" font="UO_GoldButtonText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+      <Size>
+        <AbsPoint x="470" y="30"/>
+      </Size>
+    </Label>
+    
+    <!-- Template that creates a horizontal layout resist display -->
+    <Window name="ResistGridTemplate">
+      <Size>
+        <AbsPoint x="500" y="60"/>
+      </Size>
+      <Windows>
+        <Label name="$parentTableCaption" inherits="UO_Default_Label_Color" font="UO_GoldButtonText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="516" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topmiddle" relativePoint="topmiddle"  relativeTo="$parent">
+              <AbsPoint x="0" y="-9"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <HorizontalResizeImage name="$parentHRTop" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="526" y="4"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="0" y="-15"/>
+            </Anchor>
+          </Anchors>
+        </HorizontalResizeImage>
+        <VerticalResizeImage name="$parentVRLeft" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="-3" y="15"/>
+            </Anchor>
+          </Anchors>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentVRBlock1" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="86" y="15"/>
+            </Anchor>
+          </Anchors>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentVRBlock2" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="172" y="15"/>
+            </Anchor>
+          </Anchors>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentVRBlock3" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="258" y="15"/>
+            </Anchor>
+          </Anchors>
+        </VerticalResizeImage>
+        <VerticalResizeImage name="$parentVRBlock4" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="344" y="15"/>
+            </Anchor>
+          </Anchors>
+        </VerticalResizeImage>
+		  <VerticalResizeImage name="$parentVRBlock5" inherits="UO_Default_Vertical_Rule" layer="secondary">
+			  <Size>
+				  <AbsPoint x="4" y="60"/>
+			  </Size>
+			  <Anchors>
+				  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+					  <AbsPoint x="430" y="15"/>
+				  </Anchor>
+			  </Anchors>
+		  </VerticalResizeImage>
+        <VerticalResizeImage name="$parentVRRightBorder" inherits="UO_Default_Vertical_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="4" y="60"/>
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+              <AbsPoint x="526" y="15"/>
+            </Anchor>
+          </Anchors>
+        </VerticalResizeImage>
+        <HorizontalResizeImage name="$parentHRMiddle" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="526" y="4"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="0" y="15"/>
+            </Anchor>
+          </Anchors>
+        </HorizontalResizeImage>
+        <HorizontalResizeImage name="$parentHRBottom" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+          <Size>
+            <AbsPoint x="526" y="4"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="0" y="45"/>
+            </Anchor>
+          </Anchors>
+        </HorizontalResizeImage>
+        <DynamicImage name="$parentPhysResHilight" texturescale="1" handleinput="false" layer="background">
+          <Size>
+            <AbsPoint x="83" y="60" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="0" y="15" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentPhysResHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="0" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <DynamicImage name="$parentFireResHilight" texturescale="1" handleinput="false" layer="background">
+          <Size>
+            <AbsPoint x="80" y="60" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="82" y="15" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentFireResHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="86" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <DynamicImage name="$parentColdResHilight" texturescale="1" handleinput="false" layer="background">
+          <Size>
+            <AbsPoint x="82" y="60" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="162" y="15" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentColdResHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+              <AbsPoint x="172" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <DynamicImage name="$parentPoisResHilight" texturescale="1" handleinput="false" layer="background">
+          <Size>
+            <AbsPoint x="80" y="60" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left">
+              <AbsPoint x="242" y="15" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentPoisResHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="262" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <DynamicImage name="$parentEnergyResHilight" texturescale="1" handleinput="false" layer="background">
+          <Size>
+            <AbsPoint x="80" y="60" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="321" y="15" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <Label name="$parentEnergyResHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="350" y="0"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentPhysResValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="0" y="30"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentFireResValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="86" y="30"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentColdResValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="172" y="30"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentPoisResValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="262" y="30"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Label name="$parentEnergyResValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+          <Size>
+            <AbsPoint x="80" y="30"/>
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" relativeTo="$parent">
+              <AbsPoint x="350" y="30"/>
+            </Anchor>
+          </Anchors>
+        </Label>
+		  <Label name="$parentTotalHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+			  <Size>
+				  <AbsPoint x="100" y="30"/>
+			  </Size>
+			  <Anchors>
+				  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+					  <AbsPoint x="427" y="0"/>
+				  </Anchor>
+			  </Anchors>
+		  </Label>
+		  <Label name="$parentTotalValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+			  <Size>
+				  <AbsPoint x="100" y="30"/>
+			  </Size>
+			  <Anchors>
+				  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+					  <AbsPoint x="427" y="30"/>
+				  </Anchor>
+			  </Anchors>
+		  </Label>
+      </Windows>
+    </Window>
+    <!-- End of Templates for dynamically added items -->
+
+	  <Window name="DamageGridTemplate">
+		  <Size>
+			  <AbsPoint x="500" y="60"/>
+		  </Size>
+		  <Windows>
+			  <Label name="$parentTableCaption" inherits="UO_Default_Label_Color" font="UO_GoldButtonText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="430" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topmiddle" relativePoint="topmiddle"  relativeTo="$parent">
+						  <AbsPoint x="0" y="-9"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <HorizontalResizeImage name="$parentHRTop" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="430" y="4"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+						  <AbsPoint x="0" y="-15"/>
+					  </Anchor>
+				  </Anchors>
+			  </HorizontalResizeImage>
+			  <VerticalResizeImage name="$parentVRLeft" inherits="UO_Default_Vertical_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="4" y="60"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+						  <AbsPoint x="-3" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </VerticalResizeImage>
+			  <VerticalResizeImage name="$parentVRBlock1" inherits="UO_Default_Vertical_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="4" y="60"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+						  <AbsPoint x="86" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </VerticalResizeImage>
+			  <VerticalResizeImage name="$parentVRBlock2" inherits="UO_Default_Vertical_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="4" y="60"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+						  <AbsPoint x="172" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </VerticalResizeImage>
+			  <VerticalResizeImage name="$parentVRBlock3" inherits="UO_Default_Vertical_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="4" y="60"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+						  <AbsPoint x="258" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </VerticalResizeImage>
+			  <VerticalResizeImage name="$parentVRBlock4" inherits="UO_Default_Vertical_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="4" y="60"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+						  <AbsPoint x="344" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </VerticalResizeImage>
+			  <VerticalResizeImage name="$parentVRRightBorder" inherits="UO_Default_Vertical_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="4" y="60"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="topleft" relativePoint="topleft"  relativeTo="$parent">
+						  <AbsPoint x="430" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </VerticalResizeImage>
+			  <HorizontalResizeImage name="$parentHRMiddle" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="430" y="4"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+						  <AbsPoint x="0" y="15"/>
+					  </Anchor>
+				  </Anchors>
+			  </HorizontalResizeImage>
+			  <HorizontalResizeImage name="$parentHRBottom" inherits="UO_Default_Horizontal_Rule" layer="secondary">
+				  <Size>
+					  <AbsPoint x="430" y="4"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+						  <AbsPoint x="0" y="45"/>
+					  </Anchor>
+				  </Anchors>
+			  </HorizontalResizeImage>
+			  <DynamicImage name="$parentPhysHilight" texturescale="1" handleinput="false" layer="background">
+				  <Size>
+					  <AbsPoint x="83" y="60" />
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="0" y="15" />
+					  </Anchor>
+				  </Anchors>
+			  </DynamicImage>
+			  <Label name="$parentPhysHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+						  <AbsPoint x="0" y="0"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <DynamicImage name="$parentFireHilight" texturescale="1" handleinput="false" layer="background">
+				  <Size>
+					  <AbsPoint x="80" y="60" />
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="82" y="15" />
+					  </Anchor>
+				  </Anchors>
+			  </DynamicImage>
+			  <Label name="$parentFireHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="86" y="0"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <DynamicImage name="$parentColdHilight" texturescale="1" handleinput="false" layer="background">
+				  <Size>
+					  <AbsPoint x="82" y="60" />
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="162" y="15" />
+					  </Anchor>
+				  </Anchors>
+			  </DynamicImage>
+			  <Label name="$parentColdHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left"  relativeTo="$parent">
+						  <AbsPoint x="172" y="0"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <DynamicImage name="$parentPoisonHilight" texturescale="1" handleinput="false" layer="background">
+				  <Size>
+					  <AbsPoint x="80" y="60" />
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left">
+						  <AbsPoint x="242" y="15" />
+					  </Anchor>
+				  </Anchors>
+			  </DynamicImage>
+			  <Label name="$parentPoisonHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="262" y="0"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <DynamicImage name="$parentEnergyHilight" texturescale="1" handleinput="false" layer="background">
+				  <Size>
+					  <AbsPoint x="80" y="60" />
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="321" y="15" />
+					  </Anchor>
+				  </Anchors>
+			  </DynamicImage>
+			  <Label name="$parentEnergyHeader" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="350" y="0"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <Label name="$parentPhysValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="0" y="30"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <Label name="$parentFireValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="86" y="30"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <Label name="$parentColdValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="172" y="30"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <Label name="$parentPoisonValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="262" y="30"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+			  <Label name="$parentEnergyValue" font="UO_DefaultText" maxchars="64" textalign="center" autoresize="true" handleinput="false" >
+				  <Size>
+					  <AbsPoint x="80" y="30"/>
+				  </Size>
+				  <Anchors>
+					  <Anchor point="left" relativePoint="left" relativeTo="$parent">
+						  <AbsPoint x="350" y="30"/>
+					  </Anchor>
+				  </Anchors>
+			  </Label>
+		  </Windows>
+	  </Window>
+	  
+    <!-- MAIN WINDOW DEFINITION -->
+    <Window name="AnimalLore" movable="true" layer="default">
+      <Size>
+        <AbsPoint x="650" y="780"/>
+      </Size>
+      <!--
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" relativeTo="">
+          <AbsPoint x="16" y="400"/>
+        </Anchor>
+      </Anchors>-->
+      <EventHandlers>
+        <EventHandler event="OnRButtonUp" function="AnimalLore.Shutdown" />
+        <EventHandler event="OnShutdown" function="AnimalLore.Shutdown"/>
+		  <EventHandler event="OnMouseWheel" function="EnhancePack.Scale" />
+      </EventHandlers>
+      <Windows>
+        <Window name="$parentChrome" inherits="UO_DefaultWindow">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft"/>
+            <Anchor point="bottomright" relativePoint="bottomright"/>
+          </Anchors>
+        </Window>
+
+
+        <Button name="$parentMenu" layer="popup">
+          <Size>
+            <AbsPoint x="25" y="25" />
+          </Size>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="AnimalLore.Menu" />
+            <EventHandler event="OnMouseOver" function="AnimalLore.MenuTooltip" />
+          </EventHandlers>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="5" y="-3" />
+            </Anchor>
+          </Anchors>
+        </Button>
+
+
+  
+          <Label name="$parentPetKindComboLabel" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="128" textalign="right" autoresize="true" handleinput="false" >
+            <Size>
+              <AbsPoint x="80" y="20" />
+            </Size>
+            <Anchors>
+              <Anchor point="topleft" relativePoint="topleft" >
+                <AbsPoint x="80" y="50" />
+              </Anchor>
+            </Anchors>
+          </Label>
+          <ComboBox name="$parentPetKindComboComboBox" inherits="UO_Default_LongComboBox" layer="overlay">
+            <Anchors>
+              <Anchor point="topright" relativePoint="topleft" relativeTo="$parentPetKindComboLabel">
+                <AbsPoint x="30" y="-10" />
+              </Anchor>
+            </Anchors>
+            <EventHandlers>
+              <EventHandler event="OnSelChanged" function="AnimalLore.SelChanged" />
+            </EventHandlers>
+          </ComboBox>
+
+        
+
+
+        
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

@@ -1,0 +1,55 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+    <Scripts>
+		<Script file="Source/HuePickerWindow.lua" />
+	</Scripts>
+	<Windows>
+        <Window name="HuePickerWindow" movable="true" >
+            <Size>
+                <AbsPoint x="350" y="260"/>
+            </Size>
+            <Anchors>
+                <Anchor point="center" relativePoint="center" />
+            </Anchors>
+            <EventHandlers>
+                <EventHandler event="OnInitialize" function="HuePickerWindow.Initialize"/>
+                <EventHandler event="OnShutdown" function="HuePickerWindow.Shutdown"/>
+            </EventHandlers>
+            <Windows>
+				<Window name="$parentChrome" inherits="UO_DefaultWindow">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft"/>
+						<Anchor point="bottomright" relativePoint="bottomright"/>
+					</Anchors>
+				</Window>
+                <Window name="$parentPicker" inherits="ColorPickerWindowTemplate" movable="false">
+                    <Anchors>
+						<Anchor point="top" relativePoint="top" relativeTo="$parent">
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+                    </Anchors>                   
+                </Window>
+				<Label name="$parentName" font="UO_DefaultText" maxchars="64" textalign="center" >
+					<Size>
+						<AbsPoint x="167" y="23" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentPicker">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<SliderBar name="$parentSliderBar" inherits="UO_Default_Horizontal_SliderBar_With_Ticks" numticks="5" locktoticks="true">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentName">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="HuePickerWindow.OnSlide" />
+					</EventHandlers>
+				</SliderBar>
+            </Windows>    
+        </Window>
+       
+    </Windows>
+</Interface>

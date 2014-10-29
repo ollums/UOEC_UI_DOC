@@ -1,0 +1,14 @@
+
+0 - 30: Train at an NPC Thief Guildmaster 
+
+30 - 40: Apply Lesser Poison 
+
+40 - 70: Apply Poison 
+
+70 - 92: Apply Greater Poison 
+
+92 - 100: Apply Deadly Poison
+
+NOTE: Be careful while using the Satyr Trick! Poisoning let's you lose karma so the whole fauna will attack you if you go below 0!!!
+
+|SATYR|

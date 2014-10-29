@@ -1,0 +1,2 @@
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/Legacy Runebook", "Interface.xml", "Interface.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/Legacy Runebook", "LegacyRunebook.xml", "LegacyRunebook.xml" )

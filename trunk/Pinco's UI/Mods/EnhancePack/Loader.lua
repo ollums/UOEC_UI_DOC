@@ -1,0 +1,11 @@
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "Textures.xml", "Textures.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "menuBarMod.xml", "menuBarMod.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "ScreenshotHelper.xml", "ScreenshotHelper.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "TargetWindowMod.xml", "TargetWindowMod.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "GlowingEffect.xml", "GlowingEffect.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "StatusGlowingEffect.xml", "StatusGlowingEffect.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "CenterScreenText.xml", "CenterScreenText.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "MapWindowMod.xml", "MapWindowMod.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "CCRLBL.xml", "CCRLBL.xml" )
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/EnhancePack", "ServerLine.xml", "ServerLine.xml" )
+

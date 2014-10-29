@@ -1,0 +1,4 @@
+
+0 - 30:  Train at an NPC Blacksmith, Armorer, or Warrior Guildmaster 
+
+30 - 100: Activate the skill via macro or skill button and target a weapon or a piece of armor. It will take roughly 25 hours to reach 100.0 skill. 

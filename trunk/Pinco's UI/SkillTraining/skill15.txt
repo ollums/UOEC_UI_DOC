@@ -1,0 +1,6 @@
+
+0 - 30: Train from an NPC Thief
+
+30 - 100: Take a grandmaster tinker trapped container, then create a single button macro to use the skill on your last target. Manually use the skill on the container once, then continuously press the macro button to continue training.
+
+|SATYR|

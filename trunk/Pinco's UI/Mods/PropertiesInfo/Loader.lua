@@ -1,0 +1,1 @@
+LoadResources( "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/Mods/PropertiesInfo", "PropertiesInfo.xml", "PropertiesInfo.xml" )

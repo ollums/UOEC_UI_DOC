@@ -1,0 +1,4 @@
+
+0 - 40: Training from NPC Miner in New Haven.
+
+40 - 100: Mine up and smelt Ore.

@@ -1,0 +1,11 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+
+      <DynamicImage name="MapCompass" handleinput="true" layer="default" scaleAnchor="center">
+        <Size>
+          <AbsPoint x="134" y="134" />
+        </Size>
+
+      </DynamicImage>
+  </Windows>
+</Interface>

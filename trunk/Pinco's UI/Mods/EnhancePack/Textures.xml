@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+  <Assets>
+    <Texture name="CenterStaticText" file="/CenterScreenText.dds" />
+    <Texture name="ServerDown" file="/CenterScreenText/ServerDown.dds" />
+    <Texture name="GMArrived" file="/CenterScreenText/gmarrived.dds" />
+	  <Texture name="BattleBegin" file="/CenterScreenText/BattleBegins.dds" />
+	  <Texture name="BattleLost" file="/CenterScreenText/BattleLost.dds" />
+	  <Texture name="Disarmed" file="/CenterScreenText/Disarmed.dds" />
+	  <Texture name="Beacon" file="/CenterScreenText/beacon.dds" />
+
+    <Texture name="CompassTexture" file="/Compass.dds" />
+    <Texture name="ServerLinesTram" file="/ServerLinesTram.dds" />
+    <Texture name="ServerLinesFel" file="/ServerLinesFel.dds" />
+    <Texture name="ServerLinesFel" file="/ServerLinesFel.dds" />
+
+    <Texture name="Empty" file="/Portraits/Empty.dds" />
+    
+    <Texture name="GreenGoblin" file="/Portraits/greengoblin.dds" />
+    <Texture name="Bloodworm" file="/Portraits/Bloodworm.dds" />
+    <Texture name="AcidSlug" file="/Portraits/AcidSlug.dds" />
+    <Texture name="Rotworm" file="/Portraits/Rotworm.dds" />
+    <Texture name="BladeSpirits" file="/Portraits/BladeSpirits.dds" />
+    <Texture name="energyvortex" file="/Portraits/energyvortex.dds" />
+    <Texture name="ironbeetle" file="/Portraits/ironbeetle.dds" />
+    <Texture name="WolfSpider" file="/Portraits/WolfSpider.dds" />
+    <Texture name="abyssalInfernal" file="/Portraits/abyssalinfernal.dds" />
+    <Texture name="boura" file="/Portraits/boura.dds" />
+    <Texture name="slith" file="/Portraits/slith.dds" />
+    <Texture name="chickenlizard" file="/Portraits/chickenlizard.dds" />
+    <Texture name="clockworkscorpion" file="/Portraits/clockworkscorpion.dds" />
+    <Texture name="navrey" file="/Portraits/navrey.dds" />
+    <Texture name="fireant" file="/Portraits/fireant.dds" />
+    <Texture name="maddeninghorror" file="/Portraits/maddeninghorror.dds" />
+    <Texture name="slasher" file="/Portraits/slasher.dds" />
+    <Texture name="hell hound" file="/Portraits/Canine_Hell_Hound.dds" />
+    <Texture name="scalis" file="/Portraits/scalis.dds" />
+    <Texture name="skree" file="/Portraits/skree.dds" />
+    <Texture name="lavaelemental" file="/Portraits/lavaelemental.dds" />
+    <Texture name="stygiandragon" file="/Portraits/stygiandragon.dds" />
+    <Texture name="medusa" file="/Portraits/medusa.dds" />
+    <Texture name="primevallich" file="/Portraits/primevallich.dds" />
+    <Texture name="leatherwolf" file="/Portraits/leatherwolf.dds" />
+    <Texture name="dreamwraith" file="/Portraits/dreamwraith.dds" />
+    <Texture name="trapdoorspider" file="/Portraits/trapdoorspider.dds" />
+    <Texture name="faerydragon" file="/Portraits/faerydragon.dds" />
+    <Texture name="raptor" file="/Portraits/raptor.dds" />
+    <Texture name="gremlin" file="/Portraits/gremlin.dds" />
+    <Texture name="kepetch" file="/Portraits/kepetch.dds" />
+    <Texture name="kepetchambusher" file="/Portraits/kepetchambusher.dds" />
+    <Texture name="undeadgargoyle" file="/Portraits/undeadgargoyle.dds" />
+    <Texture name="vollem" file="/Portraits/vollem.dds" />
+    <Texture name="colossus" file="/Portraits/colossus.dds" />
+    <Texture name="charybdis" file="/Portraits/charybdis.dds" />
+    <Texture name="gianttentacle" file="/Portraits/gianttentacle.dds" />
+    <Texture name="seaserpent" file="/Portraits/seaserpent.dds" />
+    <Texture name="sudiva" file="/Portraits/Dragon_AcientWyrm.dds" />
+  </Assets>
+</Interface>
